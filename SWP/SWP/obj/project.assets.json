@@ -5303,11 +5303,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\SWPApi.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\SWPApi.csproj",
       "projectName": "SWPApi",
-      "projectPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\SWPApi.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\SWPApi.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5324,8 +5324,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj"
+            "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj"
             }
           }
         }

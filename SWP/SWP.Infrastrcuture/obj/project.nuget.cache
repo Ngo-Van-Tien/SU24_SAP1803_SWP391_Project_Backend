@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NClluf71K5ewJaxXerGrshFcUVq1b1DPKFIFxmXnZjCKDdwCi2FVkZwvW3bh7R6IIRFVXb7j552WeYsXbUecEA==",
+  "dgSpecHash": "PwuQtAK5r0B/mdLiPyG+zEHCkfVOr+vbDxce75bIGk/nwcV//rt5afRZ0mJqeG4yAcBSo4mGEKykNfrdsHC1UQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

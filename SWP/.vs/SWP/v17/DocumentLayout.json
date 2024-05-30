@@ -1,133 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\handlers\\addproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\handlers\\addproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\handlers\\addproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\commands\\addproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\commands\\addproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\commands\\addproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\handlers\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\handlers\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\handlers\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\responses\\addproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\responses\\addproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\responses\\addproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\commands\\getproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\commands\\getproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\commands\\getproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\migrations\\20240527064721_addproductstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\migrations\\20240527064721_addproductstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240527064721_addproductstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\migrations\\swpdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\migrations\\swpdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\swpdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528073150_addproductnutrient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\migrations\\20240528073150_addproductnutrient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528073150_addproductnutrient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528143359_addorderdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\migrations\\20240528143359_addorderdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528143359_addorderdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528072104_addmilkfunctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\migrations\\20240528072104_addmilkfunctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528072104_addmilkfunctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\product\\responses\\getproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\product\\responses\\getproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\responses\\getproductresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\iproductitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\iproductitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\iproductitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\imilkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\imilkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\imilkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\irepositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\entities\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\milkbrand\\commands\\addmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkbrand\\commands\\addmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\commands\\addmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\swp\\swp\\swp\\application\\milkbrand\\handlers\\addmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|c:\\users\\asus\\documents\\project-swp\\swp1\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkbrand\\handlers\\addmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\handlers\\addmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -152,61 +152,57 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IUnitOfWork.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:36:37.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:36:37.319Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "SWPDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\SWPDbContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\SWPDbContext.cs",
               "ViewState": "AQIAADcAAAAAAAAAAAA2wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T05:46:36.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T05:46:36.626Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\UnitOfWork.cs",
               "ViewState": "AQIAABoAAAAAAAAAAADwvywAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T05:46:39.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T05:46:39.793Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GetProductHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:33:22.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:33:22.836Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AddProductHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Handlers\\AddProductHandler.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAwwBUAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -217,308 +213,285 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AddProductCommand.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Commands\\AddProductCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:28:15.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:28:15.109Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "AddProductResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Responses\\AddProductResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:20:48.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:20:48.499Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "GetProductCommand.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:28:18.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:28:18.378Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "20240527064721_AddProductsTable.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240527064721_AddProductsTable.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwBQAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:07:20.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:07:20.418Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "SWPDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\SWPDbContextModelSnapshot.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAqwDMAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:04:11.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:04:11.919Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "20240528073150_AddProductNutrient.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
               "ViewState": "AQIAAD0AAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:04:03.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:04:03.514Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "20240528143359_AddOrderDetailTable.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:04:02.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:04:02.156Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "20240528072104_AddMilkFunctionTable.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:04:01.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:04:01.514Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Company.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Company.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Company.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:01:38.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:01:38.137Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "SWP\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\ProductController.cs",
               "RelativeToolTip": "SWP\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T09:26:27.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T09:26:27.576Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "GetProductResponse.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
               "RelativeToolTip": "SWP\\Application\\Product\\Responses\\GetProductResponse.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:33:30.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:33:30.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:26:03.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:26:03.861Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:24:51.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:24:51.876Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "IProductItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IProductItemRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:25:24.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:25:24.098Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "IPaymentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IPaymentRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:43:09.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:43:09.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "IMilkBrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:51:40.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T06:51:40.583Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:52:55.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T06:52:55.195Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAQwBMAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:49:53.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T06:49:53.275Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "Infrastructure",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
+              "Title": "Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Infrastructure.csproj",
               "RelativeToolTip": "SWP.Infrastrcuture\\Infrastructure.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T08:42:22.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:42:22.433Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IOrderRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:24:36.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:24:36.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "ProductItem.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\ProductItem.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\ProductItem.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\ProductItem.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\ProductItem.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\ProductItem.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\ProductItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:24:26.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:24:26.462Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\appsettings.json",
               "RelativeDocumentMoniker": "SWP\\appsettings.json",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\appsettings.json",
               "RelativeToolTip": "SWP\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-29T08:23:22.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:23:22.56Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:13:58.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:13:58.433Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "AddMilkBrandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
               "RelativeToolTip": "SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAiwCMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -528,9 +501,9 @@
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "AddMilkBrandCommand.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
               "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
               "RelativeToolTip": "SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -540,9 +513,9 @@
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "MilkFunctionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -552,9 +525,9 @@
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "MilkBrandRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
               "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\Project-SWP\\SWP1\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
               "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
