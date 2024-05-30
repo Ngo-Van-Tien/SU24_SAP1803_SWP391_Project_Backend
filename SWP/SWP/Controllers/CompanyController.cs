@@ -1,0 +1,32 @@
+﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using SWPApi.Application.Company.Commands;
+
+namespace SWPApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CompanyController : ControllerBase
+    {
+        private readonly ISender _mediator;
+
+        public CompanyController(ISender mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> AddCompany([FromBody] AddCompanyCommand command)
+        {
+            if(command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
+    }
+}
