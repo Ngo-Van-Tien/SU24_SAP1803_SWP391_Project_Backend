@@ -15,6 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91eb14aed75b0bc4f651658ce154f1c682fbf223")]
+
 [assembly: System.Reflection.AssemblyProductAttribute("SWPApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWPApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
