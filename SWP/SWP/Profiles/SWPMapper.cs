@@ -20,6 +20,8 @@ namespace SWPApi.Profiles
             CreateMap<MilkBrand, AddMilkBrandResponse>()
                 .ForMember(dest => dest.CompanyId, opt => opt.MapFrom(src => src.Company.Id));
             CreateMap<MilkBrand, UpdateMilkBrandResponse>();
+            CreateMap<Product, AddProductResponse>()
+                .ForMember(dest => dest.MilkBrandId, opt => opt.MapFrom(src => src.MilkBrand.Id));
         }
     }
 }

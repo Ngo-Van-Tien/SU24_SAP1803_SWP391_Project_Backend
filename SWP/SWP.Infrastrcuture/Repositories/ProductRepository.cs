@@ -15,5 +15,17 @@ namespace Infrastructure.Repositories
         {
 
         }
+
+        public async Task AddProduct(Product product)
+        {
+            await _context.Set<Product>().AddAsync(product);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateProduct(Product product)
+        {
+            _context.Set<Product>().Update(product);
+            await _context.SaveChangesAsync();
+        }
     }
 }

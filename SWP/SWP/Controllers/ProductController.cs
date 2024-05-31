@@ -22,5 +22,25 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(new GetProductCommand() { Id = id });
             return Ok(result);
         }
+        [AllowAnonymous]
+        [HttpPost("AddProduct")]
+
+        public async Task<IActionResult> AddProduct([FromBody] AddProductCommand command)
+        {
+            if (command == null)
+            {
+                return BadRequest("Invalid product data.");
+            }
+
+            var result = await _mediator.Send(command);
+            if (result == null || !result.IsSuccess)
+            {
+                return BadRequest(result?.ErrorMessage ?? "An error occurred while creating the product.");
+            }
+
+            return Ok(result);
+        }
+
+
     }
 }
