@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWPApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41093feb82aca7961083ec8226cc57397d1a08f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+285f2b158f080562412916b7bdca4232301c04ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("SWPApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWPApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
