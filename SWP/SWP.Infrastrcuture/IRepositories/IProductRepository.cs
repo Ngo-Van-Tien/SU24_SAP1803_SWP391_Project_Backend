@@ -9,5 +9,9 @@ namespace Infrastructure.IRepositories
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
+        Task AddProduct(Product product);
+        Task UpdateProduct(Product product);
+        Task<Product> GetById(Guid Id);
+        Task DeleteProduct(Product product);
     }
 }

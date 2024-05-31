@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using SWPApi.Application.Product.Responses;
 
 namespace SWPApi.Application.Product.Commands
 {
-    public class AddProductCommand
+    public class AddProductCommand: IRequest<AddProductResponse>
     {
         public string Name { get; set; }
         public string? Description { get; set; }
