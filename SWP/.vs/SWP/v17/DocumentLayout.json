@@ -1,190 +1,142 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\",
+  "WorkspaceRootPath": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\controllers\\milkbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\milkbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\commands\\deletemilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\commands\\deletemilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\handlers\\deletemilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\handlers\\deletemilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\controllers\\milkfunctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\milkfunctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\irepositories\\imilkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\imilkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\responses\\deletemilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\responses\\deletemilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\product\\commands\\getproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\commands\\getproductcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\entities\\milkbrand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\milkbrand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\entities\\milkbrandfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\milkbrandfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\commands\\updatemilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\commands\\updatemilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\irepositories\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\handlers\\updatemilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\handlers\\updatemilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\companycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\responses\\updatemilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\responses\\updatemilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\controllers\\milkbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\milkbrandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\handlers\\addmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\handlers\\addmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\handlers\\getallcompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\handlers\\getallcompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\commands\\addmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\commands\\addmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkbrand\\handlers\\getallmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\handlers\\getallmilkbrandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\product\\handlers\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\product\\handlers\\getproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\profiles\\swpmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\profiles\\swpmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\repositories\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\company\\handlers\\addcompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\handlers\\addcompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkbrandrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\company\\commands\\addcompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\commands\\addcompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\swpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\company\\responses\\addcompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\commands\\getallcompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\commands\\getallcompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkbrand\\responses\\getallmilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\responses\\getallmilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\responses\\getallcompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\responses\\getallcompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\controllers\\milkfunctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\milkfunctioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\profiles\\swpmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\profiles\\swpmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkbrand\\commands\\getallmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\commands\\getallmilkbrandcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\responses\\addcompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\responses\\addcompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\handlers\\deletecompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\handlers\\deletecompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\commands\\deletecompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\commands\\deletecompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\responses\\deletecompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\responses\\deletecompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\controllers\\nutrientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\controllers\\nutrientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\handlers\\updatecompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\handlers\\updatecompanyhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkfunction\\handlers\\updatemilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkfunction\\handlers\\updatemilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\commands\\updatecompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\commands\\updatecompanycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\models\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\models\\baseresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\company\\responses\\updatecompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\company\\responses\\updatecompanyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\swp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\swp.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp\\application\\milkbrand\\responses\\addmilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkbrand\\responses\\addmilkbrandresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\irepositories\\imilkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\imilkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\irepositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\irepositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528073150_addproductnutrient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528073150_addproductnutrient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528143359_addorderdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528143359_addorderdetailtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\migrations\\20240528072104_addmilkfunctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240528072104_addmilkfunctiontable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\migrations\\20240527122957_addproductitemtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240527122957_addproductitemtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\migrations\\20240527122237_autogeneratecreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\migrations\\20240527122237_autogeneratecreateddate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\fptu\\c#\\swp\\swp\\swp\\swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\repositories\\milkfunctionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\milkfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\milkfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\milkbrandfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\milkbrandfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp.infrastrcuture\\entities\\milkbrand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C39DD887-CE70-4CAF-8CE4-8A73B2414EA7}|SWP.Infrastrcuture\\Infrastructure.csproj|solutionrelative:swp.infrastrcuture\\entities\\milkbrand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkfunction\\handlers\\addmilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkfunction\\handlers\\addmilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|d:\\github\\su24_sap1803_swp391_project_backend\\swp\\swp\\application\\milkfunction\\handlers\\deletemilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EDC0FB4-EC09-4319-8E93-3DF500A916C5}|SWP\\SWPApi.csproj|solutionrelative:swp\\application\\milkfunction\\handlers\\deletemilkfunctionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -194,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 226,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,600 +158,439 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "GetAllCompanyHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\GetAllCompanyHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Handlers\\GetAllCompanyHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\GetAllCompanyHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Handlers\\GetAllCompanyHandler.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAwwBcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:27:29.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetProductCommand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
-              "RelativeToolTip": "SWP\\Application\\Product\\Commands\\GetProductCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:19:02.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MilkBrandFunction.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:17:06.121Z",
+              "WhenOpened": "2024-05-31T10:51:46.166Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DeleteMilkBrandResponse.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\DeleteMilkBrandResponse.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Responses\\DeleteMilkBrandResponse.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\DeleteMilkBrandResponse.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Responses\\DeleteMilkBrandResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA7AAAA",
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\UnitOfWork.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\UnitOfWork.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAywBUAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:16:07.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteMilkBrandHandler.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\DeleteMilkBrandHandler.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Handlers\\DeleteMilkBrandHandler.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\DeleteMilkBrandHandler.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Handlers\\DeleteMilkBrandHandler.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAxwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:15:52.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeleteMilkBrandCommand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\DeleteMilkBrandCommand.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Commands\\DeleteMilkBrandCommand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\DeleteMilkBrandCommand.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Commands\\DeleteMilkBrandCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:15:34.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MilkFunctionController.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\MilkFunctionController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\MilkFunctionController.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\MilkFunctionController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\MilkFunctionController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T10:42:39.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UpdateMilkBrandResponse.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\UpdateMilkBrandResponse.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Responses\\UpdateMilkBrandResponse.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\UpdateMilkBrandResponse.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Responses\\UpdateMilkBrandResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:43:58.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UpdateMilkBrandHandler.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\UpdateMilkBrandHandler.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Handlers\\UpdateMilkBrandHandler.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\UpdateMilkBrandHandler.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Handlers\\UpdateMilkBrandHandler.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAABkAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:43:34.375Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateMilkBrandCommand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\UpdateMilkBrandCommand.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Commands\\UpdateMilkBrandCommand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\UpdateMilkBrandCommand.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Commands\\UpdateMilkBrandCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:43:05.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GetProductHandler.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
-              "RelativeToolTip": "SWP\\Application\\Product\\Handlers\\GetProductHandler.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:22:54.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Program.cs",
-              "RelativeDocumentMoniker": "SWP\\Program.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Program.cs",
-              "RelativeToolTip": "SWP\\Program.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAkwEAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:11:21.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "BaseResponse.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Models\\BaseResponse.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Models\\BaseResponse.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Models\\BaseResponse.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Models\\BaseResponse.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAA8wA8AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:09:38.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SWP.http",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\SWP.http",
-              "RelativeDocumentMoniker": "SWP\\SWP.http",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\SWP.http",
-              "RelativeToolTip": "SWP\\SWP.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-05-30T09:06:49.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "SWP\\appsettings.Development.json",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\appsettings.Development.json",
-              "RelativeToolTip": "SWP\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-30T09:06:46.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\appsettings.json",
-              "RelativeDocumentMoniker": "SWP\\appsettings.json",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\appsettings.json",
-              "RelativeToolTip": "SWP\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-30T09:06:40.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\BaseEntity.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\BaseEntity.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\BaseEntity.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T09:03:32.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MilkBrandController.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\MilkBrandController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\MilkBrandController.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\MilkBrandController.cs*",
-              "RelativeToolTip": "SWP\\Controllers\\MilkBrandController.cs*",
-              "ViewState": "AQIAADEAAAAAAAAAAAAuwEIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:49:11.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SWPMapper.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Profiles\\SWPMapper.cs",
-              "RelativeDocumentMoniker": "SWP\\Profiles\\SWPMapper.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Profiles\\SWPMapper.cs",
-              "RelativeToolTip": "SWP\\Profiles\\SWPMapper.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAwBEAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:30:22.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AddCompanyResponse.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
-              "RelativeToolTip": "SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAiwAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:29:42.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AddCompanyHandler.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Handlers\\AddCompanyHandler.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Handlers\\AddCompanyHandler.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Handlers\\AddCompanyHandler.cs",
-              "RelativeToolTip": "SWP\\Application\\Company\\Handlers\\AddCompanyHandler.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:29:28.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AddCompanyCommand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Commands\\AddCompanyCommand.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Commands\\AddCompanyCommand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\Company\\Commands\\AddCompanyCommand.cs",
-              "RelativeToolTip": "SWP\\Application\\Company\\Commands\\AddCompanyCommand.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:29:16.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MilkBrand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T08:02:40.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\ProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:55:06.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:54:59.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CompanyRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:53:49.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CompanyController.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\CompanyController.cs",
-              "RelativeDocumentMoniker": "SWP\\Controllers\\CompanyController.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Controllers\\CompanyController.cs",
-              "RelativeToolTip": "SWP\\Controllers\\CompanyController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwBkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:51:43.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AddMilkBrandResponse.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\AddMilkBrandResponse.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Responses\\AddMilkBrandResponse.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Responses\\AddMilkBrandResponse.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Responses\\AddMilkBrandResponse.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:51:38.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IUnitOfWork.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IUnitOfWork.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAUwBYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:51:06.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "20240528073150_AddProductNutrient.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528073150_AddProductNutrient.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:51:04.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "20240528143359_AddOrderDetailTable.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528143359_AddOrderDetailTable.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:51:02.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "20240528072104_AddMilkFunctionTable.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240528072104_AddMilkFunctionTable.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:50:59.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "20240527122957_AddProductItemTable.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527122957_AddProductItemTable.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240527122957_AddProductItemTable.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527122957_AddProductItemTable.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240527122957_AddProductItemTable.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:50:56.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "20240527122237_AutoGenerateCreatedDate.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527122237_AutoGenerateCreatedDate.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240527122237_AutoGenerateCreatedDate.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Migrations\\20240527122237_AutoGenerateCreatedDate.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240527122237_AutoGenerateCreatedDate.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:50:53.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ICompanyRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:50:18.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Company.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Company.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Company.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAmwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T07:50:12.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Product.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Product.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T08:13:58.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AddMilkBrandCommand.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Commands\\AddMilkBrandCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T07:05:25.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "AddMilkBrandHandler.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
-              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
-              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Handlers\\AddMilkBrandHandler.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAswBkAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:54:31.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IGenericRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:52:55.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMilkBrandRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IMilkBrandRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAIwA8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:51:40.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "MilkFunctionRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:51:09.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SWPDbContext.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\SWPDbContext.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\SWPDbContext.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAcwGMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T05:46:36.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\GenericRepository.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwBMAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:49:53.275Z",
+              "WhenOpened": "2024-05-31T05:57:18.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MilkBrandRepository.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAZAAAA",
+              "Title": "SWPDbContext.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\SWPDbContext.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\SWPDbContext.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\SWPDbContext.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAcwCAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T06:49:31.844Z",
+              "WhenOpened": "2024-05-31T04:44:13.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompanyRepository.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\CompanyRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCIAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:26:25.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MilkBrandRepository.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkBrandRepository.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCsAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T11:11:32.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllMilkBrandHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\GetAllMilkBrandHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Handlers\\GetAllMilkBrandHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Handlers\\GetAllMilkBrandHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Handlers\\GetAllMilkBrandHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:54:45.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CompanyController.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\CompanyController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\CompanyController.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\CompanyController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\CompanyController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAIwEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:38:56.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MilkBrandController.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\MilkBrandController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\MilkBrandController.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\MilkBrandController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\MilkBrandController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwEYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:42:09.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetAllCompanyCommand.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\GetAllCompanyCommand.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Commands\\GetAllCompanyCommand.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\GetAllCompanyCommand.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Commands\\GetAllCompanyCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:51:39.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetAllMilkBrandResponse.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Responses\\GetAllMilkBrandResponse.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Responses\\GetAllMilkBrandResponse.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Responses\\GetAllMilkBrandResponse.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Responses\\GetAllMilkBrandResponse.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:52:32.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetAllCompanyResponse.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\GetAllCompanyResponse.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Responses\\GetAllCompanyResponse.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\GetAllCompanyResponse.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Responses\\GetAllCompanyResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:51:53.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MilkFunctionRepository.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Repositories\\MilkFunctionRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:42:10.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MilkFunctionController.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\MilkFunctionController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\MilkFunctionController.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\MilkFunctionController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\MilkFunctionController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAwwCkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:41:50.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetAllMilkBrandCommand.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Commands\\GetAllMilkBrandCommand.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkBrand\\Commands\\GetAllMilkBrandCommand.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkBrand\\Commands\\GetAllMilkBrandCommand.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkBrand\\Commands\\GetAllMilkBrandCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:52:28.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddCompanyResponse.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Responses\\AddCompanyResponse.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:51:47.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeleteCompanyResponse.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\DeleteCompanyResponse.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Responses\\DeleteCompanyResponse.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\DeleteCompanyResponse.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Responses\\DeleteCompanyResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:44:15.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DeleteCompanyHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\DeleteCompanyHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Handlers\\DeleteCompanyHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\DeleteCompanyHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Handlers\\DeleteCompanyHandler.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:44:07.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeleteCompanyCommand.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\DeleteCompanyCommand.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Commands\\DeleteCompanyCommand.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\DeleteCompanyCommand.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Commands\\DeleteCompanyCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:44:01.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "NutrientController.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\NutrientController.cs",
+              "RelativeDocumentMoniker": "SWP\\Controllers\\NutrientController.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Controllers\\NutrientController.cs",
+              "RelativeToolTip": "SWP\\Controllers\\NutrientController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:43:10.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SWPMapper.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Profiles\\SWPMapper.cs",
+              "RelativeDocumentMoniker": "SWP\\Profiles\\SWPMapper.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Profiles\\SWPMapper.cs",
+              "RelativeToolTip": "SWP\\Profiles\\SWPMapper.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:41:09.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateMilkFunctionHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\UpdateMilkFunctionHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkFunction\\Handlers\\UpdateMilkFunctionHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\UpdateMilkFunctionHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkFunction\\Handlers\\UpdateMilkFunctionHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBkAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:35:08.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Company.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Company.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Company.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Company.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:30:55.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UpdateCompanyResponse.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\UpdateCompanyResponse.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Responses\\UpdateCompanyResponse.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Responses\\UpdateCompanyResponse.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Responses\\UpdateCompanyResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:29:57.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\UnitOfWork.cs",
-              "ToolTip": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP.Infrastrcuture\\UnitOfWork.cs",
-              "RelativeToolTip": "SWP.Infrastrcuture\\UnitOfWork.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAwwDQAAAAAAAAA",
+              "Title": "UpdateCompanyHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\UpdateCompanyHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Handlers\\UpdateCompanyHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Handlers\\UpdateCompanyHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Handlers\\UpdateCompanyHandler.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAowB8AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T05:46:39.793Z",
+              "WhenOpened": "2024-05-31T10:29:48.732Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UpdateCompanyCommand.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\UpdateCompanyCommand.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\Company\\Commands\\UpdateCompanyCommand.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\Company\\Commands\\UpdateCompanyCommand.cs",
+              "RelativeToolTip": "SWP\\Application\\Company\\Commands\\UpdateCompanyCommand.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T10:29:37.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ICompanyRepository.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\ICompanyRepository.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T09:39:18.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IMilkFunctionRepository.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkFunctionRepository.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\IRepositories\\IMilkFunctionRepository.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\IRepositories\\IMilkFunctionRepository.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\IRepositories\\IMilkFunctionRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T09:39:04.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20240531060750_Additional.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Migrations\\20240531060750_Additional.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T06:07:50.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\Product.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\Product.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\Product.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T06:00:51.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MilkFunction.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkFunction.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\MilkFunction.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkFunction.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\MilkFunction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:42:35.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MilkBrandFunction.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\MilkBrandFunction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:42:43.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MilkBrand.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
+              "RelativeDocumentMoniker": "SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
+              "RelativeToolTip": "SWP.Infrastrcuture\\Entities\\MilkBrand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:42:40.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AddMilkFunctionHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\AddMilkFunctionHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkFunction\\Handlers\\AddMilkFunctionHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\AddMilkFunctionHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkFunction\\Handlers\\AddMilkFunctionHandler.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB4AAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:42:04.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DeleteMilkFunctionHandler.cs",
+              "DocumentMoniker": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\DeleteMilkFunctionHandler.cs",
+              "RelativeDocumentMoniker": "SWP\\Application\\MilkFunction\\Handlers\\DeleteMilkFunctionHandler.cs",
+              "ToolTip": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\Application\\MilkFunction\\Handlers\\DeleteMilkFunctionHandler.cs",
+              "RelativeToolTip": "SWP\\Application\\MilkFunction\\Handlers\\DeleteMilkFunctionHandler.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T04:41:59.313Z"
             }
           ]
         }

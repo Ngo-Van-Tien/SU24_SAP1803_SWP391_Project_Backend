@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\MilkFunction\" />
     <Folder Include="Application\Payment\" />
     <Folder Include="Application\Order\" />
     <Folder Include="Application\ProductItem\" />

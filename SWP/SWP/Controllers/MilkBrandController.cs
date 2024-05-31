@@ -24,6 +24,10 @@ namespace SWPApi.Controllers
                 return BadRequest("MilkBrand had not yet been created");
             }
             var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
             return Ok(result);
         }
         [AllowAnonymous]
@@ -61,6 +65,14 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
 
+        }
+        
+        [AllowAnonymous]
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllMilkBrand()
+        {
+            var result = await _mediator.Send(new GetAllMilkBrandCommand());
+            return Ok(result);
         }
     }
         

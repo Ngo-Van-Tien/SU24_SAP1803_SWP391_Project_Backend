@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nJwXSCP8p9aBrh8k2+G4xxsj3HC/o+PUKo54d4F5jSf7JihJ5cSM3aD4dI+yTLUdUUTwl0A1QsWJS+rC2iJ6HQ==",
+  "dgSpecHash": "PYUls2pnbS/OyLNQoKsOKNgNH+TQbutoKIAf52lOqjEk35UNbYHKYgTPinUnGz0agfVFfH1KwhaVbEvib1dDhw==",
   "success": true,
-  "projectFilePath": "D:\\FPTU\\C#\\SWP\\SWP\\SWP\\SWP\\SWPApi.csproj",
+  "projectFilePath": "D:\\Github\\SU24_SAP1803_SWP391_Project_Backend\\SWP\\SWP\\SWPApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

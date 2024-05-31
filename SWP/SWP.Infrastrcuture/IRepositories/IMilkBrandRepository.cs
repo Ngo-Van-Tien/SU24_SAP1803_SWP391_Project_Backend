@@ -13,5 +13,6 @@ namespace Infrastructure.IRepositories
         Task UpdateMilkBrand(MilkBrand milkBrand);
         Task<MilkBrand> GetById(Guid Id);
         Task DeleteMilkBrand(MilkBrand milkBrand);
+        Task<IEnumerable<MilkBrand>> GetAllMilkBrands();
     }
 }

@@ -2,6 +2,7 @@
 using Infrastructure.Entities;
 using SWPApi.Application.Company.Responses;
 using SWPApi.Application.MilkBrand.Responses;
+using SWPApi.Application.MilkFunction.Responses;
 using SWPApi.Application.Product.Responses;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,22 @@ namespace SWPApi.Profiles
     {
         public SWPMapper()
         {
+            // Company
             CreateMap<Company, AddCompanyResponse>();
+            CreateMap<Company, UpdateCompanyResponse>();
+            CreateMap<Company, DeleteCompanyResponse>();
+            
+            // Milk Brand
             CreateMap<Product, GetProductResponse>();
             CreateMap<MilkBrand, AddMilkBrandResponse>()
                 .ForMember(dest => dest.CompanyId, opt => opt.MapFrom(src => src.Company.Id));
             CreateMap<MilkBrand, UpdateMilkBrandResponse>();
+
+            // Milk Function
+            CreateMap<MilkFunction, AddMilkFunctionResponse>();
+            CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
+            CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
+            
         }
     }
 }

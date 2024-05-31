@@ -15,17 +15,11 @@ namespace Infrastructure
         public IProductRepository ProductRepository { get; private set; }
         public IMilkBrandRepository MilkBrandRepository {  get; private set; }
         public ICompanyRepository CompanyRepository { get; private set; }
-
         public IMilkFunctionRepository MilkFunctionRepository { get; private set; }
-
         public INutrientRepository NutrientRepository { get; private set; }
-
         public IProductItemRepository ProductItemRepository { get; private set; }
-
         public IOrderRepository OrderRepository { get; private set; }
-
         public IPaymentRepository PaymentRepository { get; private set; }
-
         public UnitOfWork(SWPDbContext context)
         {
             _context = context;
