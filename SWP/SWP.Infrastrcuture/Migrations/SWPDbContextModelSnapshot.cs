@@ -53,7 +53,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies");
+                    b.ToTable("Companies", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrand", b =>
@@ -88,7 +88,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MilkBrands");
+                    b.ToTable("MilkBrands", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrandFunction", b =>
@@ -121,7 +121,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MilkFunctionId");
 
-                    b.ToTable("MilkBrandFunctions");
+                    b.ToTable("MilkBrandFunctions", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkFunction", b =>
@@ -148,7 +148,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MilkFunctions");
+                    b.ToTable("MilkFunctions", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Nutrient", b =>
@@ -184,7 +184,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nutrients");
+                    b.ToTable("Nutrients", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Order", b =>
@@ -230,7 +230,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.OrderDetail", b =>
@@ -269,7 +269,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductItemId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderDetails", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Payment", b =>
@@ -307,7 +307,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("Payments");
+                    b.ToTable("Payments", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>
@@ -349,7 +349,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MilkBrandId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductItem", b =>
@@ -386,7 +386,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductItems");
+                    b.ToTable("ProductItems", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductNutrient", b =>
@@ -419,7 +419,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductNutrients");
+                    b.ToTable("ProductNutrients", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
