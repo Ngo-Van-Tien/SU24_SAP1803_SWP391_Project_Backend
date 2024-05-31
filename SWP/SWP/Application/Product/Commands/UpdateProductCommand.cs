@@ -1,6 +1,16 @@
-﻿namespace SWPApi.Application.Product.Commands
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using MediatR;
+using SWPApi.Application.Product.Responses;
+
+namespace SWPApi.Application.Product.Commands
 {
-    public class UpdateProductCommand
+    public class UpdateProductCommand: IRequest<UpdateProductResponse>
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string? Description { get; set; }
+        public decimal? Price { get; set; }
+        public string? AgeRange { get; set; }
+        public Guid? MilkBrandId { get; set; }
     }
 }

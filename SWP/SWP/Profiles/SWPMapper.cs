@@ -31,7 +31,11 @@ namespace SWPApi.Profiles
             CreateMap<MilkFunction, AddMilkFunctionResponse>();
             CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
             CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
-            
+
+            // Product 
+            CreateMap<Product, AddProductResponse>()
+                .ForMember(dest => dest.MilkBrandId, opt => opt.MapFrom(src => src.MilkBrand.Id));
+            CreateMap<Product, UpdateProductResponse>();
         }
     }
 }
