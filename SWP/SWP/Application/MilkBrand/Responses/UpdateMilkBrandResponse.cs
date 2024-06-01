@@ -6,7 +6,7 @@ namespace SWPApi.Application.MilkBrand.Responses
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Guid? CompanyId { get; set; }
+        public Infrastructure.Entities.Company Company { get; set; }
         public string? Description { get; set; }
     }
 }

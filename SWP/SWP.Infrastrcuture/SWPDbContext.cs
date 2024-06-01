@@ -14,6 +14,7 @@ namespace SWP.Infrastrcuture
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<MilkBrand>().Navigation(c => c.Company).AutoInclude();
             base.OnModelCreating(builder);
             builder.Entity<Company>()
                 .Property(e => e.Id)

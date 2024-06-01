@@ -29,7 +29,6 @@
     <Folder Include="Application\Payment\" />
     <Folder Include="Application\Order\" />
     <Folder Include="Application\ProductItem\" />
-    <Folder Include="Application\Nutrient\" />
   </ItemGroup>
 
 </Project>

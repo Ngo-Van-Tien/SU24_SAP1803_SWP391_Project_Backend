@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure;
+using Infrastructure.Entities;
 using MediatR;
 using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.MilkBrand.Responses;
@@ -21,7 +22,8 @@ namespace SWPApi.Application.MilkBrand.Handlers
         {
             var milkBrands = await _unitOfWork.MilkBrandRepository.GetAllMilkBrands();
             var response = new GetAllMilkBrandResponse(milkBrands.ToList());
-            if(!milkBrands.ToList().Any()) 
+            response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
+            if (!milkBrands.ToList().Any()) 
             {
                 response.ErrorMessage = "Don't have any Milk Brand";
                 return response;

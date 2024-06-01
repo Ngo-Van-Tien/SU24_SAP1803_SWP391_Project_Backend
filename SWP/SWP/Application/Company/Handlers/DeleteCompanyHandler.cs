@@ -28,6 +28,7 @@ namespace SWPApi.Application.Company.Handlers
 
             await _unitOfWork.CompanyRepository.DeleteCompany(company);
             await _unitOfWork.SaveChangesAsync();
+            response = _mapper.Map<DeleteCompanyResponse>(company);
             response.IsSuccess = true;
             return response; 
         }

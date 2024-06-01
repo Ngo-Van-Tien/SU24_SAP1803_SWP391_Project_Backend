@@ -40,7 +40,7 @@ namespace Infrastructure.Repositories
             return milkBrand != null;
         }
         public async Task<IEnumerable<MilkBrand>> GetAllMilkBrands()
-        {                                                               
+        {
             return await _context.Set<MilkBrand>().ToListAsync();
         }
     }

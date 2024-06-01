@@ -29,6 +29,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
             await _unitOfWork.MilkBrandRepository.DeleteMilkBrand(milkBrand);
             await _unitOfWork.SaveChangesAsync();
+            response = _mapper.Map<DeleteMilkBrandResponse>(milkBrand);
             response.IsSuccess = true;
             return response;
 

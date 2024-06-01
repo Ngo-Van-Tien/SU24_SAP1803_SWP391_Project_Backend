@@ -26,6 +26,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
                 milkFunction.MilkFunctionName = request.MilkFunctionName;
                 await _unitOfOfWork.MilkFunctionRepository.UpdateMilkFunction(milkFunction);
                 await _unitOfOfWork.SaveChangesAsync();
+                response = _mapper.Map<UpdateMilkFunctionResponse>(milkFunction);
                 response.IsSuccess = true;
                 return response;
             }

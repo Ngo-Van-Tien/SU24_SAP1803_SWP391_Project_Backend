@@ -33,7 +33,7 @@ namespace SWPApi.Application.Company.Handlers
 
             await _unitOfWork.CompanyRepository.UpdateCompany(company);
             await _unitOfWork.SaveChangesAsync();
-
+            response = _mapper.Map<UpdateCompanyResponse>(company);
             response.IsSuccess = true;
             return response;
         }
