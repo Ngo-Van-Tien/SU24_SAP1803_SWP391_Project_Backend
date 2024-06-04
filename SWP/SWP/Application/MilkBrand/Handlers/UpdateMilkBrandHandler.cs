@@ -42,7 +42,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
             await _unitOfWork.MilkBrandRepository.UpdateMilkBrand(milkBrand);
             await _unitOfWork.SaveChangesAsync();
-
+            response = _mapper.Map<UpdateMilkBrandResponse>(milkBrand);
             response.IsSuccess = true;
             return response;
 

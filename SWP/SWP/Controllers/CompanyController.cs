@@ -30,7 +30,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpPut]
+        [HttpPut("{Id}")]
         public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] UpdateCompanyCommand command)
         {
             if(command == null) 
@@ -45,7 +45,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpDelete]
+        [HttpDelete("{Id}")]
         public async Task<IActionResult> DeleteCompany(Guid id)
         {
             var result = await _mediator.Send(new DeleteCompanyCommand { Id = id});

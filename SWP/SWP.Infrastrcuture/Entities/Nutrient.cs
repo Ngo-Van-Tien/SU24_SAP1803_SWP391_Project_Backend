@@ -8,9 +8,9 @@ namespace Infrastructure.Entities
 {
     public class Nutrient : BaseEntity
     {
-        public string? NutrientName { get; set; }
+        public string? Name { get; set; }
         public int? In100g { get; set; }
         public int? InCup {  get; set; }    
-        public string unit { get; set; }
+        public string Unit { get; set; }
     }
 }

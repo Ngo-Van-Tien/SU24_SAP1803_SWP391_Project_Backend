@@ -5,5 +5,7 @@ namespace SWPApi.Application.MilkBrand.Commands
 {
     public class GetAllMilkBrandCommand : IRequest<GetAllMilkBrandResponse>
     {
+       
     }
 }
+

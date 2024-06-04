@@ -15,5 +15,7 @@ namespace Infrastructure.Entities
         public string AgeRange { get; set; }
         [ForeignKey("MilkBrandId")]
         public MilkBrand MilkBrand { get; set; }
+        [ForeignKey("ImageId")]
+        public Image Image { get; set; }
     }
 }
