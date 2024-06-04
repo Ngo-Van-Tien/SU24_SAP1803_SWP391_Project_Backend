@@ -33,6 +33,7 @@ namespace SWPApi.Profiles
             CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
             CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
 
+
             //Nutrient
             CreateMap<Nutrient, AddNutrientResponse>();
             CreateMap<Nutrient, UpdateNutrientResponse>();
@@ -40,6 +41,9 @@ namespace SWPApi.Profiles
 
             // Product
             CreateMap<Product, GetProductResponse>();
+            // Product 
+            CreateMap<Product, AddProductResponse>()
+            CreateMap<Product, UpdateProductResponse>();
         }
     }
 }
