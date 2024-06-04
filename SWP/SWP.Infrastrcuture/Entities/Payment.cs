@@ -9,10 +9,6 @@ namespace Infrastructure.Entities
 {
     public class Payment : BaseEntity
     {
-        public string PaymentType { get; set; }
-        public decimal TotalAmount { get; set; }
-        public string? Status { get; set; }
-        [ForeignKey("OrderId")]
-        public Order Order { get; set; }
+        public string Method { get; set; }
     }
 }
