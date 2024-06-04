@@ -42,7 +42,7 @@ namespace SWPApi.Profiles
             // Product
             CreateMap<Product, GetProductResponse>();
             // Product 
-            CreateMap<Product, AddProductResponse>()
+            CreateMap<Product, AddProductResponse>();
             CreateMap<Product, UpdateProductResponse>();
         }
     }
