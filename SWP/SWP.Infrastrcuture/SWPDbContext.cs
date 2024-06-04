@@ -16,7 +16,7 @@ namespace SWP.Infrastrcuture
         {
             builder.Entity<MilkBrand>().Navigation(c => c.Company).AutoInclude();
             base.OnModelCreating(builder);
-            builder.Entity<Company>()
+            builder.Entity<Image>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
             builder.Entity<MilkBrand>()
@@ -52,7 +52,7 @@ namespace SWP.Infrastrcuture
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
-        public DbSet<Company> Companies { get; set; }
+        public DbSet<Image> Companies { get; set; }
         public DbSet<MilkBrand> MilkBrands { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductItem> ProductItems { get; set; }
@@ -63,6 +63,7 @@ namespace SWP.Infrastrcuture
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

@@ -23,7 +23,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
             var response = new UpdateMilkFunctionResponse();
             if(milkFunction != null)
             {
-                milkFunction.MilkFunctionName = request.MilkFunctionName;
+                milkFunction.Name = request.MilkFunctionName;
                 await _unitOfOfWork.MilkFunctionRepository.UpdateMilkFunction(milkFunction);
                 await _unitOfOfWork.SaveChangesAsync();
                 response = _mapper.Map<UpdateMilkFunctionResponse>(milkFunction);

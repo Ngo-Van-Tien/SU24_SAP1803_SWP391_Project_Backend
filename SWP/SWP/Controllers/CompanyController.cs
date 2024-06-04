@@ -19,7 +19,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("{Id}")]
+        [HttpPost]
         public async Task<IActionResult> AddCompany([FromBody] AddCompanyCommand command)
         {
             if(command == null)

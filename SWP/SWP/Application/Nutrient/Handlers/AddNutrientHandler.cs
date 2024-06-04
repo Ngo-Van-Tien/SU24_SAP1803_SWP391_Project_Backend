@@ -20,10 +20,10 @@ namespace SWPApi.Application.Nutrient.Handlers
         {
             var nutrient = new Infrastructure.Entities.Nutrient 
             {
-                NutrientName = request.NutrientName,
+                Name = request.NutrientName,
                 In100g = request.In100g,
                 InCup = request.InCup,
-                unit = request.unit
+                Unit = request.unit
             };
             var response = new AddNutrientResponse();
             if(nutrient != null)

@@ -26,10 +26,10 @@ namespace SWPApi.Application.Nutrient.Handlers
                 return response;
             }
 
-            nutrient.NutrientName = request.NutrientName;
+            nutrient.Name = request.NutrientName;
             nutrient.In100g = request.In100g;
             nutrient.InCup = request.InCup;
-            nutrient.unit = request.unit;
+            nutrient.Unit = request.unit;
 
             await _unitOfWork.NutrientRepository.UpdateNutrient(nutrient);
             await _unitOfWork.SaveChangesAsync();
