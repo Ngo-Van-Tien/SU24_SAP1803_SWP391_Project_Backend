@@ -17,6 +17,7 @@ namespace Infrastructure
         IProductItemRepository ProductItemRepository { get; }
         IOrderRepository OrderRepository { get; }
         IPaymentRepository PaymentRepository { get; }
+        IImageRepository ImageRepository { get; }
         Task SaveChangesAsync();
     }
 }

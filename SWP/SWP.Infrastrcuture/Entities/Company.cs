@@ -10,6 +10,6 @@ namespace Infrastructure.Entities
     {
         public string Name { get; set; }
         public string? Description { get; set; }
-        public string Nation { get; set; }
+        public string Nation { get; set; } 
     }
 }

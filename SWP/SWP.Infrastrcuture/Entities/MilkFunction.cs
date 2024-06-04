@@ -9,6 +9,6 @@ namespace Infrastructure.Entities
 {
     public class MilkFunction : BaseEntity
     {
-        public string MilkFunctionName {get; set;}
+        public string Name {get; set;}
     }
 }
