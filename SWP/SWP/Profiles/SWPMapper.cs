@@ -3,6 +3,7 @@ using Infrastructure.Entities;
 using SWPApi.Application.Company.Responses;
 using SWPApi.Application.MilkBrand.Responses;
 using SWPApi.Application.MilkFunction.Responses;
+using SWPApi.Application.Nutrient.Responses;
 using SWPApi.Application.Product.Responses;
 using System;
 using System.Collections.Generic;
@@ -22,19 +23,26 @@ namespace SWPApi.Profiles
             CreateMap<Company, DeleteCompanyResponse>();
             
             // Milk Brand
-            CreateMap<Product, GetProductResponse>();
-            CreateMap<MilkBrand, AddMilkBrandResponse>()
-                .ForMember(dest => dest.CompanyId, opt => opt.MapFrom(src => src.Company.Id));
+            CreateMap<MilkBrand, DeleteMilkBrandResponse>();
+            CreateMap<MilkBrand, AddMilkBrandResponse>();
             CreateMap<MilkBrand, UpdateMilkBrandResponse>();
+            CreateMap<MilkBrand, GetAllMilkBrandResponse>();
 
             // Milk Function
             CreateMap<MilkFunction, AddMilkFunctionResponse>();
             CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
             CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
 
+
+            //Nutrient
+            CreateMap<Nutrient, AddNutrientResponse>();
+            CreateMap<Nutrient, UpdateNutrientResponse>();
+            CreateMap<Nutrient, DeleteNutrientResponse>();
+
+            // Product
+            CreateMap<Product, GetProductResponse>();
             // Product 
-            CreateMap<Product, AddProductResponse>()
-                .ForMember(dest => dest.MilkBrandId, opt => opt.MapFrom(src => src.MilkBrand.Id));
+            CreateMap<Product, AddProductResponse>();
             CreateMap<Product, UpdateProductResponse>();
         }
     }

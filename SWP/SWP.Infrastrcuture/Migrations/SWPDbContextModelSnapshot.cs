@@ -53,7 +53,37 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies", (string)null);
+                    b.ToTable("Company");
+                });
+
+            modelBuilder.Entity("Infrastructure.Entities.Image", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<byte[]>("Content")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Image");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrand", b =>
@@ -88,7 +118,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MilkBrands", (string)null);
+                    b.ToTable("MilkBrands");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrandFunction", b =>
@@ -121,7 +151,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MilkFunctionId");
 
-                    b.ToTable("MilkBrandFunctions", (string)null);
+                    b.ToTable("MilkBrandFunctions");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkFunction", b =>
@@ -136,7 +166,7 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("MilkFunctionName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -148,7 +178,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MilkFunctions", (string)null);
+                    b.ToTable("MilkFunctions");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Nutrient", b =>
@@ -169,7 +199,11 @@ namespace Infrastructure.Migrations
                     b.Property<int?>("InCup")
                         .HasColumnType("int");
 
-                    b.Property<string>("NutrientName")
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedBy")
@@ -178,13 +212,9 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("unit")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Nutrients", (string)null);
+                    b.ToTable("Nutrients");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Order", b =>
@@ -230,7 +260,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.OrderDetail", b =>
@@ -269,7 +299,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductItemId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Payment", b =>
@@ -307,7 +337,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("Payments", (string)null);
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>
@@ -329,6 +359,9 @@ namespace Infrastructure.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("ImageId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("MilkBrandId")
                         .HasColumnType("uniqueidentifier");
 
@@ -347,9 +380,11 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ImageId");
+
                     b.HasIndex("MilkBrandId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductItem", b =>
@@ -386,7 +421,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductItems", (string)null);
+                    b.ToTable("ProductItems");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductNutrient", b =>
@@ -419,7 +454,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductNutrients", (string)null);
+                    b.ToTable("ProductNutrients");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -691,11 +726,19 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>
                 {
+                    b.HasOne("Infrastructure.Entities.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Infrastructure.Entities.MilkBrand", "MilkBrand")
                         .WithMany()
                         .HasForeignKey("MilkBrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Image");
 
                     b.Navigation("MilkBrand");
                 });

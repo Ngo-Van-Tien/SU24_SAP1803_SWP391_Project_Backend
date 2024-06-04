@@ -28,6 +28,10 @@ namespace SWPApi.Application.MilkBrand.Handlers
             {
                 milkBrand.Company = await _unitOfWork.CompanyRepository.GetById(request.CompanyId.Value);
             }
+            else
+            {
+                milkBrand.Company = null;
+            }
             if(milkBrand != null)
             {
                 await _unitOfWork.MilkBrandRepository.AddMilkBrand(milkBrand);

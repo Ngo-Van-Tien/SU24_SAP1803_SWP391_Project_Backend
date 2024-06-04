@@ -20,6 +20,8 @@ namespace Infrastructure
         public IProductItemRepository ProductItemRepository { get; private set; }
         public IOrderRepository OrderRepository { get; private set; }
         public IPaymentRepository PaymentRepository { get; private set; }
+        public IImageRepository ImageRepository {  get; private set; }
+
         public UnitOfWork(SWPDbContext context)
         {
             _context = context;
@@ -31,6 +33,7 @@ namespace Infrastructure
             ProductItemRepository = new ProductItemRepository(_context);
             OrderRepository = new OrderRepository(_context);
             PaymentRepository = new PaymentRepository(_context);
+            ImageRepository = new ImageRepository(_context);
 
         }
 

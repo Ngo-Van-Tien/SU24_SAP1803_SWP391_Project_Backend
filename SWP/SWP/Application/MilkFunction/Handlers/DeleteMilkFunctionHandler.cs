@@ -22,7 +22,8 @@ namespace SWPApi.Application.MilkFunction.Handlers
             if(milkFunction != null)
             {
                 await _unitOfWork.MilkFunctionRepository.DeleteMilkFunction(milkFunction);
-                await _unitOfWork.SaveChangesAsync(); 
+                await _unitOfWork.SaveChangesAsync();
+                response = _mapper.Map<DeleteMilkFunctionResponse>(milkFunction);
                 response.IsSuccess = true;
                 return response;
             }

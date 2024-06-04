@@ -6,7 +6,7 @@ namespace SWPApi.Application.MilkBrand.Responses
 {
     public class GetAllMilkBrandResponse : BaseResponse
     {
-        public List<Infrastructure.Entities.MilkBrand> MilkBrands { get; set; }
+        public List<Infrastructure.Entities.MilkBrand> MilkBrands { get; set;}
 
         public GetAllMilkBrandResponse(List<Infrastructure.Entities.MilkBrand> milkBrands)
         {
