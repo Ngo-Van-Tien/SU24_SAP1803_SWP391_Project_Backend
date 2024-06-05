@@ -12,8 +12,8 @@ using SWP.Infrastrcuture;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(SWPDbContext))]
-    [Migration("20240604161516_UpdatePayment")]
-    partial class UpdatePayment
+    [Migration("20240605071042_AddTableDB")]
+    partial class AddTableDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,7 +56,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Company");
+                    b.ToTable("Companies");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Image", b =>
@@ -86,7 +86,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrand", b =>
@@ -321,9 +321,6 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -331,8 +328,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("Payments");
                 });
@@ -708,17 +703,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Order");
 
                     b.Navigation("ProductItem");
-                });
-
-            modelBuilder.Entity("Infrastructure.Entities.Payment", b =>
-                {
-                    b.HasOne("Infrastructure.Entities.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>

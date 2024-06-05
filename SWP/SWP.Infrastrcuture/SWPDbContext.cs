@@ -15,8 +15,9 @@ namespace SWP.Infrastrcuture
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<MilkBrand>().Navigation(c => c.Company).AutoInclude();
+
             base.OnModelCreating(builder);
-            builder.Entity<Image>()
+            builder.Entity<Company>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
             builder.Entity<MilkBrand>()
@@ -49,10 +50,13 @@ namespace SWP.Infrastrcuture
             builder.Entity<Payment>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
+            builder.Entity<Image>()
+                .Property(e => e.Id)
+                .ValueGeneratedOnAdd();
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
-        public DbSet<Image> Companies { get; set; }
+        public DbSet<Company> Companies { get; set; }
         public DbSet<MilkBrand> MilkBrands { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductItem> ProductItems { get; set; }
