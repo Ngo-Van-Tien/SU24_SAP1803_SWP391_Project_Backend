@@ -53,7 +53,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Company", (string)null);
+                    b.ToTable("Companies");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Image", b =>
@@ -83,7 +83,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image", (string)null);
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrand", b =>
@@ -118,7 +118,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MilkBrands", (string)null);
+                    b.ToTable("MilkBrands");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkBrandFunction", b =>
@@ -151,7 +151,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MilkFunctionId");
 
-                    b.ToTable("MilkBrandFunctions", (string)null);
+                    b.ToTable("MilkBrandFunctions");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.MilkFunction", b =>
@@ -178,7 +178,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MilkFunctions", (string)null);
+                    b.ToTable("MilkFunctions");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Nutrient", b =>
@@ -214,7 +214,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nutrients", (string)null);
+                    b.ToTable("Nutrients");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Order", b =>
@@ -260,7 +260,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.OrderDetail", b =>
@@ -299,7 +299,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductItemId");
 
-                    b.ToTable("OrderDetails", (string)null);
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Payment", b =>
@@ -318,9 +318,6 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("OrderId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -329,9 +326,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("Payments", (string)null);
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>
@@ -378,7 +373,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("MilkBrandId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductItem", b =>
@@ -415,7 +410,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductItems", (string)null);
+                    b.ToTable("ProductItems");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.ProductNutrient", b =>
@@ -448,7 +443,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductNutrients", (string)null);
+                    b.ToTable("ProductNutrients");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -705,17 +700,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Order");
 
                     b.Navigation("ProductItem");
-                });
-
-            modelBuilder.Entity("Infrastructure.Entities.Payment", b =>
-                {
-                    b.HasOne("Infrastructure.Entities.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.Product", b =>
