@@ -1,4 +1,5 @@
-﻿using Infrastructure.IRepositories;
+﻿using Infrastructure.Entities;
+using Infrastructure.IRepositories;
 using SWP.Infrastrcuture;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class ImageRepository : GenericRepository<Image>, IImageRepository
+    public class ImageRepository : GenericRepository<ImageFile>, IImageRepository
     {
         public ImageRepository(SWPDbContext context) : base(context)
         {
-        }
-
-        public async Task AddImage(Image image)
-        {
-            await _context.Set<Image>().AddAsync(image);
-            await _context.SaveChangesAsync();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Infrastructure;
+using Infrastructure.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using SWPApi.Application.Product.Commands;
 using SWPApi.Application.Product.Responses;
 
@@ -19,25 +21,44 @@ namespace SWPApi.Application.Product.Handlers
 
         public async Task<AddProductResponse> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
+            ImageFile image = null;
+            var response = new AddProductResponse();
+            if (request.Image != null && request.Image.Length > 0)
+            {
+
+                using (var stream = new MemoryStream())
+                {
+                    await request.Image.CopyToAsync(stream);
+                    image = new ImageFile() { Content = stream.ToArray() };
+                    _unitOfWork.ImageRepository.Add(image);
+                }
+            }
             //create Entity
             var product = new Infrastructure.Entities.Product()
             {
                 Name = request.Name,
                 Description = request.Description,
                 Price = request.Price ?? 0,
-                AgeRange = request.AgeRange
+                AgeRange = request.AgeRange,
+                Image = image
             };
+
             if (request.MilkBrandId.HasValue)
             {
                 product.MilkBrand = await _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
             }
-            var response = new AddProductResponse();
+
+            if (product.MilkBrand == null) 
+            {
+                response.ErrorMessage = "The MilkBrand isn't found";
+                return response;
+            }
+
             if (product != null)
             {
-                await _unitOfWork.ProductRepository.AddProduct(product);
+                _unitOfWork.ProductRepository.Add(product);
                 await _unitOfWork.SaveChangesAsync();
 
-                response = _mapper.Map<AddProductResponse>(response);
                 response.IsSuccess = true;
                 return response;
             }

@@ -16,6 +16,6 @@ namespace Infrastructure.Entities
         [ForeignKey("MilkBrandId")]
         public MilkBrand MilkBrand { get; set; }
         [ForeignKey("ImageId")]
-        public Image Image { get; set; }
+        public ImageFile? Image { get; set; }
     }
 }

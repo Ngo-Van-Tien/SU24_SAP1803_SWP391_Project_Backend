@@ -32,7 +32,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpPut("{Id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateMilkFunction(Guid Id, [FromBody] UpdateMilkFunctionCommand command)
         {
             if(command == null)
@@ -51,7 +51,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpDelete("{Id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeletetMilkFunction(Guid Id)
         {
             var result = await _mediator.Send(new DeleteMilkFunctionCommand { Id = Id});

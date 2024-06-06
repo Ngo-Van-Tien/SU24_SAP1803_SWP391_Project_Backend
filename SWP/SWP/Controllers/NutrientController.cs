@@ -33,7 +33,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPut("{Id}")]
+        [HttpPut]
         public async Task<IActionResult> UpdateNutrient(Guid id, [FromBody] UpdateNutrientCommand command)
         {
             if(command == null)
@@ -53,7 +53,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpDelete("{Id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteNutrient(Guid id)
         {
             var result = await _mediator.Send( new  DeleteNutrientCommand() {  Id = id });

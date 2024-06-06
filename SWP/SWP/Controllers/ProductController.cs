@@ -23,10 +23,11 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(new GetProductCommand() { Id = id });
             return Ok(result);
         }
+
         [AllowAnonymous]
         [HttpPost("AddProduct")]
 
-        public async Task<IActionResult> AddProduct([FromBody] AddProductCommand command)
+        public async Task<IActionResult> AddProduct([FromForm] AddProductCommand command)
         {
             if (command == null)
             {
@@ -43,19 +44,14 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPut("{Id}")]
-
-
-        public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] UpdateProductCommand command)
+        [HttpPost("UpdateProduct")]
+        public async Task<IActionResult> UpdateProduct([FromForm] UpdateProductCommand command)
         {
             if (command == null)
             {
                 return BadRequest();
             }
-            if (id != command.Id)
-            {
-                return BadRequest("ID in the path does not match ID in the body");
-            }
+
             var result = await _mediator.Send(command);
             if (result == null)
             {

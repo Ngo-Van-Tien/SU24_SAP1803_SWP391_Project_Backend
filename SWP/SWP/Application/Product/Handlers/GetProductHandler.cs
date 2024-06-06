@@ -23,6 +23,10 @@ namespace SWPApi.Application.Product.Handlers
             if (product != null)
             {
                 response = _mapper.Map<GetProductResponse>(product);
+                if(product.Image != null)
+                {
+                   response.ImageBase64 = Convert.ToBase64String(product.Image.Content, 0, product.Image.Content.Length);
+                }
                 response.IsSuccess = true;
                 return response;
             }
