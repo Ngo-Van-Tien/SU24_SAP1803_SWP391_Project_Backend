@@ -15,6 +15,7 @@ namespace SWP.Infrastrcuture
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<MilkBrand>().Navigation(c => c.Company).AutoInclude();
+            builder.Entity<Product>().Navigation(c => c.Image).AutoInclude();
 
             base.OnModelCreating(builder);
             builder.Entity<Company>()
@@ -50,7 +51,7 @@ namespace SWP.Infrastrcuture
             builder.Entity<Payment>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
-            builder.Entity<Image>()
+            builder.Entity<ImageFile>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
         }
@@ -67,7 +68,7 @@ namespace SWP.Infrastrcuture
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<Image> Images { get; set; }
+        public DbSet<ImageFile> ImageFiles { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

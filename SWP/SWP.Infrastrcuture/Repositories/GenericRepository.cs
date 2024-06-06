@@ -1,4 +1,5 @@
 ﻿using Infrastructure.IRepositories;
+using PagedList;
 using SWP.Infrastrcuture;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,16 @@ namespace Infrastructure.Repositories
         public void RemoveRange(IEnumerable<T> entities)
         {
             _context.Set<T>().RemoveRange(entities);
+        }
+
+        public IPagedList<T> Find(Expression<Func<T, bool>> predicate, int pageNumber, int pageSize)
+        {
+            return _context.Set<T>().Where(predicate).ToPagedList<T>(pageNumber, pageSize);
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
         }
     }
 }

@@ -10,5 +10,6 @@ namespace SWPApi.Application.Product.Responses
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public string AgeRange { get; set; }
+        public string ImageBase64 { get; set; }
     }
 }
