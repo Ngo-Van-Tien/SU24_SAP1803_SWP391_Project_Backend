@@ -12,15 +12,24 @@ namespace SWPApi.Application.Product.Handlers
     {
         IUnitOfWork _unitOfWork;
         IMapper _mapper;
+
+        public UpdateProductHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        {
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+
         public async Task<UpdateProductResponse> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = await _unitOfWork.ProductRepository.GetById(request.Id);
+            var product =  _unitOfWork.ProductRepository.GetById(request.Id);
             var response = new UpdateProductResponse();
             if(product == null)
             {
-                response.ErrorMessage = "Milk brand is not found";
+                response.ErrorMessage = "Product is not found";
                 return response;
             }
+
+            var image = product.Image;
             var milkBrand = await _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
             if (milkBrand == null)
             {
@@ -31,12 +40,24 @@ namespace SWPApi.Application.Product.Handlers
             {
                 milkBrand = null;
             }
+
+            if (request.Image != null && request.Image.Length > 0)
+            {
+
+                using (var stream = new MemoryStream())
+                {
+                    await request.Image.CopyToAsync(stream);
+                    image = new ImageFile() { Content = stream.ToArray() };
+                    _unitOfWork.ImageRepository.Add(image);
+                }
+            }
+            product.Image = image;
             product.Name = request.Name;
             product.Description = request.Description;
             product.AgeRange = request.AgeRange;
             product.Price = (decimal)request.Price;
 
-            await _unitOfWork.ProductRepository.UpdateProduct(product);
+            _unitOfWork.ProductRepository.Update(product);
             await _unitOfWork.SaveChangesAsync();
 
             response.IsSuccess = true;
