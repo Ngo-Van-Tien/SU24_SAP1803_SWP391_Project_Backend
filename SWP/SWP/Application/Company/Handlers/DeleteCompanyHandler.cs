@@ -21,7 +21,7 @@ namespace SWPApi.Application.Company.Handlers
             var response = new DeleteCompanyResponse();
             try
             {
-                var company = await _unitOfWork.CompanyRepository.GetById(request.Id);
+                var company = _unitOfWork.CompanyRepository.GetById(request.Id);
 
                 if (company == null)
                 {
@@ -30,7 +30,7 @@ namespace SWPApi.Application.Company.Handlers
                     return response;
                 }
 
-                await _unitOfWork.CompanyRepository.DeleteCompany(company);
+                _unitOfWork.CompanyRepository.Remove(company);
                 await _unitOfWork.SaveChangesAsync();
 
                 response = _mapper.Map<DeleteCompanyResponse>(company);

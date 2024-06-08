@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.IRepositories
 {
-    public interface IMilkFunctionRepository
+    public interface IMilkFunctionRepository : IGenericRepository<MilkFunction>
     {
-        Task AddMilkFunciton(MilkFunction milkFunction);
-        Task<MilkFunction> GetById(Guid id);
-        Task<IEnumerable<MilkFunction>> GetAllMilkFunction();
-        Task UpdateMilkFunction(MilkFunction milkFunction);
-        Task DeleteMilkFunction(MilkFunction milkFunction);
     }
 }

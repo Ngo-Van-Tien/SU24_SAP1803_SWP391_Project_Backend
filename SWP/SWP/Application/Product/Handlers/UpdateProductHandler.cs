@@ -30,7 +30,7 @@ namespace SWPApi.Application.Product.Handlers
             }
 
             var image = product.Image;
-            var milkBrand = await _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
+            var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
             if (milkBrand == null)
             {
                 response.ErrorMessage = "milkBrand is not existing";

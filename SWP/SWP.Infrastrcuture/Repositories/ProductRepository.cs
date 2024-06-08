@@ -1,5 +1,6 @@
 ﻿using Infrastructure.Entities;
 using Infrastructure.IRepositories;
+using PagedList;
 using SWP.Infrastrcuture;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,7 @@ namespace Infrastructure.Repositories
         {
 
         }
+
+        
     }
 }

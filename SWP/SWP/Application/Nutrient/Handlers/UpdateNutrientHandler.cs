@@ -18,24 +18,35 @@ namespace SWPApi.Application.Nutrient.Handlers
 
         public async Task<UpdateNutrientResponse> Handle(UpdateNutrientCommand request, CancellationToken cancellationToken)
         {
-            var nutrient = await _unitOfWork.NutrientRepository.GetById(request.Id);
             var response = new UpdateNutrientResponse();
-            if (nutrient == null)
+            try
             {
-                response.ErrorMessage = "Nutient is not found";
-                return response;
+                var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
+                
+                if (nutrient == null)
+                {
+                    response.ErrorMessage = "Nutient is not found";
+                    return response;
+                }
+
+                nutrient.Name = request.Name;
+                nutrient.In100g = request.In100g;
+                nutrient.InCup = request.InCup;
+                nutrient.Unit = request.unit;
+
+                if(nutrient != null)
+                {
+                    _unitOfWork.NutrientRepository.Update(nutrient);
+                    _unitOfWork.SaveChangesAsync();
+                    response = _mapper.Map<UpdateNutrientResponse>(nutrient);
+                }
+
+                response.IsSuccess = true;
             }
-
-            nutrient.Name = request.NutrientName;
-            nutrient.In100g = request.In100g;
-            nutrient.InCup = request.InCup;
-            nutrient.Unit = request.unit;
-
-            await _unitOfWork.NutrientRepository.UpdateNutrient(nutrient);
-            await _unitOfWork.SaveChangesAsync();
-            response = _mapper.Map<UpdateNutrientResponse>(nutrient);
-
-            response.IsSuccess = true;
+            catch (Exception ex)
+            {
+                response.ErrorMessage = "Error when update nutrient " + ex.Message;
+            }
             return response;
         }
     }
