@@ -30,7 +30,7 @@ namespace SWPApi.Application.Company.Handlers
                     Nation = request.Nation,
                 };
 
-                await _unitOfWork.CompanyRepository.AddCompany(company);
+                _unitOfWork.CompanyRepository.Add(company);
                 await _unitOfWork.SaveChangesAsync();
                 response = _mapper.Map<AddCompanyResponse>(company);
 

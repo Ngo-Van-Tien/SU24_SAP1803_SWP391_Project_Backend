@@ -33,15 +33,11 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPut]
-        public async Task<IActionResult> UpdateMilkFunction(Guid Id, [FromBody] UpdateMilkFunctionCommand command)
+        public async Task<IActionResult> UpdateMilkFunction( [FromBody] UpdateMilkFunctionCommand command)
         {
             if(command == null)
             {
                 return BadRequest();
-            }
-            if(Id != command.Id)
-            {
-                return BadRequest("ID in the path does not match ID in the body");
             }
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)

@@ -19,34 +19,40 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
         public async Task<UpdateMilkBrandResponse> Handle(UpdateMilkBrandCommand request, CancellationToken cancellationToken)
         {
-            var milkBrand = await _unitOfWork.MilkBrandRepository.GetById(request.Id);
             var response = new UpdateMilkBrandResponse();
-            if(milkBrand == null)
+            try
             {
-                response.ErrorMessage = "Milk brand is not found";
+                var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
+                
+                if (milkBrand == null)
+                {
+                    response.ErrorMessage = "Milk brand is not found";
+                    return response;
+                }
+
+                var company = _unitOfWork.CompanyRepository.GetById(request.CompanyId.Value);
+                if (company == null)
+                {
+                    response.ErrorMessage = "Company is not existing";
+                    return response;
+                }
+
+                milkBrand.Name = request.Name;
+                milkBrand.Description = request.Description;
+                milkBrand.Company = company;
+
+                _unitOfWork.MilkBrandRepository.Update(milkBrand);
+                await _unitOfWork.SaveChangesAsync();
+                response = _mapper.Map<UpdateMilkBrandResponse>(milkBrand);
+                response.IsSuccess = true;
                 return response;
             }
-
-            var company = await _unitOfWork.CompanyRepository.GetById(request.CompanyId.Value);
-            if(company == null)
+            catch  (Exception ex)
             {
-                response.ErrorMessage = "Company is not existing";
-                return response;
-            }else if (request.CompanyId.Value.Equals("")){
-                company = null;
+                response.IsSuccess = false;
+                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
             }
-
-            milkBrand.Name = request.Name;
-            milkBrand.Description = request.Description;
-            milkBrand.Company = company;
-
-            await _unitOfWork.MilkBrandRepository.UpdateMilkBrand(milkBrand);
-            await _unitOfWork.SaveChangesAsync();
-            response = _mapper.Map<UpdateMilkBrandResponse>(milkBrand);
-            response.IsSuccess = true;
             return response;
-
-
         }
     }
 }

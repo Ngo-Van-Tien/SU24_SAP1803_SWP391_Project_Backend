@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure;
 using Infrastructure;
 using Infrastructure.Entities;
 using MediatR;
@@ -20,16 +21,23 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
         public async Task<GetAllMilkBrandResponse> Handle(GetAllMilkBrandCommand request, CancellationToken cancellationToken)
         {
-            var milkBrands = await _unitOfWork.MilkBrandRepository.GetAllMilkBrands();
-            var response = new GetAllMilkBrandResponse(milkBrands.ToList());
-            response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
-            if (!milkBrands.ToList().Any()) 
+            var response = new GetAllMilkBrandResponse();
+            try
             {
-                response.ErrorMessage = "Don't have any Milk Brand";
-                return response;
+                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll();
+                response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
+                if (!milkBrands.Any())
+                {
+                    response.ErrorMessage = "Don't have any Milk Brand";
+                    return response;
+                }
+                response.IsSuccess = true;
             }
-            response.IsSuccess = true;
-            return  response;
+            catch (Exception ex)
+            {
+                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
+            }
+            return response;
         }
     }
 }

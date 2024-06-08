@@ -20,7 +20,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> AddCompany([FromBody] AddCompanyCommand command)
+        public async Task<IActionResult> AddCompany([FromForm] AddCompanyCommand command)
         {
             if(command == null)
             {
@@ -30,14 +30,13 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCompany(Guid id, [FromBody] UpdateCompanyCommand command)
+        [HttpPut("update company")]
+        public async Task<IActionResult> UpdateCompany([FromForm] UpdateCompanyCommand command)
         {
             if (command == null) 
             {
                 return BadRequest();
             }
-            command.Id = id;
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
@@ -58,11 +57,15 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("GetAll")]
+        [HttpGet("get all")]
         public async Task<IActionResult> GetAllCompany()
         {
             var result = await _mediator.Send(new GetAllCompanyCommand());
-            return Ok(result.Companies);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result);
         }
     }
 }

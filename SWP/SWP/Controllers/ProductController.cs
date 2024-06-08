@@ -1,13 +1,15 @@
-﻿using MediatR;
+﻿using Infrastructure.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.Product.Commands;
+using System.Drawing.Printing;
 
 namespace SWPApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     public class ProductController : ControllerBase
     {
         private readonly ISender _mediator;
@@ -25,7 +27,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("AddProduct")]
+        [HttpPost]
 
         public async Task<IActionResult> AddProduct([FromForm] AddProductCommand command)
         {
@@ -44,7 +46,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("UpdateProduct")]
+        [HttpPost]
         public async Task<IActionResult> UpdateProduct([FromForm] UpdateProductCommand command)
         {
             if (command == null)
@@ -61,6 +63,21 @@ namespace SWPApi.Controllers
             {
                 return BadRequest(result.ErrorMessage);
             }
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> GetProductByName(GetProductByNameCommand command)
+        {
+            
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+
             return Ok(result);
         }
 

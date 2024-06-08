@@ -16,32 +16,5 @@ namespace Infrastructure.Repositories
         {
         }
 
-        public async Task AddMilkFunciton(MilkFunction milkFunction)
-        {
-            await _context.Set<MilkFunction>().AddAsync(milkFunction);
-            await _context.SaveChangesAsync();  
-        }
-
-        public async Task DeleteMilkFunction(MilkFunction milkFunction)
-        {
-            _context.Set<MilkFunction>().Remove(milkFunction);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<IEnumerable<MilkFunction>> GetAllMilkFunction()
-        {
-            return await _context.Set<MilkFunction>().ToListAsync();
-        }
-
-        public async Task UpdateMilkFunction(MilkFunction milkFunction)
-        {
-            _context.Set<MilkFunction>().Update(milkFunction);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<MilkFunction> GetById(Guid id)
-        {
-             return await _context.Set<MilkFunction>().FindAsync(id);
-        }
     }
 }

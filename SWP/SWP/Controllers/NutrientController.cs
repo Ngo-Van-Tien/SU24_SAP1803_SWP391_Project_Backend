@@ -34,16 +34,12 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPut]
-        public async Task<IActionResult> UpdateNutrient(Guid id, [FromBody] UpdateNutrientCommand command)
+        public async Task<IActionResult> UpdateNutrient( [FromBody] UpdateNutrientCommand command)
         {
             if(command == null)
             {
                 return BadRequest();
-            }
-            if(id != command.Id)
-            {
-                return BadRequest("Id in the path does not match Id in the body");
-            }    
+            }   
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {

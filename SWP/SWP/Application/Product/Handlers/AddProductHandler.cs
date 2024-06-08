@@ -45,7 +45,7 @@ namespace SWPApi.Application.Product.Handlers
 
             if (request.MilkBrandId.HasValue)
             {
-                product.MilkBrand = await _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
+                product.MilkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
             }
 
             if (product.MilkBrand == null) 

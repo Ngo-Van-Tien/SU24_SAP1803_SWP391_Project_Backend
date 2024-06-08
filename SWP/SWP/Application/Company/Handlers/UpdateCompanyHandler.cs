@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.Internal.Mappers;
 using Infrastructure;
 using MediatR;
 using SWPApi.Application.Company.Commands;
@@ -22,7 +23,7 @@ namespace SWPApi.Application.Company.Handlers
             var response = new UpdateCompanyResponse();
             try
             {
-                var company = await _unitOfWork.CompanyRepository.GetById(request.Id);
+                var company = _unitOfWork.CompanyRepository.GetById(request.Id);
 
                 if (company == null)
                 {
@@ -35,7 +36,7 @@ namespace SWPApi.Application.Company.Handlers
                 company.Description = request.Description;
                 company.Nation = request.Nation;
 
-                await _unitOfWork.CompanyRepository.UpdateCompany(company);
+                _unitOfWork.CompanyRepository.Update(company);
                 await _unitOfWork.SaveChangesAsync();
 
                 response = _mapper.Map<UpdateCompanyResponse>(company);

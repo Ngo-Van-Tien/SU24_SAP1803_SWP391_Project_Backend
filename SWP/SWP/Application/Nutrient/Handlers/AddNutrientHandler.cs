@@ -18,23 +18,30 @@ namespace SWPApi.Application.Nutrient.Handlers
         }
         public async Task<AddNutrientResponse> Handle(AddNutrientCommand request, CancellationToken cancellationToken)
         {
-            var nutrient = new Infrastructure.Entities.Nutrient 
-            {
-                Name = request.NutrientName,
-                In100g = request.In100g,
-                InCup = request.InCup,
-                Unit = request.unit
-            };
             var response = new AddNutrientResponse();
-            if(nutrient != null)
+            try
             {
-                await _unitOfWork.NutrientRepository.AddNutrient(nutrient);
-                await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<AddNutrientResponse>(nutrient);
-                response.IsSuccess = true;
-                return response;
+                var nutrient = new Infrastructure.Entities.Nutrient
+                {
+                    Name = request.Name,
+                    In100g = request.In100g,
+                    InCup = request.InCup,
+                    Unit = request.unit
+                };
+                
+                if (nutrient != null)
+                {
+                    _unitOfWork.NutrientRepository.Add(nutrient);
+                    _unitOfWork.SaveChangesAsync();
+                    response = _mapper.Map<AddNutrientResponse>(nutrient);
+                    response.IsSuccess = true;
+                    
+                }
             }
-            response.ErrorMessage = "Failed to create new nutrient";
+            catch (Exception ex)
+            {
+                response.ErrorMessage = "Error when add new Nutrient " + ex.Message;
+            }
             return response;
         }
     }
