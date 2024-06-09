@@ -38,7 +38,6 @@ namespace SWPApi.Application.Product.Handlers
             {
                 Name = request.Name,
                 Description = request.Description,
-                Price = request.Price ?? 0,
                 AgeRange = request.AgeRange,
                 Image = image
             };
