@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SWPApi.Application.ProductItem.Commands;
 
 namespace SWPApi.Controllers
 {
@@ -16,30 +17,51 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet] Task<IActionResult> GetProductItemByID(Guid id)
+        [HttpPost]
+        public async Task<IActionResult> add([FromForm] AddCommand command)
         {
-            return null;
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        Task<IActionResult> UpdateProductItem(Guid id)
+        [HttpPut]
+        public async Task<IActionResult> update([FromForm] UpdateCommand command)
         {
-            return null;
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        Task<IActionResult> DeleteProductItem(Guid id)
+        [HttpDelete]
+        public async Task<IActionResult> delete([FromForm] DeleteCommand command)
         {
-            return null;
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        Task<IActionResult> GetAllProductItm()
-        {
-            return null;
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
     }
 }
