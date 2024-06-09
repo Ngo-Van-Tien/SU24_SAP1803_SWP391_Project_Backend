@@ -3,7 +3,7 @@ using SWPApi.Application.Product.Responses;
 
 namespace SWPApi.Application.Product.Commands
 {
-    public class GetProductByNameCommand : IRequest<GetProductByNameResponse>
+    public class GetByNameCommand : IRequest<GetByNameResponse>
     {
         public string Name { get; set; }
         public int PageNumber { get; set; }

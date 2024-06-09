@@ -14,7 +14,6 @@ namespace Infrastructure.Repositories
     {
         public ProductRepository(SWPDbContext context) : base(context)
         {
-
         }
 
         

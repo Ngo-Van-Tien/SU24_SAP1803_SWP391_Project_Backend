@@ -15,7 +15,6 @@ namespace Infrastructure.Repositories
         public NutrientRepository(SWPDbContext context) : base(context)
         {
         }
-
         
     }
 }
