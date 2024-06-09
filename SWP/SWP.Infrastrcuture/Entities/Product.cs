@@ -11,7 +11,6 @@ namespace Infrastructure.Entities
     {
         public string Name { get; set; }
         public string? Description { get; set; }
-        public decimal Price { get; set; }
         public string AgeRange { get; set; }
         [ForeignKey("MilkBrandId")]
         public MilkBrand MilkBrand { get; set; }

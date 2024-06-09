@@ -55,7 +55,6 @@ namespace SWPApi.Application.Product.Handlers
             product.Name = request.Name;
             product.Description = request.Description;
             product.AgeRange = request.AgeRange;
-            product.Price = (decimal)request.Price;
 
             _unitOfWork.ProductRepository.Update(product);
             await _unitOfWork.SaveChangesAsync();

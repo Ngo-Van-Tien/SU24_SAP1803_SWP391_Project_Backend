@@ -45,7 +45,6 @@ namespace SWPApi.Profiles
             CreateMap<Product, AddProductResponse>();
             CreateMap<Product, UpdateProductResponse>();
             CreateMap<Product, GetByNameResponse>();
-            CreateMap<Product, GetByPriceResponse>();
             CreateMap<Product, GetByMilkBrandResponse>();
         }
     }
