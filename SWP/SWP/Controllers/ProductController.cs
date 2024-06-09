@@ -20,7 +20,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<IActionResult> GetProduct(Guid id)
+        public async Task<IActionResult> getproduct(Guid id)
         {
             var result = await _mediator.Send(new GetProductCommand() { Id = id });
             return Ok(result);
@@ -28,8 +28,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-
-        public async Task<IActionResult> AddProduct([FromForm] AddProductCommand command)
+        public async Task<IActionResult> addproduct([FromForm] AddProductCommand command)
         {
             if (command == null)
             {
@@ -47,7 +46,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> UpdateProduct([FromForm] UpdateProductCommand command)
+        public async Task<IActionResult> updateproduct([FromForm] UpdateProductCommand command)
         {
             if (command == null)
             {
@@ -68,9 +67,38 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> GetProductByName(GetProductByNameCommand command)
+        public async Task<IActionResult> getbyname(GetByNameCommand command)
         {
             
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> getbyprice(GetByPriceCommand command)
+        {
+
+            var result = await _mediator.Send(command);
+
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> getbymilkbrand(GetByMilkBrandCommand command)
+        {
             var result = await _mediator.Send(command);
 
             if (!result.IsSuccess)
