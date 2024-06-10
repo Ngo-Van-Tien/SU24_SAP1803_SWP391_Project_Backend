@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.Nutrient.Commands;
 using System.Runtime.CompilerServices;
 
@@ -58,6 +59,17 @@ namespace SWPApi.Controllers
                 return BadRequest(result.ErrorMessage);
             }
             return Ok(result);
+        }
+        [AllowAnonymous]
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllNutrient()
+        {
+            var result = await _mediator.Send(new GetAllNutrientCommand());
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result.Nutrients);
         }
     }
 }
