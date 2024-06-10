@@ -17,17 +17,26 @@ namespace SWPApi.Application.MilkFunction.Handlers
         }
         public async Task<DeleteMilkFunctionResponse> Handle(DeleteMilkFunctionCommand request, CancellationToken cancellationToken)
         {
-            var milkFunction = await _unitOfWork.MilkFunctionRepository.GetById(request.Id);
-            var response = new DeleteMilkFunctionResponse();    
-            if(milkFunction != null)
+            var response = new DeleteMilkFunctionResponse();
+            try
             {
-                await _unitOfWork.MilkFunctionRepository.DeleteMilkFunction(milkFunction);
-                await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<DeleteMilkFunctionResponse>(milkFunction);
-                response.IsSuccess = true;
+                var milkFunction = _unitOfWork.MilkFunctionRepository.GetById(request.Id);
+                if (milkFunction != null)
+                {
+                    _unitOfWork.MilkFunctionRepository.Remove(milkFunction);
+                    await _unitOfWork.SaveChangesAsync();
+                    response = _mapper.Map<DeleteMilkFunctionResponse>(milkFunction);
+                    response.IsSuccess = true;
+                    
+                }
+                response.ErrorMessage = "Milk Function is not found";
                 return response;
             }
-            response.ErrorMessage = "Milk Function is not found";
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.ErrorMessage = "Error when delete milk function: " + ex.Message;
+            }
             return response;
         }
     }

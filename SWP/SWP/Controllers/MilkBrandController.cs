@@ -17,7 +17,7 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> AddMilkBrand([FromBody] AddMilkBrandCommand command)
+        public async Task<IActionResult> AddMilkBrand([FromForm] AddMilkBrandCommand command)
         {
             if(command == null)
             {
@@ -31,16 +31,12 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpPut("{Id}")]
-        public async Task<IActionResult> UpdateMilkBrand(Guid Id, [FromBody] UpdateMilkBrandCommand command)
+        [HttpPut("update milk brand")]
+        public async Task<IActionResult> UpdateMilkBrand( [FromForm] UpdateMilkBrandCommand command)
         {
             if(command == null) 
             {
                 return BadRequest();
-            }
-            if (Id != command.Id)
-            {
-                return BadRequest("ID in the path does not match ID in the body");
             }
             var result = await _mediator.Send(command);
             if(result == null)
@@ -54,7 +50,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpDelete("{Id}")]
+        [HttpDelete("delete milk brand")]
         public async Task<IActionResult> DeleteMilkBrand(Guid Id)
         {
             
@@ -72,6 +68,10 @@ namespace SWPApi.Controllers
         public async Task<IActionResult> GetAllMilkBrand()
         {
             var result = await _mediator.Send(new GetAllMilkBrandCommand());
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
             return Ok(result);
         }
     }

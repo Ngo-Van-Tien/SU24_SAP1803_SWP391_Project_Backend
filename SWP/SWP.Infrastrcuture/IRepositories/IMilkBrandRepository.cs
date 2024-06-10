@@ -9,10 +9,5 @@ namespace Infrastructure.IRepositories
 {
     public interface IMilkBrandRepository : IGenericRepository<MilkBrand>
     {
-        Task AddMilkBrand(MilkBrand milkBrand);
-        Task UpdateMilkBrand(MilkBrand milkBrand);
-        Task<MilkBrand> GetById(Guid Id);
-        Task DeleteMilkBrand(MilkBrand milkBrand);
-        Task<IEnumerable<MilkBrand>> GetAllMilkBrands();
     }
 }

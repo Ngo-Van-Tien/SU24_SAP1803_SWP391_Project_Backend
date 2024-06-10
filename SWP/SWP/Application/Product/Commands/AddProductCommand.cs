@@ -11,8 +11,6 @@ namespace SWPApi.Application.Product.Commands
         [FromForm]
         public string? Description { get; set; }
         [FromForm]
-        public decimal? Price { get; set; }
-        [FromForm]
         public string? AgeRange { get; set; }
         [FromForm]
         public Guid? MilkBrandId { get; set; }

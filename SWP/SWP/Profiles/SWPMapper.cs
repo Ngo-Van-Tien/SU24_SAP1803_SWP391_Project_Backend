@@ -4,7 +4,9 @@ using SWPApi.Application.Company.Responses;
 using SWPApi.Application.MilkBrand.Responses;
 using SWPApi.Application.MilkFunction.Responses;
 using SWPApi.Application.Nutrient.Responses;
+using SWPApi.Application.Payment.Responses;
 using SWPApi.Application.Product.Responses;
+using SWPApi.Application.ProductItem.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,7 @@ namespace SWPApi.Profiles
             CreateMap<Company, AddCompanyResponse>();
             CreateMap<Company, UpdateCompanyResponse>();
             CreateMap<Company, DeleteCompanyResponse>();
+            CreateMap<Company, GetAllCompanyResponse>();
             
             // Milk Brand
             CreateMap<MilkBrand, DeleteMilkBrandResponse>();
@@ -43,6 +46,16 @@ namespace SWPApi.Profiles
             CreateMap<Product, GetProductResponse>();
             CreateMap<Product, AddProductResponse>();
             CreateMap<Product, UpdateProductResponse>();
+            CreateMap<Product, GetByNameResponse>();
+            CreateMap<Product, GetByMilkBrandResponse>();
+
+            // Product Item
+            CreateMap<ProductItem, AddResponse>();
+            CreateMap<ProductItem, UpdateResponse>();
+            CreateMap<ProductItem, DeleteResponse>();
+
+            // Payment
+            CreateMap<Payment, AddPaymentResponse>();
         }
     }
 }

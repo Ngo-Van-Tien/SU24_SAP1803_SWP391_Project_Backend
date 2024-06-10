@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.IRepositories
 {
-    public interface INutrientRepository
+    public interface INutrientRepository : IGenericRepository<Nutrient>
     {
-        Task AddNutrient(Nutrient nutrient);
-        Task<Nutrient> GetById(Guid id);
-        Task<IEnumerable<Nutrient>> GetAllNutrient();
-        Task UpdateNutrient(Nutrient nutrient);
-        Task DeleteNutrient(Nutrient nutrient);
     }
 }

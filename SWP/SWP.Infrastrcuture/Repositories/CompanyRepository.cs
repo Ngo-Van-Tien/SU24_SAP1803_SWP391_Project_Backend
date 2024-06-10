@@ -18,33 +18,6 @@ namespace Infrastructure.Repositories
         {
         }
 
-        public async Task AddCompany(Company company)
-        {
-            await _context.Set<Company>().AddAsync(company);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteCompany(Company company)
-        {
-            _context.Set<Company>().Remove(company);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<IEnumerable<Company>> GetAllCompany()
-        {
-            return await _context.Set<Company>().ToListAsync();
-            
-        }
-
-        public async Task<Company> GetById(Guid id)
-        {
-            return await _context.Set<Company>().FindAsync(id);
-        }
-
-        public async Task UpdateCompany(Company company)
-        {
-             _context.Set<Company>().Update(company);
-            await _context.SaveChangesAsync();
-        }
+        
     }
 }

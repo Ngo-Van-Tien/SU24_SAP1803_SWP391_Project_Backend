@@ -21,20 +21,30 @@ namespace SWPApi.Application.MilkFunction.Handlers
 
         public async Task<AddMilkFunctionResponse> Handle(AddMilkFunctionCommand request, CancellationToken cancellationToken)
         {
-            var milkFunction = new Infrastructure.Entities.MilkFunction
-            {
-                Name = request.MilkFunctionName,
-            };
             var response = new AddMilkFunctionResponse();
-            if(milkFunction != null) 
+            try
             {
-                await _unitOfWork.MilkFunctionRepository.AddMilkFunciton(milkFunction);
-                await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<AddMilkFunctionResponse>(milkFunction);
-                response.IsSuccess = true;
-                return response;
+                var milkFunction = new Infrastructure.Entities.MilkFunction
+                {
+                    Name = request.MilkFunctionName,
+                };
+
+
+                if (milkFunction != null)
+                {
+                    _unitOfWork.MilkFunctionRepository.Add(milkFunction);
+                    await _unitOfWork.SaveChangesAsync();
+                    response = _mapper.Map<AddMilkFunctionResponse>(milkFunction);
+                    response.IsSuccess = true;
+                }
+
+
             }
-            response.ErrorMessage = "Milk Function had not yet been created";
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.ErrorMessage = "Error when creating new milk function: " + ex.Message;
+            }
             return response;
         }
     }
