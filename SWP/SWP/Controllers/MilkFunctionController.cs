@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.MilkFunction.Commands;
 
 namespace SWPApi.Controllers
@@ -56,6 +57,17 @@ namespace SWPApi.Controllers
                 return BadRequest(result.ErrorMessage);
             }
             return Ok(result);
+        }
+        [AllowAnonymous]
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllMilkFunction()
+        {
+            var result = await _mediator.Send(new GetAllMilkFunctionCommand());
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result.MilkFunction);
         }
     }
 }
