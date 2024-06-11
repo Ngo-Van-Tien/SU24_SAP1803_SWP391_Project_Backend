@@ -26,7 +26,7 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
             return Ok(result);
         }
@@ -41,11 +41,11 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(command);
             if(result == null)
             {
-                return NotFound(result.ErrorMessage);
+                return NotFound(result);
             }
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }   
             return Ok(result);
         }
@@ -57,22 +57,22 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(new DeleteMilkBrandCommand {Id=id });
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
             return Ok(result);
 
         }
         
         [AllowAnonymous]
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<IActionResult> GetAllMilkBrand()
         {
             var result = await _mediator.Send(new GetAllMilkBrandCommand());
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
-            return Ok(result.MilkBrands);
+            return Ok(result);
         }
     }
         

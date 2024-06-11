@@ -67,36 +67,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> getbyname(GetByNameCommand command)
-        {
-            
-            var result = await _mediator.Send(command);
-
-            if (!result.IsSuccess)
-            {
-                return BadRequest(result);
-            }
-
-            return Ok(result);
-        }
-
-
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> getbymilkbrand(GetByMilkBrandCommand command)
-        {
-            var result = await _mediator.Send(command);
-
-            if (!result.IsSuccess)
-            {
-                return BadRequest(result);
-            }
-
-            return Ok(result);
-        }
-        [AllowAnonymous]
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
             var result = await _mediator.Send(new GetAllProductCommand());
@@ -104,7 +75,7 @@ namespace SWPApi.Controllers
             {
                 return BadRequest(result.ErrorMessage);
             }
-            return Ok(result.Products);
+            return Ok(result);
         }
 
     }

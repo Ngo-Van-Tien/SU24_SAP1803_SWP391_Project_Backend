@@ -66,7 +66,7 @@ namespace SWPApi.Controllers
             {
                 return BadRequest(result.ErrorMessage);
             }
-            return Ok(result.Companies);
+            return Ok(result);
         }
     }
 }

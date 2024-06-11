@@ -13,12 +13,12 @@ namespace SWPApi.Application.MilkFunction.Handlers
     public class GetAllMilkFunctionHandler : IRequestHandler<GetAllMilkFunctionCommand, GetAllMilkFunctionResponse>
     {
 
-        IUnitOfWork unitOfWork;
-        IMapper mapper;
+        IUnitOfWork _unitOfWork;
+        IMapper _mapper;
         public GetAllMilkFunctionHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this.unitOfWork = unitOfWork;
-            this.mapper = mapper;
+            this._unitOfWork = unitOfWork;
+            this._mapper = mapper;
 
         }
         public async Task<GetAllMilkFunctionResponse> Handle(GetAllMilkFunctionCommand request, CancellationToken cancellationToken)
@@ -26,12 +26,21 @@ namespace SWPApi.Application.MilkFunction.Handlers
             var response = new GetAllMilkFunctionResponse();
             try
             {
-
-                response.IsSuccess = true;
+                var milkFunctions = _unitOfWork.MilkFunctionRepository.GetAll().ToList();
+                if (!milkFunctions.Any())
+                {
+                    response.ErrorMessage = "Do not have any milk function";
+                }
+                else
+                {
+                    response.Data = milkFunctions;
+                    response.IsSuccess = true;
+                }
+                
             }
             catch (Exception ex)
             {
-
+                response.ErrorMessage += ex.ToString();
             }
             return response;
         }

@@ -7,6 +7,6 @@ namespace SWPApi.Application.MilkFunction.Commands
     public class AddMilkFunctionCommand : IRequest<AddMilkFunctionResponse>
     {
         [Required]
-        public string MilkFunctionName { get; set; }
+        public string Name { get; set; }
     }
 }

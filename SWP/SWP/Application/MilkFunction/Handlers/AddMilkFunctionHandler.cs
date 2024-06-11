@@ -26,7 +26,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
             {
                 var milkFunction = new Infrastructure.Entities.MilkFunction
                 {
-                    Name = request.MilkFunctionName,
+                    Name = request.Name,
                 };
 
 
