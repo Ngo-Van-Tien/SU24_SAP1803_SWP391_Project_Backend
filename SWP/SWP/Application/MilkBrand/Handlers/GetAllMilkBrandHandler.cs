@@ -25,17 +25,19 @@ namespace SWPApi.Application.MilkBrand.Handlers
             try
             {
                 var milkBrands = _unitOfWork.MilkBrandRepository.GetAll();
-                response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
                 if (!milkBrands.Any())
                 {
                     response.ErrorMessage = "Don't have any Milk Brand";
+                    response.IsSuccess = false;
                     return response;
                 }
+                response.MilkBrands = _mapper.Map<List<Infrastructure.Entities.MilkBrand>>(milkBrands);
                 response.IsSuccess = true;
             }
             catch (Exception ex)
             {
                 response.ErrorMessage = "Error when creating new brand: " + ex.Message;
+                response.IsSuccess = false;
             }
             return response;
         }

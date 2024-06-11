@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.MilkBrand.Commands;
+using SWPApi.Application.MilkFunction.Commands;
 using SWPApi.Application.Product.Commands;
 using System.Drawing.Printing;
 
@@ -93,6 +94,17 @@ namespace SWPApi.Controllers
             }
 
             return Ok(result);
+        }
+        [AllowAnonymous]
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAllProduct()
+        {
+            var result = await _mediator.Send(new GetAllProductCommand());
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result.Products);
         }
 
     }
