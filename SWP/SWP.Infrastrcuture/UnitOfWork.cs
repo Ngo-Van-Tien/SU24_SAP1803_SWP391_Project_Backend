@@ -22,6 +22,10 @@ namespace Infrastructure
         public IPaymentRepository PaymentRepository { get; private set; }
         public IImageRepository ImageRepository {  get; private set; }
 
+        public IAppUserRepository AppUserRepository { get; private set; }
+
+        public IOrderDetailRepository OrderDetailRepository { get; private set; }
+
         public UnitOfWork(SWPDbContext context)
         {
             _context = context;
@@ -34,7 +38,8 @@ namespace Infrastructure
             OrderRepository = new OrderRepository(_context);
             PaymentRepository = new PaymentRepository(_context);
             ImageRepository = new ImageRepository(_context);
-
+            AppUserRepository = new AppUserRepository(_context);
+            OrderDetailRepository = new OrderDetailRepository(_context);
         }
 
         public Task SaveChangesAsync()
