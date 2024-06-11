@@ -14,6 +14,7 @@ namespace Infrastructure.Entities
         public decimal ShipFees { get; set; }
         public decimal FinalPrice { get; set; }
         public string Address { get; set; }
+        public string PhoneNumber { get;set; }
         public string Status { get; set; }
         [ForeignKey("UserId")]
         public AppUser User { get; set; }

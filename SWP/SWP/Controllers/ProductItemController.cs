@@ -64,16 +64,22 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
         [AllowAnonymous]
-        [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllProductItem()
+        [HttpPost]
+        public async Task<IActionResult> GetProductItems(GetProductItemsCommand command)
         {
-            var result = await _mediator.Send(new GetAllProductItemCommand());
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
-            return Ok(result.ProductItems);
+            return Ok(result);
+
         }
     }
 }
