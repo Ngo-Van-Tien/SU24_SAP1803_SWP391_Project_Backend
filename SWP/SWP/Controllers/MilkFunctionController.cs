@@ -7,7 +7,7 @@ using SWPApi.Application.MilkFunction.Commands;
 
 namespace SWPApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class MilkFunctionController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> AddMilkFunction([FromBody] AddMilkFunctionCommand command)
+        public async Task<IActionResult> AddMilkFunction([FromForm] AddMilkFunctionCommand command)
         {
             if(command == null)
             {
@@ -34,7 +34,7 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPut]
-        public async Task<IActionResult> UpdateMilkFunction( [FromBody] UpdateMilkFunctionCommand command)
+        public async Task<IActionResult> UpdateMilkFunction( [FromForm] UpdateMilkFunctionCommand command)
         {
             if(command == null)
             {
@@ -49,25 +49,29 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpDelete]
-        public async Task<IActionResult> DeletetMilkFunction(Guid Id)
+        public async Task<IActionResult> DeletetMilkFunction(Guid id)
         {
-            var result = await _mediator.Send(new DeleteMilkFunctionCommand { Id = Id});
+            var result = await _mediator.Send(new DeleteMilkFunctionCommand { Id=id});
             if (!result.IsSuccess)
             {
                 return BadRequest(result.ErrorMessage);
             }
             return Ok(result);
         }
+
+
         [AllowAnonymous]
-        [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllMilkFunction()
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(new GetAllMilkFunctionCommand());
+            var command = new GetAllMilkFunctionCommand();
+            var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
-            return Ok(result.MilkFunction);
+            return Ok(result);
+
         }
     }
 }

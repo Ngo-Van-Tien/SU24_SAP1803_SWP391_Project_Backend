@@ -7,7 +7,7 @@ using SWPApi.Application.Company.Commands;
 
 namespace SWPApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class CompanyController : ControllerBase
     {
@@ -45,7 +45,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteCompany(Guid id)
         {
             var result = await _mediator.Send(new DeleteCompanyCommand { Id = id});
@@ -57,15 +57,16 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("get all")]
+        [HttpGet]
         public async Task<IActionResult> GetAllCompany()
         {
-            var result = await _mediator.Send(new GetAllCompanyCommand());
+            var command = new GetAllCompanyCommand();
+            var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
                 return BadRequest(result.ErrorMessage);
             }
-            return Ok(result.Companies);
+            return Ok(result);
         }
     }
 }

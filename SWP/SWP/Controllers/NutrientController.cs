@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace SWPApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class NutrientController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> AddNutrient([FromBody]AddNutrientCommand command)
+        public async Task<IActionResult> AddNutrient([FromForm]AddNutrientCommand command)
         {
             if(command == null)
             {
@@ -35,7 +35,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPut]
-        public async Task<IActionResult> UpdateNutrient( [FromBody] UpdateNutrientCommand command)
+        public async Task<IActionResult> UpdateNutrient( [FromForm] UpdateNutrientCommand command)
         {
             if(command == null)
             {
@@ -53,10 +53,23 @@ namespace SWPApi.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteNutrient(Guid id)
         {
-            var result = await _mediator.Send( new  DeleteNutrientCommand() {  Id = id });
+            var command = new DeleteNutrientCommand { Id=id};
+            var result = await _mediator.Send(command);
             if(!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetNutrients()
+        {
+            var command = new GetNutrientsCommand(); 
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
             }
             return Ok(result);
         }

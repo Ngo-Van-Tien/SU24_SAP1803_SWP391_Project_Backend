@@ -32,7 +32,7 @@ namespace SWPApi.Application.Nutrient.Handlers
                 if (nutrient != null)
                 {
                     _unitOfWork.NutrientRepository.Add(nutrient);
-                    _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<AddNutrientResponse>(nutrient);
                     response.IsSuccess = true;
                     

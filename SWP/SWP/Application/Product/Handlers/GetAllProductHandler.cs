@@ -21,20 +21,23 @@ namespace SWPApi.Application.Product.Handlers
             var response = new GetAllProductResponse();
             try
             {
-                var product = _unitOfWork.ProductRepository.GetAll();
-                if (!product.Any())
+                var products = _unitOfWork.ProductRepository.GetAll().ToList();
+                if (!products.Any())
                 {
                     response.ErrorMessage = "Don't have any Product";
-                    response.IsSuccess = false;
                     return response;
                 }
-                response.Products = _mapper.Map<List<Infrastructure.Entities.Product>>(product);
-                response.IsSuccess = true;
+                else
+                {
+                    response.Data = products;
+                    response.IsSuccess = true;
+                }
+                
+                
             }
             catch (Exception ex)
             {
                 response.ErrorMessage = "Error when creating new product: " + ex.Message;
-                response.IsSuccess = false;
             }
             return response;
         }
