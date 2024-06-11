@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Entities;
+using SWP.Infrastrcuture.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.IRepositories
 {
-    public interface IOrderRepository : IGenericRepository<Order>
+    public interface IOrderDetailRepository : IGenericRepository<OrderDetail>
     {
     }
 }

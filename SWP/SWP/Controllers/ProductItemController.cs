@@ -63,5 +63,21 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> GetProductItems(GetProductItemsCommand command)
+        {
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

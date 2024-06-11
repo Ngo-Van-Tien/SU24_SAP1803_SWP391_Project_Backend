@@ -16,8 +16,11 @@ namespace Infrastructure
         INutrientRepository NutrientRepository { get; }
         IProductItemRepository ProductItemRepository { get; }
         IOrderRepository OrderRepository { get; }
+        IOrderDetailRepository OrderDetailRepository { get; }
+        IAppUserRepository AppUserRepository { get;}
         IPaymentRepository PaymentRepository { get; }
         IImageRepository ImageRepository { get; }
+
         Task SaveChangesAsync();
     }
 }
