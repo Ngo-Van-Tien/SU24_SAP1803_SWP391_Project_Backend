@@ -74,6 +74,19 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var command = new GetByIdMilkBrandCommand { Id = id };
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
         
 }
