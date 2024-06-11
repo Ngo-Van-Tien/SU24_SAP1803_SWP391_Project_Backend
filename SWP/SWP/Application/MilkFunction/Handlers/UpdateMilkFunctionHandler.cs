@@ -31,11 +31,16 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     _unitOfOfWork.MilkFunctionRepository.Update(milkFunction);
                     await _unitOfOfWork.SaveChangesAsync();
                     response = _mapper.Map<UpdateMilkFunctionResponse>(milkFunction);
+
                     response.IsSuccess = true;
                     return response;
                 }
-                response.ErrorMessage = "Milk Function is not found";
-                return response;
+                else
+                {
+                    response.ErrorMessage = "Milk Function is not found";
+                    return response;
+                }
+                
             }
             catch (Exception ex)
             {

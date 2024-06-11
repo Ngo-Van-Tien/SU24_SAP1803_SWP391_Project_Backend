@@ -8,6 +8,7 @@ namespace SWPApi.Application.Company.Commands
     public class UpdateCompanyCommand : IRequest<UpdateCompanyResponse>
     {
         [FromForm]
+        [Required]
         public Guid Id { get; set; }
         [FromForm]
         [Required]

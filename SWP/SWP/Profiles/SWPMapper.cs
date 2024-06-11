@@ -24,13 +24,13 @@ namespace SWPApi.Profiles
             CreateMap<Company, AddCompanyResponse>();
             CreateMap<Company, UpdateCompanyResponse>();
             CreateMap<Company, DeleteCompanyResponse>();
-            CreateMap<Company, GetAllCompanyResponse>();
+            
             
             // Milk Brand
             CreateMap<MilkBrand, DeleteMilkBrandResponse>();
             CreateMap<MilkBrand, AddMilkBrandResponse>();
             CreateMap<MilkBrand, UpdateMilkBrandResponse>();
-            CreateMap<MilkBrand, GetAllMilkBrandResponse>();
+            
 
             // Milk Function
             CreateMap<MilkFunction, AddMilkFunctionResponse>();

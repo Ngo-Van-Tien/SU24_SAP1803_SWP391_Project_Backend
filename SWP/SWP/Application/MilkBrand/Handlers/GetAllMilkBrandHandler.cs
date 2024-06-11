@@ -24,8 +24,8 @@ namespace SWPApi.Application.MilkBrand.Handlers
             var response = new GetAllMilkBrandResponse();
             try
             {
-                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll();
-                response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
+                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll().ToList();
+                response.Data = milkBrands;
                 if (!milkBrands.Any())
                 {
                     response.ErrorMessage = "Don't have any Milk Brand";
