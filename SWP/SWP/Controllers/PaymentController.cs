@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SWPApi.Application.Payment.Commands;
+using SWPApi.Application.Payments.Commands;
 
 namespace SWPApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class PaymentController : ControllerBase
     {
@@ -17,9 +17,26 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> addpayment([FromForm] AddPaymentCommand command)
+        public async Task<IActionResult> CreatePayment([FromForm] CreatePaymentCommand command)
         {
             if(command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetPayment(int pageNumber, int PageSize)
+        {
+            var command = new GetPaymentsCommand() { PageNumber = pageNumber, PageSize = PageSize };
+            if (command == null)
             {
                 return BadRequest();
             }

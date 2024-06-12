@@ -20,7 +20,7 @@ namespace SWPApi.Application.ProductItem.Handler
         {
             var response = new GetProductItemsResponse();
             var productItems = _unitOfWork.ProductItemRepository.Find(x => (string.IsNullOrEmpty(request.Name) || x.Product.Name.Contains(request.Name)) &&
-                                                                           (x.Price >= request.StartPrice && (request.EndPrice > 0 && x.Price <= request.EndPrice)) &&
+                                                                           (x.Price >= request.StartPrice && (request.EndPrice <= 0 || x.Price <= request.EndPrice)) &&
                                                                            (request.Sizes.Count == 0 || request.Sizes.Contains(x.Size)), request.PageNumber, request.PageSize);
             response.IsSuccess = true;
             response.Data = productItems;
