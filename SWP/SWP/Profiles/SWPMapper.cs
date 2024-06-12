@@ -38,13 +38,14 @@ namespace SWPApi.Profiles
             CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
             CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
             CreateMap<MilkFunction, GetAllMilkFunctionResponse>();
+            CreateMap<MilkFunction, GetByIdMilkFunctionResponse>();
 
 
             //Nutrient
             CreateMap<Nutrient, AddNutrientResponse>();
             CreateMap<Nutrient, UpdateNutrientResponse>();
             CreateMap<Nutrient, DeleteNutrientResponse>();
-            CreateMap<Nutrient, GetAllNutrientResponse>();
+            CreateMap<Nutrient, GetByIdNutrientResponse>();
 
             // Product
             CreateMap<Product, GetProductResponse>();

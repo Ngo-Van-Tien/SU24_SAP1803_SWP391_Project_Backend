@@ -70,7 +70,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet]
+        [HttpGet("getbyid")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var command = new GetByIdCommand { Id = id };
