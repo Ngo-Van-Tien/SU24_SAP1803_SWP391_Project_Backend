@@ -28,8 +28,4 @@
     <ProjectReference Include="..\SWP.Infrastrcuture\Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Order\" />
-  </ItemGroup>
-
 </Project>

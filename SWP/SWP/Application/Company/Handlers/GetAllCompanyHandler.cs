@@ -19,14 +19,23 @@ namespace SWPApi.Application.Company.Handlers
 
         public async Task<GetAllCompanyResponse> Handle(GetAllCompanyCommand request, CancellationToken cancellationToken)
         {
-            var companys = _unitOfWork.CompanyRepository.GetAll();
             var response = new GetAllCompanyResponse();
-            if (!companys.Any()) 
+            try
             {
-                response.ErrorMessage = "Do not have any company";
-                return response;
+                var companys = _unitOfWork.CompanyRepository.GetAll().ToList();
+                if (!companys.Any())
+                {
+                    response.ErrorMessage = "Do not have any company";
+                }
+                else
+                {
+                    response.Data = companys;
+                    response.IsSuccess = true;
+                }
+            }catch (Exception ex)
+            {
+                response.ErrorMessage += ex.Message;
             }
-            response.IsSuccess = true;
             return response;
         }
     }

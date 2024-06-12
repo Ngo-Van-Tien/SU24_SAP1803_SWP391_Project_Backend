@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Azure;
 using Infrastructure;
 using Infrastructure.Entities;
@@ -24,19 +24,20 @@ namespace SWPApi.Application.MilkBrand.Handlers
             var response = new GetAllMilkBrandResponse();
             try
             {
-                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll();
-                response = _mapper.Map<GetAllMilkBrandResponse>(milkBrands);
+                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll().ToList();
                 if (!milkBrands.Any())
                 {
-                    response.ErrorMessage = "Don't have any Milk Brand";
-                    return response;
+                    response.ErrorMessage = "Do not have any milk brand";
                 }
-                response.IsSuccess = true;
-            }
-            catch (Exception ex)
+                else
+                {
+                    response.Data = milkBrands;
+                    response.IsSuccess = true;
+                }
+            }catch(Exception ex)
             {
-                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
-            }
+                response.ErrorMessage += ex.Message;
+            }  
             return response;
         }
     }

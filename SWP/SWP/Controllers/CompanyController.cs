@@ -7,7 +7,7 @@ using SWPApi.Application.Company.Commands;
 
 namespace SWPApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class CompanyController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpPut("update company")]
+        [HttpPut]
         public async Task<IActionResult> UpdateCompany([FromForm] UpdateCompanyCommand command)
         {
             if (command == null) 
@@ -40,30 +40,44 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpDelete("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> DeleteCompany(Guid id)
         {
             var result = await _mediator.Send(new DeleteCompanyCommand { Id = id});
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
             return Ok(result);
         }
 
         [AllowAnonymous]
-        [HttpGet("get all")]
+        [HttpGet]
         public async Task<IActionResult> GetAllCompany()
         {
-            var result = await _mediator.Send(new GetAllCompanyCommand());
+            var command = new GetAllCompanyCommand();
+            var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var command = new GetByIdCommand { Id = id };
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
             }
             return Ok(result);
         }

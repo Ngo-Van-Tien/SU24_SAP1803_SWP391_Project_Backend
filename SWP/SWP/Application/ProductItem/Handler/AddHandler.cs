@@ -38,7 +38,7 @@ namespace SWPApi.Application.ProductItem.Handler
                 else
                 {
                     _unitOfWork.ProductItemRepository.Add(productItem);
-                    _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<AddResponse>(productItem);
                     response.IsSuccess = true;
                 }

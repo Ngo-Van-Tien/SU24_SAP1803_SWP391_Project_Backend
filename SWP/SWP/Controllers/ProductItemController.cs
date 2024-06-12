@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SWPApi.Application.MilkFunction.Commands;
 using SWPApi.Application.ProductItem.Commands;
 
 namespace SWPApi.Controllers
@@ -62,6 +63,23 @@ namespace SWPApi.Controllers
                 return BadRequest(result);
             }
             return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetProductItems(GetProductItemsCommand command)
+        {
+            if (command == null)
+            {
+                return BadRequest();
+            }
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+
         }
     }
 }

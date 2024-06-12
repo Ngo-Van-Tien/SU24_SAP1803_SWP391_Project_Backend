@@ -27,10 +27,14 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<DeleteMilkFunctionResponse>(milkFunction);
                     response.IsSuccess = true;
-                    
+
                 }
-                response.ErrorMessage = "Milk Function is not found";
-                return response;
+                else
+                {
+                    response.ErrorMessage = "Milk Function is not found";
+                    return response;
+                }
+                
             }
             catch (Exception ex)
             {
