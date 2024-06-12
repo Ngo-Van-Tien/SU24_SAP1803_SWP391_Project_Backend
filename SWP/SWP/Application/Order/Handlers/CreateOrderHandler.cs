@@ -18,15 +18,19 @@ namespace SWPApi.Application.Order.Handlers
         public async Task<CreateOrderResponse> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             var response = new CreateOrderResponse();
-            var user = new AppUser();
-            user.UserName = request.Email;
-            user.PhoneNumber = request.PhoneNumber;
-            user.Email = request.Email;
-            user.Address = request.Address;
-            user.FirstName = request.FirstName;
-            user.LastName = request.LastName;
-            _unitOfWork.AppUserRepository.Add(user);
-            await _unitOfWork.SaveChangesAsync();
+            var user = _unitOfWork.AppUserRepository.Find(x => !string.IsNullOrEmpty(request.Email) && x.Email.ToLower() == request.Email.Trim().ToLower()).FirstOrDefault();
+            if (user == null) 
+            {
+                user = new AppUser();
+                user.UserName = request.Email;
+                user.PhoneNumber = request.PhoneNumber;
+                user.Email = request.Email;
+                user.Address = request.Address;
+                user.FirstName = request.FirstName;
+                user.LastName = request.LastName;
+                _unitOfWork.AppUserRepository.Add(user);
+                await _unitOfWork.SaveChangesAsync();
+            }
             var productItems = _unitOfWork.ProductItemRepository.Find(x => request.ProductItemIds.Contains(x.Id));
 
             var order = new Infrastructure.Entities.Order();
@@ -49,6 +53,7 @@ namespace SWPApi.Application.Order.Handlers
                 orderDetails.Add(orderDetail);
             }
 
+            order.TotalPriceProduct = totalPrice;
             order.FinalPrice = totalPrice - request.ShipFees;
             _unitOfWork.OrderDetailRepository.AddRange(orderDetails);
 
