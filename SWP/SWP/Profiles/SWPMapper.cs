@@ -5,7 +5,6 @@ using SWPApi.Application.MilkBrand.Responses;
 using SWPApi.Application.MilkFunction.Responses;
 using SWPApi.Application.Nutrient.Responses;
 using SWPApi.Application.Order.Responses;
-using SWPApi.Application.Payment.Responses;
 using SWPApi.Application.Product.Responses;
 using SWPApi.Application.ProductItem.Response;
 using System;
@@ -57,9 +56,6 @@ namespace SWPApi.Profiles
             CreateMap<ProductItem, UpdateResponse>();
             CreateMap<ProductItem, DeleteResponse>();
             CreateMap<ProductItem, GetAllProductItemResponse>();
-
-            // Payment
-            CreateMap<Payment, AddPaymentResponse>();
 
             //Order
             CreateMap<Order, GetOrderResponse>();

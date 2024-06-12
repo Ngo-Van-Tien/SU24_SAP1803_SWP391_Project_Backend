@@ -10,5 +10,9 @@ namespace Infrastructure.Entities
     public class Payment : BaseEntity
     {
         public string Method { get; set; }
+        public DateTime PaymentDate { get; set; }
+        public decimal PaymentAmount { get; set; }
+        [ForeignKey("OrderId")]
+        public Order Order { get; set; }
     }
 }
