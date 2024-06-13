@@ -54,11 +54,11 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .SetIsOriginAllowed(origin => true)
                             .AllowCredentials());
 // Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-app.UseSwagger();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
     app.UseSwaggerUI();
-//}
+}
 
 app.UseHttpsRedirection();
 

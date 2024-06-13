@@ -5,6 +5,7 @@ namespace SWPApi.Application.Order.Responses
 {
     public class GetOrderResponse : BaseResponse
     {
+        public Guid Id { get; set; }
         public decimal TotalPriceProduct { get; set; }
         public decimal ShipFees { get; set; }
         public decimal FinalPrice { get; set; }

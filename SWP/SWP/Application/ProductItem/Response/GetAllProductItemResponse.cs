@@ -4,6 +4,6 @@ namespace SWPApi.Application.ProductItem.Response
 {
     public class GetAllProductItemResponse:BaseResponse
     {
-        public List<Infrastructure.Entities.ProductItem> ProductItems { get; set; }
+        public List<Infrastructure.Entities.ProductItem> Data { get; set; }
     }
 }

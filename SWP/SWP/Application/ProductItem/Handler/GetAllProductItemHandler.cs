@@ -22,15 +22,16 @@ namespace SWPApi.Application.ProductItem.Handler
             var response = new GetAllProductItemResponse();
             try
             {
-                var productItem = _unitOfWork.ProductItemRepository.GetAll();
-                if(!productItem.Any())
+                var productItems = _unitOfWork.ProductItemRepository.GetAll().ToList();
+                if(!productItems.Any())
 {
                     response.ErrorMessage = "Don't have any ProductItem";
-                    response.IsSuccess = false;
-                    return response;
                 }
-                response.ProductItems = _mapper.Map<List<Infrastructure.Entities.ProductItem>>(productItem);
-                response.IsSuccess = true;
+                else
+                {
+                    response.Data = productItems;
+                    response.IsSuccess = true;
+                }
             }
             catch (Exception ex)
             {
