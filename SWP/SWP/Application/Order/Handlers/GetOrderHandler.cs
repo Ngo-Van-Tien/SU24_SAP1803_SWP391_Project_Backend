@@ -18,7 +18,7 @@ namespace SWPApi.Application.Order.Handlers
         }
         public async Task<GetOrderResponse> Handle(GetOrderCommand request, CancellationToken cancellationToken)
         {
-            var order = _unitOfWork.ProductRepository.GetById(request.Id);
+            var order = _unitOfWork.OrderRepository.GetById(request.Id);
             var response = new GetOrderResponse();
             if (order != null)
             {

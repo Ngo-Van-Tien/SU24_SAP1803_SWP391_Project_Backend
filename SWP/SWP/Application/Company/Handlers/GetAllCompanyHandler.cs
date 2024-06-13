@@ -22,14 +22,15 @@ namespace SWPApi.Application.Company.Handlers
             var response = new GetAllCompanyResponse();
             try
             {
-                var companys = _unitOfWork.CompanyRepository.GetAll().ToList();
-                if (!companys.Any())
+                var companies = _unitOfWork.CompanyRepository.GetAll().ToList();
+                if (!companies.Any())
                 {
                     response.ErrorMessage = "Do not have any company";
                 }
                 else
                 {
-                    response.Data = companys;
+                    
+                    response.Data = companies;
                     response.IsSuccess = true;
                 }
             }catch (Exception ex)
