@@ -20,7 +20,7 @@ namespace Infrastructure
         IAppUserRepository AppUserRepository { get;}
         IPaymentRepository PaymentRepository { get; }
         IImageRepository ImageRepository { get; }
-
+        IMilkBrandFunctionRepository MilkBrandFunctionRepository { get; }
         Task SaveChangesAsync();
     }
 }

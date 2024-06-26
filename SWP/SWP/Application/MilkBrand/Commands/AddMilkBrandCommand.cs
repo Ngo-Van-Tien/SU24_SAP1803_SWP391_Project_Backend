@@ -15,5 +15,7 @@ namespace SWPApi.Application.MilkBrand.Commands
         public Guid? CompanyId { get; set; }
         [FromForm]
         public string? Description { get; set; }
+        public List<Guid> MilkFunctionIds { get; set; }
+
     }
 }

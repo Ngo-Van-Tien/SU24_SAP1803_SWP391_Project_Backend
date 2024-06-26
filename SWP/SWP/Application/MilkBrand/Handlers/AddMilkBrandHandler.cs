@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure;
+using Infrastructure.Entities;
 using MediatR;
 using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.MilkBrand.Responses;
@@ -34,11 +35,23 @@ namespace SWPApi.Application.MilkBrand.Handlers
                 response.ErrorMessage = "Company is not found";
                 return response;
             }
+            _unitOfWork.MilkBrandRepository.Add(milkBrand);
+            await _unitOfWork.SaveChangesAsync();
+            response = _mapper.Map<AddMilkBrandResponse>(milkBrand);
+            response.IsSuccess = true;
 
-             _unitOfWork.MilkBrandRepository.Add(milkBrand);
-             await _unitOfWork.SaveChangesAsync();
-             response = _mapper.Map<AddMilkBrandResponse>(milkBrand);
-             response.IsSuccess = true;
+            var milkBrandFunctions = new List<MilkBrandFunction>();
+            var milkFunctions = _unitOfWork.MilkFunctionRepository.Find(x => request.MilkFunctionIds.Contains(x.Id));
+            foreach( var milkFunction in milkFunctions)
+            {
+                var milkBrandFunction = new MilkBrandFunction();
+                milkBrandFunction.MilkBrand = milkBrand;
+                milkBrandFunction.MilkFunction = milkFunction;
+                milkBrandFunctions.Add(milkBrandFunction);
+            }
+            _unitOfWork.MilkBrandFunctionRepository.AddRange(milkBrandFunctions);
+            await _unitOfWork.SaveChangesAsync();
+            response.IsSuccess = true;
             
             return response;
         }

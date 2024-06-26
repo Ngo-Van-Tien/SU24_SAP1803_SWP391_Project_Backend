@@ -57,6 +57,7 @@ namespace SWP.Infrastrcuture
             builder.Entity<ImageFile>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
+
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
