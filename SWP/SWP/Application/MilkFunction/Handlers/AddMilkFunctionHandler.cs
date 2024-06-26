@@ -22,8 +22,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
         public async Task<AddMilkFunctionResponse> Handle(AddMilkFunctionCommand request, CancellationToken cancellationToken)
         {
             var response = new AddMilkFunctionResponse();
-            try
-            {
+            
                 var milkFunction = new Infrastructure.Entities.MilkFunction
                 {
                     Name = request.Name,
@@ -39,12 +38,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
                 }
 
 
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Error when creating new milk function: " + ex.Message;
-            }
+            
             return response;
         }
     }

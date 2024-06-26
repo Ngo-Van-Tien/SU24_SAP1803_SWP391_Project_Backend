@@ -24,8 +24,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
         public async Task<GetAllMilkFunctionResponse> Handle(GetAllMilkFunctionCommand request, CancellationToken cancellationToken)
         {
             var response = new GetAllMilkFunctionResponse();
-            try
-            {
+            
                 var milkFunctions = _unitOfWork.MilkFunctionRepository.GetAll().ToList();
                 if (!milkFunctions.Any())
                 {
@@ -37,11 +36,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     response.IsSuccess = true;
                 }
                 
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage += ex.ToString();
-            }
+            
             return response;
         }
     }

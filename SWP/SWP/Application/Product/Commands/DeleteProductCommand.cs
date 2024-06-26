@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SWPApi.Application.MilkFunction.Responses;
+using SWPApi.Application.Product.Responses;
 using System.ComponentModel.DataAnnotations;
 
-namespace SWPApi.Application.MilkFunction.Commands
+namespace SWPApi.Application.Product.Commands
 {
-    public class DeleteMilkFunctionCommand : IRequest<DeleteMilkFunctionResponse>
+    public class DeleteProductCommand : IRequest<DeleteProductResponse>
     {
         [FromForm]
         [Required]

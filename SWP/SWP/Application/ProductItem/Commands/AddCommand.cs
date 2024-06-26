@@ -8,14 +8,17 @@ namespace SWPApi.Application.ProductItem.Commands
 {
     public class AddCommand : IRequest<AddResponse>
     {
+        [Required]
         [FromForm]
         public int Quantity { get; set; }
+        [Required]
         [FromForm]
         public decimal Price { get; set; }
+        [Required]
         [FromForm]
         public int Size { get; set; }
-        [FromForm]
         [Required]
-        public Guid? ProductId { get; set; }
+        [FromForm]
+        public Guid ProductId { get; set; }
     }
 }

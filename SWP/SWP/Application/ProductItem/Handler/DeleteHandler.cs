@@ -19,8 +19,7 @@ namespace SWPApi.Application.ProductItem.Handler
         public async Task<DeleteResponse> Handle(DeleteCommand request, CancellationToken cancellationToken)
         {
             var response = new DeleteResponse();
-            try
-            {
+            
                 var productItem = _unitOfWork.ProductItemRepository.GetById(request.Id);
                 if (productItem == null)
                 {
@@ -31,10 +30,7 @@ namespace SWPApi.Application.ProductItem.Handler
                 await _unitOfWork.SaveChangesAsync();
                 response = _mapper.Map<DeleteResponse>(productItem);
                 response.IsSuccess = true;
-            }catch (Exception ex)
-            {
-                response.ErrorMessage = "Error when delete product item " + ex.Message;   
-            }
+            
             return response;
         }
     }

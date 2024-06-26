@@ -20,8 +20,7 @@ namespace SWPApi.Application.Nutrient.Handlers
         public async Task<GetByIdNutrientResponse> Handle(GetByIdNutrientCommand request, CancellationToken cancellationToken)
         {
             var response = new GetByIdNutrientResponse();
-            try
-            {
+            
                 var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
                 if (nutrient == null)
                 {
@@ -32,11 +31,7 @@ namespace SWPApi.Application.Nutrient.Handlers
                     response = _mapper.Map<GetByIdNutrientResponse>(nutrient);
                     response.IsSuccess = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage += ex.Message;
-            }
+            
             return response;
         }
     }
