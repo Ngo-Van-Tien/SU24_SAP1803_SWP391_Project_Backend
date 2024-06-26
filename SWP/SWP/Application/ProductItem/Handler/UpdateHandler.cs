@@ -20,37 +20,32 @@ namespace SWPApi.Application.ProductItem.Handler
         public async Task<UpdateResponse> Handle(UpdateCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdateResponse();
-            try
-            {
+            
                 var productItem = _unitOfWork.ProductItemRepository.GetById(request.Id);
                 if(productItem == null)
                 {
                     response.ErrorMessage = "Product Item is not found";
                     return response;
                 }
-                var product = _unitOfWork.ProductRepository.GetById(request.ProductId.Value);
+                var product = _unitOfWork.ProductRepository.GetById(request.ProductId);
                 if (product == null)
                 {
                     response.ErrorMessage = "Product is not found";
                     return response;
                 }
-                productItem.Quantity = (int)request.Quantity;
-                productItem.Price = (decimal) request.Price;
-                productItem.Size = (int)request.Size;
+                productItem.Quantity = request.Quantity;
+                productItem.Price =  request.Price;
+                productItem.Size = request.Size;
                 productItem.Product = product;
 
                 if(productItem != null)
                 {
                     _unitOfWork.ProductItemRepository.Update(productItem);
-                    _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<UpdateResponse>(productItem);
                     response.IsSuccess = true;
                 }
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error when update produc item " + ex.Message;
-            }
+            
             return response;
         }
     }

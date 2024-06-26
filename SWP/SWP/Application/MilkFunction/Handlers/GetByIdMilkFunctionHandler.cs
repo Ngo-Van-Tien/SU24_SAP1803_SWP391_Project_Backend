@@ -19,8 +19,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
         public async Task<GetByIdMilkFunctionResponse> Handle(GetByIdMilkFunctionCommand request, CancellationToken cancellationToken)
         {
             var response = new GetByIdMilkFunctionResponse();
-            try
-            {
+            
                 var milkFunction = _unitOfWork.MilkFunctionRepository.GetById(request.Id);
                 if(milkFunction == null)
                 {
@@ -31,10 +30,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     response = _mapper.Map<GetByIdMilkFunctionResponse>(milkFunction);
                     response.IsSuccess = true;
                 }
-            }catch (Exception ex)
-            {
-                response.ErrorMessage += ex.Message;
-            }
+            
             return response;
         }
     }

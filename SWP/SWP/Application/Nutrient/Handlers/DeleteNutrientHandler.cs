@@ -19,25 +19,20 @@ namespace SWPApi.Application.Nutrient.Handlers
         public async Task<DeleteNutrientResponse> Handle(DeleteNutrientCommand request, CancellationToken cancellationToken)
         {
             var response = new DeleteNutrientResponse();
-            try
-            {
+            
                 var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
                 
                 if (nutrient != null)
                 {
                     _unitOfWork.NutrientRepository.Remove(nutrient);
-                    _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<DeleteNutrientResponse>(nutrient);
                     response.IsSuccess = true;
                     return response;
                 }
                 response.ErrorMessage = "Nutrient is not found";
-                return response;
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error when delete nutrient" + ex.Message;
-            }
+                
+            
             return response;
         }
     }

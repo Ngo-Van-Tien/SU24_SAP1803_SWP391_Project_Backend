@@ -38,14 +38,14 @@ namespace SWPApi.Application.Product.Handlers
             {
                 Name = request.Name,
                 Description = request.Description,
-                AgeRange = request.AgeRange,
+                StartAge = request.StartAge,
+                EndAge = request.EndAge,
                 Image = image
             };
 
-            if (request.MilkBrandId.HasValue)
-            {
-                product.MilkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
-            }
+            
+            product.MilkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId);
+            
 
             if (product.MilkBrand == null) 
             {

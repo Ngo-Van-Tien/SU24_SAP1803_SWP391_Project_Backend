@@ -78,5 +78,16 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromForm] DeleteProductCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

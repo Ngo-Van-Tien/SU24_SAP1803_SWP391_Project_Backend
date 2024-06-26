@@ -18,8 +18,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
         public async Task<AddMilkBrandResponse> Handle(AddMilkBrandCommand request, CancellationToken cancellationToken)
         {
             var response = new AddMilkBrandResponse();
-            try
-             {
+            
                 var milkBrand = new Infrastructure.Entities.MilkBrand
             {
                 Name = request.Name,
@@ -40,12 +39,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
              await _unitOfWork.SaveChangesAsync();
              response = _mapper.Map<AddMilkBrandResponse>(milkBrand);
              response.IsSuccess = true;
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
-            }
+            
             return response;
         }
     }

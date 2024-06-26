@@ -20,8 +20,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
         public async Task<UpdateMilkBrandResponse> Handle(UpdateMilkBrandCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdateMilkBrandResponse();
-            try
-            {
+            
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
                 
                 if (milkBrand == null)
@@ -45,13 +44,8 @@ namespace SWPApi.Application.MilkBrand.Handlers
                 await _unitOfWork.SaveChangesAsync();
                 response = _mapper.Map<UpdateMilkBrandResponse>(milkBrand);
                 response.IsSuccess = true;
-                return response;
-            }
-            catch  (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
-            }
+                
+            
             return response;
         }
     }

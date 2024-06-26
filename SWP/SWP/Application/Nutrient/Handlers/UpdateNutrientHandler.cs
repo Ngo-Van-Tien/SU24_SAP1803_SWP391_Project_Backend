@@ -19,8 +19,7 @@ namespace SWPApi.Application.Nutrient.Handlers
         public async Task<UpdateNutrientResponse> Handle(UpdateNutrientCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdateNutrientResponse();
-            try
-            {
+            
                 var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
                 
                 if (nutrient == null)
@@ -32,21 +31,16 @@ namespace SWPApi.Application.Nutrient.Handlers
                 nutrient.Name = request.Name;
                 nutrient.In100g = request.In100g;
                 nutrient.InCup = request.InCup;
-                nutrient.Unit = request.unit;
+                nutrient.Unit = request.Unit;
 
                 if(nutrient != null)
                 {
                     _unitOfWork.NutrientRepository.Update(nutrient);
-                    _unitOfWork.SaveChangesAsync();
+                    await _unitOfWork.SaveChangesAsync();
                     response = _mapper.Map<UpdateNutrientResponse>(nutrient);
-                }
+                    response.IsSuccess = true;
+            }
 
-                response.IsSuccess = true;
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error when update nutrient " + ex.Message;
-            }
             return response;
         }
     }

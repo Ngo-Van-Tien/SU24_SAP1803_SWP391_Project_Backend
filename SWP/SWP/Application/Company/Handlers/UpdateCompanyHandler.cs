@@ -21,14 +21,12 @@ namespace SWPApi.Application.Company.Handlers
         public async Task<UpdateCompanyResponse> Handle(UpdateCompanyCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdateCompanyResponse();
-            try
-            {
+            
                 var company = _unitOfWork.CompanyRepository.GetById(request.Id);
 
                 if (company == null)
                 {
                     response.ErrorMessage = "Company not found";
-                    response.IsSuccess = false;
                     return response;
                 }
 
@@ -41,12 +39,8 @@ namespace SWPApi.Application.Company.Handlers
 
                 response = _mapper.Map<UpdateCompanyResponse>(company);
                 response.IsSuccess = true;
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = $"An error occurred: {ex.Message}";
-                response.IsSuccess = false;
-            }
+            
+            
             return response;
         }
     }

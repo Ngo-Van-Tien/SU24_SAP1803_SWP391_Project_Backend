@@ -20,8 +20,7 @@ namespace SWPApi.Application.Company.Handlers
         public async Task<GetByIdResponse> Handle(GetByIdCommand request, CancellationToken cancellationToken)
         {
             var response = new GetByIdResponse();
-            try
-            {
+            
                 var company = _unitOfWork.CompanyRepository.GetById(request.Id);
                 if(company == null)
                 {
@@ -32,10 +31,7 @@ namespace SWPApi.Application.Company.Handlers
                     response = _mapper.Map<GetByIdResponse>(company);
                     response.IsSuccess = true;
                 }
-            }catch(Exception ex)
-            {
-                response.ErrorMessage += ex.Message;
-            }
+            
             return response;
         }
     }
