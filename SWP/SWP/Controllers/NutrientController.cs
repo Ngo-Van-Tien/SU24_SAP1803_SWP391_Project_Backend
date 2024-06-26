@@ -74,15 +74,15 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [AllowAnonymous]
-        [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAllNutrient()
+        [HttpGet]
+        public async Task<IActionResult> GetByIdNutrient(Guid id)
         {
-            var result = await _mediator.Send(new GetAllNutrientCommand());
+            var result = await _mediator.Send(new GetByIdNutrientCommand { Id=id});
             if (!result.IsSuccess)
             {
-                return BadRequest(result.ErrorMessage);
+                return BadRequest(result);
             }
-            return Ok(result.Nutrients);
+            return Ok(result);
         }
     }
 }

@@ -21,12 +21,12 @@ namespace SWPApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddMilkFunction([FromForm] AddMilkFunctionCommand command)
         {
-            if(command == null)
+            if (command == null)
             {
                 return BadRequest();
             }
             var result = await _mediator.Send(command);
-            if(!result.IsSuccess)
+            if (!result.IsSuccess)
             {
                 return Ok(result.ErrorMessage);
             }
@@ -34,9 +34,9 @@ namespace SWPApi.Controllers
         }
         [AllowAnonymous]
         [HttpPut]
-        public async Task<IActionResult> UpdateMilkFunction( [FromForm] UpdateMilkFunctionCommand command)
+        public async Task<IActionResult> UpdateMilkFunction([FromForm] UpdateMilkFunctionCommand command)
         {
-            if(command == null)
+            if (command == null)
             {
                 return BadRequest();
             }
@@ -51,7 +51,7 @@ namespace SWPApi.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeletetMilkFunction(Guid id)
         {
-            var result = await _mediator.Send(new DeleteMilkFunctionCommand { Id=id});
+            var result = await _mediator.Send(new DeleteMilkFunctionCommand { Id = id });
             if (!result.IsSuccess)
             {
                 return BadRequest(result.ErrorMessage);
@@ -73,5 +73,18 @@ namespace SWPApi.Controllers
             return Ok(result);
 
         }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var command = new GetByIdMilkFunctionCommand { Id = id };
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        } 
     }
 }

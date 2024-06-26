@@ -24,6 +24,7 @@ namespace SWPApi.Profiles
             CreateMap<Company, UpdateCompanyResponse>();
             CreateMap<Company, DeleteCompanyResponse>();
             CreateMap<Company, GetByIdResponse>();
+            
 
             // Milk Brand
             CreateMap<MilkBrand, DeleteMilkBrandResponse>();
@@ -37,13 +38,14 @@ namespace SWPApi.Profiles
             CreateMap<MilkFunction, UpdateMilkFunctionResponse>();
             CreateMap<MilkFunction, DeleteMilkFunctionResponse>();
             CreateMap<MilkFunction, GetAllMilkFunctionResponse>();
+            CreateMap<MilkFunction, GetByIdMilkFunctionResponse>();
 
 
             //Nutrient
             CreateMap<Nutrient, AddNutrientResponse>();
             CreateMap<Nutrient, UpdateNutrientResponse>();
             CreateMap<Nutrient, DeleteNutrientResponse>();
-            CreateMap<Nutrient, GetAllNutrientResponse>();
+            CreateMap<Nutrient, GetByIdNutrientResponse>();
 
             // Product
             CreateMap<Product, GetProductResponse>();
@@ -56,6 +58,7 @@ namespace SWPApi.Profiles
             CreateMap<ProductItem, UpdateResponse>();
             CreateMap<ProductItem, DeleteResponse>();
             CreateMap<ProductItem, GetAllProductItemResponse>();
+            CreateMap<ProductItem, GetByIdProductItemResponse>();
 
             //Order
             CreateMap<Order, GetOrderResponse>();
