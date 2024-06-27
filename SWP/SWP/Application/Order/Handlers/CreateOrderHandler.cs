@@ -31,7 +31,8 @@ namespace SWPApi.Application.Order.Handlers
                 _unitOfWork.AppUserRepository.Add(user);
                 await _unitOfWork.SaveChangesAsync();
             }
-            var productItems = _unitOfWork.ProductItemRepository.Find(x => request.ProductItemIds.Contains(x.Id));
+            var productItemIds = request.ProductItems.Select(x => x.Id);
+            var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id));
 
             var order = new Infrastructure.Entities.Order();
             order.Address = request.Address;
@@ -45,8 +46,14 @@ namespace SWPApi.Application.Order.Handlers
             {
                 var orderDetail = new OrderDetail();
                 orderDetail.Order = order;
-                orderDetail.Quantity = item.Quantity;
-                orderDetail.Price = item.Price;
+                var quantityRequest = request.ProductItems.FirstOrDefault(x => x.Id == item.Id).Quantity;
+                if (quantityRequest > item.Quantity) 
+                {
+                    response.ErrorMessage = "Product " + item.Id + " isn't enough quantity";
+                    return response;
+                }
+                orderDetail.Quantity = quantityRequest;
+                orderDetail.Price = item.Price * quantityRequest;
                 orderDetail.ProductItem = item;
                 orderDetail.Order = order;
                 totalPrice += orderDetail.Price;
@@ -54,7 +61,7 @@ namespace SWPApi.Application.Order.Handlers
             }
 
             order.TotalPriceProduct = totalPrice;
-            order.FinalPrice = totalPrice - request.ShipFees;
+            order.FinalPrice = totalPrice + request.ShipFees;
             _unitOfWork.OrderDetailRepository.AddRange(orderDetails);
 
             await _unitOfWork.SaveChangesAsync();

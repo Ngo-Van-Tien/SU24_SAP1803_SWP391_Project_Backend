@@ -6,7 +6,13 @@ namespace SWPApi.Application.Order.Commands
 {
     public class CreateOrderCommand : IRequest<CreateOrderResponse>
     {
-        public List<Guid> ProductItemIds { get; set; }
+        public class ProductRequest
+        {
+            public Guid Id { get; set; }
+            public int Quantity { get; set; }
+        }
+
+        public List<ProductRequest> ProductItems { get; set; }
         public decimal ShipFees { get; set; }
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
