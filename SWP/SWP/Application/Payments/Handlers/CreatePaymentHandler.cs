@@ -26,6 +26,22 @@ namespace SWPApi.Application.Payments.Handlers
                 return response;
             }
 
+            if(request.PaymentAmount < order.FinalPrice)
+            {
+                response.ErrorMessage = "The payment amount must be more than ordered amount.";
+                return response;
+            }
+
+            var orderDetails = _unitOfWork.OrderDetailRepository.Find(x => x.Order.Id == order.Id);
+            var productItems = _unitOfWork.ProductItemRepository.Find(x => orderDetails.Select(x => x.ProductItem.Id).Contains(x.Id));
+            foreach (var productItem in productItems)
+            {
+                var quantityRequest = orderDetails.FirstOrDefault(x => x.ProductItem.Id == productItem.Id).Quantity;
+                productItem.Quantity = productItem.Quantity - quantityRequest;
+            }
+
+            _unitOfWork.ProductItemRepository.UpdateRange(productItems);
+
             var payment = new Payment()
             {
                 Method = request.Method,
