@@ -57,5 +57,17 @@ namespace SWPApi.Controllers
 
             return Ok(result);
         }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<IActionResult> GetByStatus([FromForm] GetOrderByStatusCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }
