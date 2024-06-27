@@ -20,8 +20,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
         public async Task<UpdateMilkFunctionResponse> Handle(UpdateMilkFunctionCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdateMilkFunctionResponse();
-            try
-            {
+            
                 var milkFunction = _unitOfOfWork.MilkFunctionRepository.GetById(request.Id);
                 
                 if (milkFunction != null)
@@ -33,20 +32,15 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     response = _mapper.Map<UpdateMilkFunctionResponse>(milkFunction);
 
                     response.IsSuccess = true;
-                    return response;
+                    
                 }
                 else
                 {
                     response.ErrorMessage = "Milk Function is not found";
-                    return response;
+                    
                 }
                 
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Error when update milk function: " + ex.Message;
-            }
+            
             return response;
         }
     }

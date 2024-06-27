@@ -19,8 +19,7 @@ namespace SWPApi.Application.Nutrient.Handlers
         public async Task<GetNutrientsResponse> Handle(GetNutrientsCommand request, CancellationToken cancellationToken)
         {
             var response = new GetNutrientsResponse();
-            try
-            {
+            
                 var nutrients = _unitOfWork.NutrientRepository.GetAll().ToList();
                 if (!nutrients.Any())
                 {
@@ -29,11 +28,7 @@ namespace SWPApi.Application.Nutrient.Handlers
                 }
                 response.Data = nutrients;
                 response.IsSuccess = true;
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage += ex.ToString();
-            }
+            
             return response;
         }
     }

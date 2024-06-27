@@ -14,7 +14,8 @@ namespace SWPApi.Application.Company.Commands
         [Required]
         public string Name { get; set; }
         [FromForm]
-        public string? Description { get; set; }
+        [Required]
+        public string Description { get; set; }
         [FromForm]
         [Required]
         public string Nation { get; set; }

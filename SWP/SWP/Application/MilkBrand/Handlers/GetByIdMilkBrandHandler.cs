@@ -21,8 +21,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
         public async Task<GetByIdMilkBrandResponse> Handle(GetByIdMilkBrandCommand request, CancellationToken cancellationToken)
         {
             var response = new GetByIdMilkBrandResponse();
-            try
-            {
+            
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
                 if(milkBrand == null)
                 {
@@ -33,10 +32,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
                     response = _mapper.Map<GetByIdMilkBrandResponse>(milkBrand);
                     response.IsSuccess = true;
                 }
-            }catch (Exception ex)
-            {
-                response.ErrorMessage += ex.Message;
-            }
+            
             return response;
         }
     }

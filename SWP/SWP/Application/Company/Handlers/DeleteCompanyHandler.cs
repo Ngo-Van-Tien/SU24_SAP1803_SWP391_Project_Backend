@@ -19,30 +19,24 @@ namespace SWPApi.Application.Company.Handlers
         public async Task<DeleteCompanyResponse> Handle(DeleteCompanyCommand request, CancellationToken cancellationToken)
         {
             var response = new DeleteCompanyResponse();
-            try
+
+            var company = _unitOfWork.CompanyRepository.GetById(request.Id);
+
+            if (company == null)
             {
-                var company = _unitOfWork.CompanyRepository.GetById(request.Id);
-
-                if (company == null)
-                {
-                    response.ErrorMessage = "Company not found";
-                    response.IsSuccess = false;
-                    return response;
-                }
-
-                _unitOfWork.CompanyRepository.Remove(company);
-                await _unitOfWork.SaveChangesAsync();
-
-                response = _mapper.Map<DeleteCompanyResponse>(company);
-                response.IsSuccess = true;
+                response.ErrorMessage = "Company not found";
+                return response;
             }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = $"An error occurred: {ex.Message}";
-                response.IsSuccess = false;
-            }
+
+            _unitOfWork.CompanyRepository.Remove(company);
+            await _unitOfWork.SaveChangesAsync();
+
+            response = _mapper.Map<DeleteCompanyResponse>(company);
+            response.IsSuccess = true;
+
 
             return response;
+
         }
     }
 }

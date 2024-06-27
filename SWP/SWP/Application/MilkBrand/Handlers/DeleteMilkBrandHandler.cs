@@ -20,8 +20,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
         public async Task<DeleteMilkBrandResponse> Handle(DeleteMilkBrandCommand request, CancellationToken cancellationToken)
         {
             var response = new DeleteMilkBrandResponse();
-            try
-            {
+            
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
                 if (milkBrand == null)
                 {
@@ -35,12 +34,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
                 response.IsSuccess = true;
 
-            }
-            catch(Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Error when creating new brand: " + ex.Message;
-            }
+            
             return response;
         }
     }

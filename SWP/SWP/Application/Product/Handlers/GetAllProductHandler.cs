@@ -19,8 +19,7 @@ namespace SWPApi.Application.Product.Handlers
         public async Task<GetAllProductResponse> Handle(GetAllProductCommand request, CancellationToken cancellationToken)
         {
             var response = new GetAllProductResponse();
-            try
-            {
+            
                 var products = _unitOfWork.ProductRepository.GetAll().ToList();
                 if (!products.Any())
                 {
@@ -33,12 +32,6 @@ namespace SWPApi.Application.Product.Handlers
                     response.IsSuccess = true;
                 }
                 
-                
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error when creating new product: " + ex.Message;
-            }
             return response;
         }
     }

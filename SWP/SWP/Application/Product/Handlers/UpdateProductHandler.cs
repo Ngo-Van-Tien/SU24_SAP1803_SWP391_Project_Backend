@@ -30,16 +30,13 @@ namespace SWPApi.Application.Product.Handlers
             }
 
             var image = product.Image;
-            var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId.Value);
+            var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId);
             if (milkBrand == null)
             {
                 response.ErrorMessage = "milkBrand is not existing";
                 return response;
             }
-            else if (request.MilkBrandId.Equals(""))
-            {
-                milkBrand = null;
-            }
+            
 
             if (request.Image != null && request.Image.Length > 0)
             {
@@ -54,7 +51,8 @@ namespace SWPApi.Application.Product.Handlers
             product.Image = image;
             product.Name = request.Name;
             product.Description = request.Description;
-            product.AgeRange = request.AgeRange;
+            product.StartAge = request.StartAge;
+            product.EndAge = request.EndAge;
 
             _unitOfWork.ProductRepository.Update(product);
             await _unitOfWork.SaveChangesAsync();

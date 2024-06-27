@@ -67,7 +67,7 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> GetProductItems(GetProductItemsCommand command)
+        public async Task<IActionResult> GetProductItems([FromForm]GetProductItemsCommand command)
         {
             if (command == null)
             {

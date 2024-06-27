@@ -21,8 +21,7 @@ namespace SWPApi.Application.Company.Handlers
         {
             var response = new AddCompanyResponse();
 
-            try
-            {
+           
                 var company = new Infrastructure.Entities.Company
                 {
                     Name = request.Name,
@@ -33,24 +32,10 @@ namespace SWPApi.Application.Company.Handlers
                 _unitOfWork.CompanyRepository.Add(company);
                 await _unitOfWork.SaveChangesAsync();
                 response = _mapper.Map<AddCompanyResponse>(company);
+                response.IsSuccess = true;
 
-                if (company != null)
-                {
-                    response.IsSuccess = true;
-                    return response;
-                }
-                else
-                {
-                    response.ErrorMessage = "Error when creating a new company";
-                    return response;
-                }
-            }
-            catch (Exception ex)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = $"An error occurred: {ex.Message}";
                 return response;
-            }
+            
         }
     }
 }

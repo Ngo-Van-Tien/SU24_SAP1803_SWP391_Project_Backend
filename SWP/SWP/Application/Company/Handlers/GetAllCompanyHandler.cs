@@ -20,8 +20,7 @@ namespace SWPApi.Application.Company.Handlers
         public async Task<GetAllCompanyResponse> Handle(GetAllCompanyCommand request, CancellationToken cancellationToken)
         {
             var response = new GetAllCompanyResponse();
-            try
-            {
+            
                 var companies = _unitOfWork.CompanyRepository.GetAll().ToList();
                 if (!companies.Any())
                 {
@@ -33,10 +32,7 @@ namespace SWPApi.Application.Company.Handlers
                     response.Data = companies;
                     response.IsSuccess = true;
                 }
-            }catch (Exception ex)
-            {
-                response.ErrorMessage += ex.Message;
-            }
+            
             return response;
         }
     }
