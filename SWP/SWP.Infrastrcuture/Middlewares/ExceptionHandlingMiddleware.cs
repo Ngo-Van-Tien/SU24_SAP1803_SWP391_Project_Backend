@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Middlewares
@@ -25,8 +26,10 @@ namespace Infrastructure.Middlewares
             }
             catch (Exception ex)
             {
+                var result = new { error = ex.Message };
                 httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await httpContext.Response.WriteAsync(ex.Message);
+                httpContext.Response.ContentType = "application/json";
+                await httpContext.Response.WriteAsync(result.ToString());
             }
         }
     }

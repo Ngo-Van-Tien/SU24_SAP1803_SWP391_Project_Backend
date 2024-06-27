@@ -19,6 +19,8 @@ namespace SWP.Infrastrcuture
             builder.Entity<Product>().Navigation(c => c.MilkBrand).AutoInclude();
             builder.Entity<ProductItem>().Navigation(c => c.Product).AutoInclude();
             builder.Entity<Order>().Navigation(c => c.User).AutoInclude();
+            builder.Entity<OrderDetail>().Navigation(c => c.Order).AutoInclude();
+            builder.Entity<OrderDetail>().Navigation(c => c.ProductItem).AutoInclude();
 
             base.OnModelCreating(builder);
             builder.Entity<Company>()

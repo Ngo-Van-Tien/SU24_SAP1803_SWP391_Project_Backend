@@ -23,6 +23,11 @@ namespace Infrastructure.Repositories
             _context.Set<T>().Add(entity);
         }
 
+        public void UpdateRange(IEnumerable<T> entities)
+        {
+            _context.Set<T>().UpdateRange(entities);
+        }
+
         public void AddRange(IEnumerable<T> entities)
         {
             _context.Set<T>().AddRange(entities);
