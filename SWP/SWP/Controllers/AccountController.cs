@@ -11,6 +11,7 @@ namespace SWPApi.Controllers
     {
         private readonly ISender _mediator;
 
+
         public AccountController(ISender mediator)
         {
             _mediator = mediator;

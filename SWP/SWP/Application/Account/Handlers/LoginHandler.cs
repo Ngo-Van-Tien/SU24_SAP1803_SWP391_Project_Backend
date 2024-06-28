@@ -10,6 +10,7 @@ namespace SWPApi.Application.Account.Handlers
     {
          SignInManager<AppUser> _signInManager;
          UserManager<AppUser> _userManager;
+         TokenHandler _tokenHandler;
 
         public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
         {
@@ -29,6 +30,8 @@ namespace SWPApi.Application.Account.Handlers
             if (result.Succeeded)
             {
                 response.IsSuccess = true;
+                response.Token = _tokenHandler.GenerateTokenString(user);
+                
                 return response;
             }
             return response;
