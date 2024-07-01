@@ -24,6 +24,7 @@ namespace Infrastructure
         public IAppUserRepository AppUserRepository { get; private set; }
         public IOrderDetailRepository OrderDetailRepository { get; private set; }
         public IMilkBrandFunctionRepository MilkBrandFunctionRepository { get; private set; }
+        public IProductNutrientRepository ProductNutrientRepository { get; private set; }
         public UnitOfWork(SWPDbContext context)
         {
             _context = context;

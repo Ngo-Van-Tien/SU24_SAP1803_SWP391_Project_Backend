@@ -23,9 +23,6 @@ namespace SWPApi.Application.Nutrient.Handlers
                 var nutrient = new Infrastructure.Entities.Nutrient
                 {
                     Name = request.Name,
-                    In100g = request.In100g,
-                    InCup = request.InCup,
-                    Unit = request.Unit
                 };
                 
                 if (nutrient != null)

@@ -13,5 +13,8 @@ namespace Infrastructure.Entities
         public Product Product { get; set; }
         [ForeignKey("NutrientId")]
         public Nutrient Nutrient { get; set; }
+        public double? In100g { get; set; }
+        public double? InCup { get; set; }
+        public string Unit { get; set; }
     }
 }

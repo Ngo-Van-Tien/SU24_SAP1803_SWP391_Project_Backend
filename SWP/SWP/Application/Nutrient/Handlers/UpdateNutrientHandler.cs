@@ -29,9 +29,6 @@ namespace SWPApi.Application.Nutrient.Handlers
                 }
 
                 nutrient.Name = request.Name;
-                nutrient.In100g = request.In100g;
-                nutrient.InCup = request.InCup;
-                nutrient.Unit = request.Unit;
 
                 if(nutrient != null)
                 {
