@@ -5,14 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWPApi.Application.Account.Commands
 {
-    public class RegisterCommand : IRequest<RegisterResponse>
+    public class UpdatePasswordCommand : IRequest<UpdatePasswordResponse>
     {
-        [Required]
-        [FromForm]
-        public string FirstName { get; set; }
-        [Required]
-        [FromForm]
-        public string LastName { get; set; }
         [Required]
         [FromForm]
         public string Email { get; set; }
@@ -21,9 +15,6 @@ namespace SWPApi.Application.Account.Commands
         public string Password { get; set; }
         [Required]
         [FromForm]
-        public string Address { get; set; }
-        [Required]
-        [FromForm]
-        public string PhoneNumber { get; set; }
+        public string NewPassword { get; set; }
     }
 }
