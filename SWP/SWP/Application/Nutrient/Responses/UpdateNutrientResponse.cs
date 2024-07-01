@@ -6,8 +6,5 @@ namespace SWPApi.Application.Nutrient.Responses
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public int? In100g { get; set; }
-        public int? InCup { get; set; }
-        public string unit { get; set; }
     }
 }
