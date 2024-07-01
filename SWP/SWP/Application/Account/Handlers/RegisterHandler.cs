@@ -30,7 +30,8 @@ namespace SWPApi.Application.Account.Handlers
                 Email = request.Email,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Address = request.Address
+                Address = request.Address,
+                PhoneNumber = request.PhoneNumber
             };
 
             var result = await _userManager.CreateAsync(user, request.Password);

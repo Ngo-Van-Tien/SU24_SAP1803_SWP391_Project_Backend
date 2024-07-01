@@ -37,5 +37,38 @@ namespace SWPApi.Controllers
             }
             return Unauthorized(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetUser([FromForm] GetUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if(!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdatePassword([FromForm] UpdatePasswordCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

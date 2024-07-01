@@ -17,8 +17,11 @@ namespace SWPApi.Application.Account.Handlers
         {
             IEnumerable<System.Security.Claims.Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Email, user.UserName),
-                new Claim(ClaimTypes.Role, "Admin"),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim("FirstName", user.FirstName),
+                new Claim("LastName", user.LastName)
             };
             SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("Jwt:Key").Value));
             SigningCredentials signingCred = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
