@@ -10,12 +10,13 @@ namespace SWPApi.Application.Account.Handlers
     {
          SignInManager<AppUser> _signInManager;
          UserManager<AppUser> _userManager;
-         TokenHandler _tokenHandler;
+         JwtTokenHandler _tokenHandler;
 
-        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, JwtTokenHandler tokenHandler)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _tokenHandler = tokenHandler;
         }
         public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
@@ -36,5 +37,7 @@ namespace SWPApi.Application.Account.Handlers
             }
             return response;
         }
+
+
     }
 }

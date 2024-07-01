@@ -13,6 +13,8 @@ namespace SWPApi.Application.Account.Handlers
     {
         UserManager<AppUser> _userManager;
         IMapper _mapper;
+       
+
         public RegisterHandler(UserManager<AppUser> userManager, IMapper mapper)
         {
             _userManager = userManager;
