@@ -17,7 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var configuration = builder.Configuration;
-builder.Services.AddDbContext<SWPDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<SWPDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")),
+             ServiceLifetime.Transient);
 
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<SWPDbContext>()
@@ -39,6 +40,8 @@ builder.Services.AddTransient<IPaymentRepository, PaymentRepository>();
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddScoped<UserManager<AppUser>>();
+builder.Services.AddScoped<RoleManager<IdentityRole>>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -67,7 +70,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 var app = builder.Build();
+
+//using (var scope = app.Services.CreateScope())
+//{
+//    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+//    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//    var contenxt = scope.ServiceProvider.GetRequiredService<SWPDbContext>();
+//    await DbInitializer.Initialize(userManager, roleManager, contenxt);
+//}
+
 app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .SetIsOriginAllowed(origin => true)

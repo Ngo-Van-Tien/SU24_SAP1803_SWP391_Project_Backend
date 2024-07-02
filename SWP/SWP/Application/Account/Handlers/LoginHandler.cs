@@ -1,8 +1,14 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace SWPApi.Application.Account.Handlers
 {
@@ -11,12 +17,13 @@ namespace SWPApi.Application.Account.Handlers
          SignInManager<AppUser> _signInManager;
          UserManager<AppUser> _userManager;
          JwtTokenHandler _tokenHandler;
-
-        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, JwtTokenHandler tokenHandler)
+        IConfiguration _configuration;
+        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, JwtTokenHandler tokenHandler, IConfiguration configuration)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _tokenHandler = tokenHandler;
+            _configuration = configuration;
         }
         public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
@@ -31,11 +38,39 @@ namespace SWPApi.Application.Account.Handlers
             if (result.Succeeded)
             {
                 response.IsSuccess = true;
-                response.Token = _tokenHandler.GenerateTokenString(user);
+                response.Token = await GenerateTokenString(user);
                 
                 return response;
             }
             return response;
+        }
+
+        private async Task<string> GenerateTokenString(AppUser user)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim("FirstName", user.FirstName),
+                new Claim("LastName", user.LastName)
+            };
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+            foreach (var role in userRoles) {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+
+            SecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("Jwt:Key").Value));
+            SigningCredentials signingCred = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
+            var securityToken = new JwtSecurityToken(
+            claims: claims,
+                expires: DateTime.Now.AddMinutes(60),
+                issuer: _configuration.GetSection("Jwt:Issuer").Value,
+                audience: _configuration.GetSection("Jwt:Audience").Value,
+                signingCredentials: signingCred);
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(securityToken);
+            return tokenString;
         }
 
 
