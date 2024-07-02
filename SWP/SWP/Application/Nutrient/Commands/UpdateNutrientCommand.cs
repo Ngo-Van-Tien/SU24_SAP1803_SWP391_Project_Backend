@@ -13,14 +13,7 @@ namespace SWPApi.Application.Nutrient.Commands
         [Required]
         [FromForm]
         public string Name { get; set; }
-        [Required]
-        [FromForm]
-        public int In100g { get; set; }
-        [Required]
-        [FromForm]
-        public int InCup { get; set; }
-        [Required]
-        [FromForm]
-        public string Unit { get; set; }
+       
+
     }
 }

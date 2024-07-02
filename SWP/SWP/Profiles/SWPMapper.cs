@@ -62,6 +62,7 @@ namespace SWPApi.Profiles
 
             //Order
             CreateMap<Order, GetOrderResponse>();
+            
         }
     }
 }

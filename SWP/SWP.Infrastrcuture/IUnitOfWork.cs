@@ -21,6 +21,7 @@ namespace Infrastructure
         IPaymentRepository PaymentRepository { get; }
         IImageRepository ImageRepository { get; }
         IMilkBrandFunctionRepository MilkBrandFunctionRepository { get; }
+        IProductNutrientRepository ProductNutrientRepository { get; }
         Task SaveChangesAsync();
     }
 }
