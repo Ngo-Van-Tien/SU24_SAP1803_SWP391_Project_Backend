@@ -18,25 +18,17 @@ namespace SWPApi.Application.Order.Handlers
         public async Task<CreateOrderResponse> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             var response = new CreateOrderResponse();
-            var user = _unitOfWork.AppUserRepository.Find(x => !string.IsNullOrEmpty(request.Email) && x.Email.ToLower() == request.Email.Trim().ToLower()).FirstOrDefault();
-            if (user == null) 
-            {
-                user = new AppUser();
-                user.UserName = request.Email;
-                user.PhoneNumber = request.PhoneNumber;
-                user.Email = request.Email;
-                user.Address = request.Address;
-                user.FirstName = request.FirstName;
-                user.LastName = request.LastName;
-                _unitOfWork.AppUserRepository.Add(user);
-                await _unitOfWork.SaveChangesAsync();
+            var user = _unitOfWork.AppUserRepository.Find(x => x.Id == request.UserId).FirstOrDefault();
+            if (user != null) {
+                response.IsSuccess = false;
+                response.ErrorMessage = "The user not found";
             }
             var productItemIds = request.ProductItems.Select(x => x.Id);
             var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id));
 
             var order = new Infrastructure.Entities.Order();
-            order.Address = request.Address;
-            order.PhoneNumber = request.PhoneNumber;
+            order.Address = user.Address;
+            order.PhoneNumber = user.PhoneNumber;
             order.ShipFees = request.ShipFees;
             order.Status = OrderConstant.CREATED_STATUS;
             order.User = user;
