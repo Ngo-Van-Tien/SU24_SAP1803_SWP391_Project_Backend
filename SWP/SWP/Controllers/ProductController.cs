@@ -68,6 +68,18 @@ namespace SWPApi.Controllers
 
         [AllowAnonymous]
         [HttpGet]
+        public async Task<IActionResult> getproducts([FromQuery]GetProductsCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
             var result = await _mediator.Send(new GetAllProductCommand());

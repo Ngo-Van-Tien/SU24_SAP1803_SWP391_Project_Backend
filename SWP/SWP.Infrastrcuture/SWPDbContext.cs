@@ -1,7 +1,11 @@
-﻿using Infrastructure.Entities;
+﻿using Infrastructure;
+using Infrastructure.Constans;
+using Infrastructure.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SWP.Infrastrcuture.Entities;
+using System.Linq;
 
 namespace SWP.Infrastrcuture
 {
@@ -9,7 +13,7 @@ namespace SWP.Infrastrcuture
     {
         public SWPDbContext(DbContextOptions<SWPDbContext> options) : base(options) 
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -59,7 +63,6 @@ namespace SWP.Infrastrcuture
             builder.Entity<ImageFile>()
                 .Property(e => e.Id)
                 .ValueGeneratedOnAdd();
-            
         }
 
         public DbSet<AppUser> AppUsers { get; set; }
