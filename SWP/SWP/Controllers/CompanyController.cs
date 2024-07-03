@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,7 @@ namespace SWPApi.Controllers
             _mediator = mediator;
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> AddCompany([FromForm] AddCompanyCommand command)
         {
@@ -29,7 +30,7 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(command);
             return Ok(result);
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPut]
         public async Task<IActionResult> UpdateCompany([FromForm] UpdateCompanyCommand command)
         {
@@ -44,7 +45,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.Admin)]
         [HttpDelete]
         public async Task<IActionResult> DeleteCompany(Guid id)
         {
@@ -56,7 +57,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpGet]
         public async Task<IActionResult> GetAllCompany()
         {
@@ -70,7 +71,7 @@ namespace SWPApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("getbyid")]
+        [HttpGet]
         public async Task<IActionResult> GetById(Guid id)
         {
             var command = new GetByIdCommand { Id = id };

@@ -27,7 +27,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>()
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddTransient<JwtTokenHandler>();
+
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IMilkBrandRepository, MilkBrandRepository>();
