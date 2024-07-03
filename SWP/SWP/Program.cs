@@ -73,13 +73,13 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-//    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-//    var contenxt = scope.ServiceProvider.GetRequiredService<SWPDbContext>();
-//    await DbInitializer.Initialize(userManager, roleManager, contenxt);
-//}
+using (var scope = app.Services.CreateScope())
+{
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var contenxt = scope.ServiceProvider.GetRequiredService<SWPDbContext>();
+    await DbInitializer.Initialize(userManager, roleManager, contenxt);
+}
 
 app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
