@@ -39,12 +39,7 @@ namespace SWPApi.Application.Account.Handlers
             {
                 response.IsSuccess = true;
                 response.Token = await GenerateTokenString(user);
-                response.Email = user.Email;
-                response.FirstName = user.FirstName;
-                response.LastName = user.LastName;
-                response.Address = user.Address;
-                response.PhoneNumber = user.PhoneNumber;
-
+                
                 return response;
             }
             return response;
