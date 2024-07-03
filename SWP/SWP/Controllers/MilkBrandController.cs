@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +16,7 @@ namespace SWPApi.Controllers
         {
             _mediator = mediator;
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> AddMilkBrand([FromForm] AddMilkBrandCommand command)
         {
@@ -30,7 +31,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPut]
         public async Task<IActionResult> UpdateMilkBrand( [FromForm] UpdateMilkBrandCommand command)
         {
@@ -49,7 +50,7 @@ namespace SWPApi.Controllers
             }   
             return Ok(result);
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpDelete]
         public async Task<IActionResult> DeleteMilkBrand(Guid id)
         {

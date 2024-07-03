@@ -16,13 +16,11 @@ namespace SWPApi.Application.Account.Handlers
     {
          SignInManager<AppUser> _signInManager;
          UserManager<AppUser> _userManager;
-         JwtTokenHandler _tokenHandler;
         IConfiguration _configuration;
-        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, JwtTokenHandler tokenHandler, IConfiguration configuration)
+        public LoginHandler(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, IConfiguration configuration)
         {
             _signInManager = signInManager;
             _userManager = userManager;
-            _tokenHandler = tokenHandler;
             _configuration = configuration;
         }
         public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)

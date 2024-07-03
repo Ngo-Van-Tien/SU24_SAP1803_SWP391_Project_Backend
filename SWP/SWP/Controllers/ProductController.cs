@@ -1,4 +1,5 @@
-﻿using Infrastructure.Entities;
+﻿using Infrastructure.Constans;
+using Infrastructure.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +28,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> addproduct([FromForm] AddProductCommand command)
         {
@@ -39,13 +40,13 @@ namespace SWPApi.Controllers
             var result = await _mediator.Send(command);
             if (result == null || !result.IsSuccess)
             {
-                return BadRequest(result?.ErrorMessage ?? "An error occurred while creating the product.");
+                return BadRequest(result);
             }
 
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> updateproduct([FromForm] UpdateProductCommand command)
         {
@@ -90,7 +91,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpDelete]
         public async Task<IActionResult> Delete([FromForm] DeleteProductCommand command)
         {

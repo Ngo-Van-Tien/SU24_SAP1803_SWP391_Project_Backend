@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Models;
+using PagedList;
 
 namespace SWPApi.Application.Account.Responses
 {
@@ -15,6 +16,6 @@ namespace SWPApi.Application.Account.Responses
             public bool LockoutEnabled { get; set; }
         }
 
-        public List<User> Data { get; set; }
+        public IPagedList<User> Data { get; set; }
     }
 }
