@@ -15,7 +15,8 @@ namespace SWPApi.Controllers
         {
             _mediator = mediator;
         }
-        [AllowAnonymous]
+
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreatePayment([FromForm] CreatePaymentCommand command)
         {
@@ -31,7 +32,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetPayment(int pageNumber, int PageSize)
         {

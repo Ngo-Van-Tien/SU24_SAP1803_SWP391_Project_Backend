@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace SWPApi.Controllers
             _mediator = mediator;
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateOrder(CreateOrderCommand command)
         {
@@ -30,7 +31,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetOrder(Guid id)
         {
@@ -44,7 +45,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetAllOrders()
         {
@@ -58,7 +59,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> GetByStatus([FromForm] GetOrderByStatusCommand command)
         {
