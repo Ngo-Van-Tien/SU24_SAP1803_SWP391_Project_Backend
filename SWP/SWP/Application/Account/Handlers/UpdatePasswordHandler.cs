@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
+using System.ComponentModel.DataAnnotations;
 
 namespace SWPApi.Application.Account.Handlers
 {
@@ -17,6 +18,11 @@ namespace SWPApi.Application.Account.Handlers
         public async Task<UpdatePasswordResponse> Handle(UpdatePasswordCommand request, CancellationToken cancellationToken)
         {
             var response = new UpdatePasswordResponse();
+            if (string.IsNullOrEmpty(request.Email) || !new EmailAddressAttribute().IsValid(request.Email))
+            {
+                response.ErrorMessage = "Invalid email address";
+                return response;
+            }
             var user = await _userManager.FindByEmailAsync(request.Email);
 
             if (user == null)
