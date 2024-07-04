@@ -88,6 +88,19 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpGet]
+        public async Task<IActionResult> GetQuantity()
+        {
+            var command = new CountMilkBrandCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
         
 }
