@@ -31,7 +31,7 @@ namespace SWPApi.Application.Account.Handlers
             if (user == null)
             {
                 response.IsSuccess = false;
-                response.ErrorMessage = "Không thể xác định người dùng hiện tại.";
+                response.ErrorMessage = "The current user could not be located";
                 return response;
             }
 
@@ -39,7 +39,14 @@ namespace SWPApi.Application.Account.Handlers
             if (currentUser == null)
             {
                 response.IsSuccess = false;
-                response.ErrorMessage = "Không thể tìm thấy người dùng hiện tại.";
+                response.ErrorMessage = "The current user could not be located";
+                return response;
+            }
+
+            if (request.pageNumber <= 0 || request.pageSize <= 0)
+            {
+                response.IsSuccess = false;
+                response.ErrorMessage = "Page number and page size must be greater than 0";
                 return response;
             }
 
@@ -53,7 +60,10 @@ namespace SWPApi.Application.Account.Handlers
                 if (customerRole != null)
                 {
                     var customerUserIds = await _userManager.GetUsersInRoleAsync(UserRolesConstant.Customer);
-                    usersQuery = usersQuery.Where(u => customerUserIds.Select(cu => cu.Id).Contains(u.Id));
+                    if (customerUserIds != null)
+                    {
+                        usersQuery = usersQuery.Where(u => customerUserIds.Select(cu => cu.Id).Contains(u.Id));
+                    }
                 }
             }
 
@@ -69,7 +79,12 @@ namespace SWPApi.Application.Account.Handlers
                     LockoutEnabled = u.LockoutEnabled
                 })
                 .ToListAsync(cancellationToken);
-
+            if (usersList == null)
+            {
+                response.IsSuccess = false;
+                response.ErrorMessage = "Failed to retrieve user list";
+                return response;
+            }
             var pagedUsers = usersList.ToPagedList(request.pageNumber, request.pageSize);
 
             response.Data = pagedUsers;

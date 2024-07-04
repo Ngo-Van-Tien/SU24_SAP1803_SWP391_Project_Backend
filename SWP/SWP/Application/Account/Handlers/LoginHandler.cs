@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
+using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -25,8 +26,14 @@ namespace SWPApi.Application.Account.Handlers
         }
         public async Task<LoginResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.FindByEmailAsync(request.Email);
             var response = new LoginResponse();
+            if (string.IsNullOrEmpty(request.Email) || !new EmailAddressAttribute().IsValid(request.Email))
+            {
+                response.ErrorMessage = "Invalid email address";
+                return response;
+            }
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            
             if (user == null)
             {
                 response.ErrorMessage = "User or password is not valid";
