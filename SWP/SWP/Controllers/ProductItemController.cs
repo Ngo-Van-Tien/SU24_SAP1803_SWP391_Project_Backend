@@ -120,5 +120,32 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+
+        public async Task<IActionResult> GetQuantity()
+        {
+            var command = new CountProductItemCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> GetQuantityOutOfStock()
+        {
+            var command = new CountOutOfStockCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }
