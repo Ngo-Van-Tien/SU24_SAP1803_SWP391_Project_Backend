@@ -19,7 +19,7 @@ namespace SWPApi.Application.Order.Handlers
         {
             var response = new CreateOrderResponse();
             var user = _unitOfWork.AppUserRepository.Find(x => x.Id == request.UserId).FirstOrDefault();
-            if (user != null) {
+            if (user == null) {
                 response.IsSuccess = false;
                 response.ErrorMessage = "The user not found";
             }

@@ -11,5 +11,6 @@ namespace Infrastructure.Constans
         public static string CREATED_STATUS = "CREATED";
         public static string SHIPPING_STATUS = "SHIPPING";
         public static string SUCCESS_STATUS = "SUCCESS";
+        public static string CANCEL_STATUS = "CANCEL";
     }
 }
