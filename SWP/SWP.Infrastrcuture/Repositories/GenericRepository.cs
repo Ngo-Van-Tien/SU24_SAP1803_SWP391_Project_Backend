@@ -33,10 +33,10 @@ namespace Infrastructure.Repositories
             _context.Set<T>().AddRange(entities);
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
-        {
-            return _context.Set<T>().Where(expression);
-        }
+            public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+            {
+                return _context.Set<T>().Where(expression);
+            }
 
         public IEnumerable<T> GetAll()
         {

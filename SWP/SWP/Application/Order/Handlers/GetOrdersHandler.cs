@@ -18,7 +18,9 @@ namespace SWPApi.Application.Order.Handlers
         public async Task<GetOrdersResponse> Handle(GetOrdersCommand request, CancellationToken cancellationToken)
         {
             var response = new GetOrdersResponse();
-            response.Data = _unitOfWork.OrderRepository.GetAll().ToList();
+            var orders = _unitOfWork.OrderRepository.GetAll().ToList();
+
+            response.Data =  _mapper.Map<List<GetOrdersResponse.OrderDisplay>>(orders);
             response.IsSuccess = true;
 
             return response;

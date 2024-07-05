@@ -25,7 +25,7 @@ namespace SWPApi.Application.Order.Handlers
             var orders = _unitOfWork.OrderRepository
                             .Find(o => o.CreatedDate >= startDate
                                     && o.CreatedDate <= endDate
-                                    && o.Status == "SUCCESS");
+                                    && o.Status == "SUCCCESS");
 
             if (orders.Any())
             {

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure;
+using Infrastructure.Constans;
 using Infrastructure.Entities;
 using MediatR;
 using SWPApi.Application.Payments.Commands;
@@ -49,8 +50,10 @@ namespace SWPApi.Application.Payments.Handlers
                 PaymentDate = request.PaymentDate,
                 Order = order,
             };
-
+            
             _unitOfWork.PaymentRepository.Add(payment);
+            order.StatusPayment = OrderConstant.PAID_STATUS;
+            _unitOfWork.OrderRepository.Update(order);
             await _unitOfWork.SaveChangesAsync();
 
             response.IsSuccess = true;

@@ -16,6 +16,7 @@ namespace Infrastructure.Entities
         public string Address { get; set; }
         public string PhoneNumber { get;set; }
         public string Status { get; set; }
+        public string StatusPayment { get; set; }
         [ForeignKey("UserId")]
         public AppUser User { get; set; }
     }
