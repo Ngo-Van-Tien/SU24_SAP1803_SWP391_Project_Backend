@@ -16,7 +16,7 @@ namespace SWPApi.Controllers
             _mediator = mediator;
         }
 
-        [Authorize]
+        
         [HttpPost]
         public async Task<IActionResult> CreatePayment([FromForm] CreatePaymentCommand command)
         {

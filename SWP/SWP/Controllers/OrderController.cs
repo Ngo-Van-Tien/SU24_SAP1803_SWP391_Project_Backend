@@ -128,5 +128,29 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> updatestatus([FromForm] UpdateStatusCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> getdetailorder([FromForm] GetDetailOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

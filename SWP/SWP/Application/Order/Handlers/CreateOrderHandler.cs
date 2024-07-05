@@ -30,7 +30,8 @@ namespace SWPApi.Application.Order.Handlers
             order.Address = user.Address;
             order.PhoneNumber = user.PhoneNumber;
             order.ShipFees = request.ShipFees;
-            order.Status = OrderConstant.CREATED_STATUS;
+            order.Status = OrderConstant.PROCESSING_STATUS;
+            order.StatusPayment = OrderConstant.UNPAID_STATUS;
             order.User = user;
             decimal totalPrice = 0;
             var orderDetails = new List<OrderDetail>();

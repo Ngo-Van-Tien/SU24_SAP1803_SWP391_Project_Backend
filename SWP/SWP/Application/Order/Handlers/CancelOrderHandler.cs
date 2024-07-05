@@ -24,9 +24,13 @@ namespace SWPApi.Application.Order.Handlers
             }
             else
             {
-                if(order.Status != OrderConstant.SUCCESS_STATUS)
+                if(order.Status == OrderConstant.PROCESSING_STATUS || order.Status == OrderConstant.DELIVERING_STATUS)
                 {
                     order.Status = OrderConstant.CANCEL_STATUS;
+                    if(order.StatusPayment == OrderConstant.PAID_STATUS)
+                    {
+                        order.StatusPayment = OrderConstant.WAITREFUNDED_STATUS;
+                    }
                     _unitOfWork.OrderRepository.Update(order);
                     await _unitOfWork.SaveChangesAsync();
                     respone.Order = order;
