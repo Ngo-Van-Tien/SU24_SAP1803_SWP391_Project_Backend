@@ -28,7 +28,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        
         [HttpPost]
         public async Task<IActionResult> addproduct([FromForm] AddProductCommand command)
         {
@@ -108,6 +108,17 @@ namespace SWPApi.Controllers
         public async Task<IActionResult> getquantity()
         {
             var command = new GetQuantityProductCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> getnutrientsbyproductid([FromForm] GetNutrientsCommand  command)
+        {
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {

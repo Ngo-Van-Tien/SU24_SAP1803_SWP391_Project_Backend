@@ -52,8 +52,14 @@ namespace SWPApi.Application.Product.Handlers
                 response.ErrorMessage = "The MilkBrand isn't found";
                 return response;
             }
+            var nutrients = request.Nutrients.ToList();
+            if (nutrients == null || nutrients.Any())
+            {
+                response.ErrorMessage = "Nutrients list is empty or null.";
+                return response;
+            }
 
-            foreach (var nutrientDetail in request.Nutrients)
+            foreach (var nutrientDetail in nutrients)
             {
                 var nutrient = _unitOfWork.NutrientRepository.GetById(nutrientDetail.NutrientId);
                 if (nutrient != null)
@@ -67,6 +73,7 @@ namespace SWPApi.Application.Product.Handlers
                         Unit = nutrientDetail.Unit
                     };
                     _unitOfWork.ProductNutrientRepository.Add(productNutrient);
+                    await _unitOfWork.SaveChangesAsync();
                 }
             }
 
