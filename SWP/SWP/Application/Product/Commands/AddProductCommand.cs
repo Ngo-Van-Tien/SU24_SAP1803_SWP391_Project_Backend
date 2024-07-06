@@ -9,16 +9,12 @@ namespace SWPApi.Application.Product.Commands
     public class NutrientDetail
     {
         [Required]
-        [FromForm]
         public Guid NutrientId { get; set; }
         [Required]
-        [FromForm]
         public double? In100g { get; set; }
         [Required]
-        [FromForm]
         public double? InCup { get; set; }
         [Required]
-        [FromForm]
         public string Unit { get; set; }
     }
     public class AddProductCommand: IRequest<AddProductResponse>
@@ -43,6 +39,6 @@ namespace SWPApi.Application.Product.Commands
         public IFormFile Image { get; set; }
         [Required]
         [FromForm]
-        public List<NutrientDetail> Nutrients { get; set; }
+        public List<NutrientDetail> Nutrients { get; set; } = new List<NutrientDetail>();
     }
 }
