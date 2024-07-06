@@ -52,28 +52,21 @@ namespace SWPApi.Application.Product.Handlers
                 response.ErrorMessage = "The MilkBrand isn't found";
                 return response;
             }
-            var nutrients = request.Nutrients.ToList();
-            if (nutrients == null || nutrients.Any())
-            {
-                response.ErrorMessage = "Nutrients list is empty or null.";
-                return response;
-            }
 
-            foreach (var nutrientDetail in nutrients)
+            foreach (var productNutrient in request.Data)
             {
-                var nutrient = _unitOfWork.NutrientRepository.GetById(nutrientDetail.NutrientId);
+                var nutrient = _unitOfWork.NutrientRepository.GetById(productNutrient.NutrientId);
                 if (nutrient != null)
                 {
-                    var productNutrient = new ProductNutrient
+                    var newProductNutrient = new Infrastructure.Entities.ProductNutrient
                     {
                         Product = product,
                         Nutrient = nutrient,
-                        In100g = nutrientDetail.In100g,
-                        InCup = nutrientDetail.InCup,
-                        Unit = nutrientDetail.Unit
+                        In100g = productNutrient.In100g,
+                        InCup = productNutrient.InCup,
+                        Unit = productNutrient.Unit
                     };
-                    _unitOfWork.ProductNutrientRepository.Add(productNutrient);
-                    await _unitOfWork.SaveChangesAsync();
+                    _unitOfWork.ProductNutrientRepository.Add(newProductNutrient);
                 }
             }
 
