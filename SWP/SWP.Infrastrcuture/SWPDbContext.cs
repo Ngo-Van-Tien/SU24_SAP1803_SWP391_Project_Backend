@@ -106,12 +106,11 @@ namespace SWP.Infrastrcuture
                 if (entry.State == EntityState.Added)
                 {
                     entity.CreatedDate = now;
-                }else if(entry.State == EntityState.Modified)
+                }
+                else if (entry.State == EntityState.Modified)
                 {
                     entity.UpdatedDate = now;
                 }
-
-                
             }
         }
     }
