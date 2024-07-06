@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace SWPApi.Controllers
             _mediator = mediator;
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> add([FromForm] AddCommand command)
         {
@@ -33,7 +34,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPut]
         public async Task<IActionResult> update([FromForm] UpdateCommand command)
         {
@@ -49,7 +50,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpDelete]
         public async Task<IActionResult> delete([FromForm] DeleteCommand command)
         {
@@ -108,10 +109,37 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> GetOutOfStock(GetOutOfStockCommand command)
         {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+
+        public async Task<IActionResult> GetQuantity()
+        {
+            var command = new CountProductItemCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> GetQuantityOutOfStock()
+        {
+            var command = new CountOutOfStockCommand();
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
+using System.ComponentModel.DataAnnotations;
 
 namespace SWPApi.Application.Account.Handlers
 {
@@ -16,8 +17,14 @@ namespace SWPApi.Application.Account.Handlers
 
         public async Task<GetUserResponse> Handle(GetUserCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userManager.FindByEmailAsync(request.Email);
             var response = new GetUserResponse();
+            if (string.IsNullOrEmpty(request.Email) || !new EmailAddressAttribute().IsValid(request.Email))
+            {
+                response.ErrorMessage = "Invalid email address";
+                return response;
+            }
+            var user = await _userManager.FindByEmailAsync(request.Email);
+            
             if (user == null)
             {
                 response.ErrorMessage = "User is not existed";
@@ -30,9 +37,10 @@ namespace SWPApi.Application.Account.Handlers
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 Address = user.Address,
-                PhoneNumber = user.PhoneNumber
-            };
-            response.IsSuccess = true;
+                PhoneNumber = user.PhoneNumber,
+                IsSuccess = true
+        };
+            
 
             return response;
         }

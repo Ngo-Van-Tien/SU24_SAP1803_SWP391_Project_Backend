@@ -70,5 +70,87 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> GeyQuantityByStatus([FromForm] GetQuantityOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> SaleReport([FromForm]  SaleReportCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpGet]
+        public async Task<IActionResult> top5highestsalse()
+        {
+            var command = new Top5ProductHightestSaleCommand();
+            var result = await _mediator.Send(command);
+            if(!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpGet]
+        public async Task<IActionResult> top5leastsalse()
+        {
+            var command = new Top5ProductLeaestSaleCommand();
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> cancelorder([FromForm] CancelOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> updatestatus([FromForm] UpdateStatusCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> getdetailorder([FromForm] GetDetailOrderCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

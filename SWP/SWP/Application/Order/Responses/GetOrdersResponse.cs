@@ -5,6 +5,15 @@ namespace SWPApi.Application.Order.Responses
 {
     public class GetOrdersResponse : BaseResponse
     {
-        public List<Infrastructure.Entities.Order> Data { get; set; }
+        public List<OrderDisplay> Data { get; set; }
+
+        public class OrderDisplay
+        {
+            public Guid Id { get; set; }
+            public string Status { get; set; }
+            public string StatusPayment { get; set; }
+            public string Address { get; set; }
+            public DateTime CreateDate { get; set; }
+        } 
     }
 }

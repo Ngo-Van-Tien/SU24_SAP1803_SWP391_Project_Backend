@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.Account.Commands;
@@ -16,6 +18,7 @@ namespace SWPApi.Controllers
         {
             _mediator = mediator;
         }
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register([FromForm] RegisterCommand command)
         {
@@ -26,7 +29,7 @@ namespace SWPApi.Controllers
             }
             return BadRequest(response);
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login([FromForm] LoginCommand command)
         {
@@ -37,7 +40,7 @@ namespace SWPApi.Controllers
             }
             return Unauthorized(result);
         }
-
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> GetUser([FromForm] GetUserCommand command)
         {
@@ -48,7 +51,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-
+        [Authorize(Roles = UserRolesConstant.Customer)]
         [HttpPost]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileCommand command)
         {
@@ -59,7 +62,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-
+        [Authorize(Roles = UserRolesConstant.Customer)]
         [HttpPost]
         public async Task<IActionResult> UpdatePassword([FromForm] UpdatePasswordCommand command)
         {
@@ -70,7 +73,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpGet]
         public async Task<IActionResult> GetAllUser()
         {
@@ -82,7 +85,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-
+        [Authorize(Roles = UserRolesConstant.Admin)]
         [HttpPost]
         public async Task<IActionResult> LockAccount([FromForm]LockAccountCommand command)
         {

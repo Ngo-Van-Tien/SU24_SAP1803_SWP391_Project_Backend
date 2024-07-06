@@ -62,7 +62,9 @@ namespace SWPApi.Profiles
 
             //Order
             CreateMap<Order, GetOrderResponse>();
-            
+            CreateMap<Order, GetOrdersResponse.OrderDisplay>()
+                .ForMember(dest => dest.CreateDate, opt => opt.MapFrom(src => src.CreatedDate));
+
         }
     }
 }

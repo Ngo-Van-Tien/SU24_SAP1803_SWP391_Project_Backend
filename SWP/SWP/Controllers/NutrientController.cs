@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,7 @@ namespace SWPApi.Controllers
         {
             _mediator = mediator;
         }
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> AddNutrient([FromForm]AddNutrientCommand command)
         {
@@ -33,7 +34,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPut]
         public async Task<IActionResult> UpdateNutrient( [FromForm] UpdateNutrientCommand command)
         {
@@ -49,7 +50,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpDelete]
         public async Task<IActionResult> DeleteNutrient(Guid id)
         {
