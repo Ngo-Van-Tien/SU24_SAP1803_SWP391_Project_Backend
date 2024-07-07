@@ -51,7 +51,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize(Roles = UserRolesConstant.Customer)]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileCommand command)
         {
@@ -62,7 +62,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize(Roles = UserRolesConstant.Customer)]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdatePassword([FromForm] UpdatePasswordCommand command)
         {

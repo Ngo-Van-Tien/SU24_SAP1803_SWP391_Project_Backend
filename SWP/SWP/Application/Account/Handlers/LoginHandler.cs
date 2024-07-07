@@ -52,6 +52,11 @@ namespace SWPApi.Application.Account.Handlers
                 
                 return response;
             }
+            else
+            {
+                response.ErrorMessage = "User or password is not corrrect";
+                return response;
+;            }
             return response;
         }
 
