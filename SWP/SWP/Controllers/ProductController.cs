@@ -30,6 +30,7 @@ namespace SWPApi.Controllers
 
         
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> addproduct([FromForm] AddProductCommand command)
         {
             if (command == null)
