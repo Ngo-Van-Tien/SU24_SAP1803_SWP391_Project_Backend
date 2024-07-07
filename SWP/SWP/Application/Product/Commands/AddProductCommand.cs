@@ -28,6 +28,7 @@ namespace SWPApi.Application.Product.Commands
         [FromForm]
         public IFormFile Image { get; set; }
         [Required]
+        [FromForm]
         public List<ProductNutrient> Data { get; set; }
     }
     public class ProductNutrient
