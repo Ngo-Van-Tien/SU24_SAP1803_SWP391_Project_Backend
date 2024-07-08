@@ -13,7 +13,7 @@ namespace SWPApi.Application.Order.Responses
             public string Status { get; set; }
             public string StatusPayment { get; set; }
             public string Address { get; set; }
-            public DateTime CreateDate { get; set; }
+            public DateTimeOffset CreateDate { get; set; }
         } 
     }
 }
