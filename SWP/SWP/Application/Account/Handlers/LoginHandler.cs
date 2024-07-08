@@ -68,7 +68,9 @@ namespace SWPApi.Application.Account.Handlers
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim("FirstName", user.FirstName),
-                new Claim("LastName", user.LastName)
+                new Claim("LastName", user.LastName),
+                new Claim("PhoneNumber", user.PhoneNumber),
+                new Claim("Address", user.Address )
             };
 
             var userRoles = await _userManager.GetRolesAsync(user);
