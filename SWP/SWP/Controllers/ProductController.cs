@@ -28,9 +28,8 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> addproduct([FromForm] AddProductCommand command)
         {
             if (command == null)
