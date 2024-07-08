@@ -45,7 +45,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [Authorize]
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpGet]
         public async Task<IActionResult> GetAllOrders()
         {
