@@ -29,6 +29,7 @@ namespace SWP.Infrastrcuture
             builder.Entity<MilkBrandFunction>().Navigation(c => c.MilkFunction).AutoInclude();
             builder.Entity<ProductNutrient>().Navigation(c => c.Product).AutoInclude();
             builder.Entity<ProductNutrient>().Navigation(c => c.Nutrient).AutoInclude();
+
             base.OnModelCreating(builder);
             builder.Entity<Company>()
                 .Property(e => e.Id)
