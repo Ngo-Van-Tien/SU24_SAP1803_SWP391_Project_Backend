@@ -18,9 +18,9 @@ namespace SWPApi.Application.Product.Commands
         [Required]
         [FromForm]
         public int StartAge { get; set; }
-        [Required]
+        
         [FromForm]
-        public int EndAge { get; set; }
+        public int? EndAge { get; set; }
         [Required]
         [FromForm]
         public Guid MilkBrandId { get; set; }
