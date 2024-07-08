@@ -19,7 +19,7 @@ namespace SWPApi.Controllers
             _mediator = mediator;
         }
 
-        
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
         [HttpPost]
         public async Task<IActionResult> AddCompany([FromForm] AddCompanyCommand command)
         {
@@ -83,7 +83,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        
         [HttpGet]
         public async Task<IActionResult> GetQuantity()
         {
