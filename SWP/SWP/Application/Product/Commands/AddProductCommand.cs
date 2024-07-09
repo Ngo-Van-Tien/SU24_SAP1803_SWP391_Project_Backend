@@ -1,26 +1,12 @@
-﻿using MediatR;
+﻿
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.Product.Responses;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SWPApi.Application.Product.Commands
 {
-
-    public class NutrientDetail
-    {
-        [Required]
-        [FromForm]
-        public Guid NutrientId { get; set; }
-        [Required]
-        [FromForm]
-        public double? In100g { get; set; }
-        [Required]
-        [FromForm]
-        public double? InCup { get; set; }
-        [Required]
-        [FromForm]
-        public string Unit { get; set; }
-    }
     public class AddProductCommand: IRequest<AddProductResponse>
     {
 
@@ -32,9 +18,9 @@ namespace SWPApi.Application.Product.Commands
         [Required]
         [FromForm]
         public int StartAge { get; set; }
-        [Required]
+        
         [FromForm]
-        public int EndAge { get; set; }
+        public int? EndAge { get; set; }
         [Required]
         [FromForm]
         public Guid MilkBrandId { get; set; }
@@ -43,6 +29,14 @@ namespace SWPApi.Application.Product.Commands
         public IFormFile Image { get; set; }
         [Required]
         [FromForm]
-        public List<NutrientDetail> Nutrients { get; set; }
+        public List<ProductNutrient> Data { get; set; }
+    }
+    public class ProductNutrient
+    {
+        public Guid NutrientId { get; set; }
+        public double? In100g { get; set; }
+        public double? InCup { get; set; }
+        public string Unit { get; set; }
     }
 }
+

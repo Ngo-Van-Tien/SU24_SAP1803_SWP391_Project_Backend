@@ -42,11 +42,21 @@ namespace SWPApi.Application.Account.Handlers
             var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, false);
             if (result.Succeeded)
             {
+                response.FirstName = user.FirstName;
+                response.LastName = user.LastName;
+                response.Email = user.Email;
+                response.Address = user.Address;
+                response.PhoneNumber = user.PhoneNumber;
                 response.IsSuccess = true;
                 response.Token = await GenerateTokenString(user);
                 
                 return response;
             }
+            else
+            {
+                response.ErrorMessage = "User or password is not corrrect";
+                return response;
+;            }
             return response;
         }
 
@@ -58,7 +68,9 @@ namespace SWPApi.Application.Account.Handlers
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim("FirstName", user.FirstName),
-                new Claim("LastName", user.LastName)
+                new Claim("LastName", user.LastName),
+                new Claim("PhoneNumber", user.PhoneNumber),
+                new Claim("Address", user.Address )
             };
 
             var userRoles = await _userManager.GetRolesAsync(user);

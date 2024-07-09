@@ -53,20 +53,20 @@ namespace SWPApi.Application.Product.Handlers
                 return response;
             }
 
-            foreach (var nutrientDetail in request.Nutrients)
+            foreach (var productNutrient in request.Data)
             {
-                var nutrient = _unitOfWork.NutrientRepository.GetById(nutrientDetail.NutrientId);
+                var nutrient = _unitOfWork.NutrientRepository.GetById(productNutrient.NutrientId);
                 if (nutrient != null)
                 {
-                    var productNutrient = new ProductNutrient
+                    var newProductNutrient = new Infrastructure.Entities.ProductNutrient
                     {
                         Product = product,
                         Nutrient = nutrient,
-                        In100g = nutrientDetail.In100g,
-                        InCup = nutrientDetail.InCup,
-                        Unit = nutrientDetail.Unit
+                        In100g = productNutrient.In100g,
+                        InCup = productNutrient.InCup,
+                        Unit = productNutrient.Unit
                     };
-                    _unitOfWork.ProductNutrientRepository.Add(productNutrient);
+                    _unitOfWork.ProductNutrientRepository.Add(newProductNutrient);
                 }
             }
 

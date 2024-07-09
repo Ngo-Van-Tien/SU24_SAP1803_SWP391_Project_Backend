@@ -60,6 +60,7 @@ namespace SWPApi.Application.Order.Handlers
             await _unitOfWork.SaveChangesAsync();
 
             response.IsSuccess = true;
+            response.Id = order.Id;
             response.Order = order;
             return response;
         }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.MilkBrand.Commands;
+using System.Net.WebSockets;
 
 namespace SWPApi.Controllers
 {
@@ -96,6 +97,17 @@ namespace SWPApi.Controllers
             var command = new CountMilkBrandCommand();
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> getmilkfuntionsbymilkbrandid([FromForm] GetMilkFunctionsCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if(!result.IsSuccess)
             {
                 return BadRequest(result);
             }

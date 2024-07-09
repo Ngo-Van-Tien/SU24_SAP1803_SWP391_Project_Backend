@@ -83,7 +83,7 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        
         [HttpGet]
         public async Task<IActionResult> GetQuantity()
         {

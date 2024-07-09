@@ -51,7 +51,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize(Roles = UserRolesConstant.Customer)]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileCommand command)
         {
@@ -62,7 +62,7 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
-        [Authorize(Roles = UserRolesConstant.Customer)]
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UpdatePassword([FromForm] UpdatePasswordCommand command)
         {
@@ -74,10 +74,9 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
-        [HttpGet]
-        public async Task<IActionResult> GetAllUser()
+        [HttpPost]
+        public async Task<IActionResult> GetAllUser([FromForm] GetAllUserCommand command)
         {
-            var command = new GetAllUserCommand();
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
             {

@@ -12,7 +12,8 @@ namespace SWPApi.Application.Order.Responses
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string Status { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public string StatusPayment { get; set; }
+        public DateTimeOffset CreatedDate { get; set; }
         public List<Infrastructure.Entities.OrderDetail> OrderDetails { get; set; }
     }
 }
