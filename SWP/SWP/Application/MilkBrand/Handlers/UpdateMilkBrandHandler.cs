@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure;
+using Infrastructure.Entities;
 using MediatR;
 using SWPApi.Application.MilkBrand.Commands;
 using SWPApi.Application.MilkBrand.Responses;
@@ -23,14 +24,14 @@ namespace SWPApi.Application.MilkBrand.Handlers
             
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
                 
-                if (milkBrand == null)
+                if (milkBrand == null || !milkBrand.Enable)
                 {
                     response.ErrorMessage = "Milk brand is not found";
                     return response;
                 }
 
-                var company = _unitOfWork.CompanyRepository.GetById(request.CompanyId.Value);
-                if (company == null)
+                var company = _unitOfWork.CompanyRepository.GetById(request.CompanyId);
+                if (company == null || !company.Enable)
                 {
                     response.ErrorMessage = "Company is not existing";
                     return response;
@@ -39,10 +40,29 @@ namespace SWPApi.Application.MilkBrand.Handlers
                 milkBrand.Name = request.Name;
                 milkBrand.Description = request.Description;
                 milkBrand.Company = company;
+            ImageFile image = null;
+            if (request.Image != null && request.Image.Length > 0)
+            {
 
-                _unitOfWork.MilkBrandRepository.Update(milkBrand);
+                using (var stream = new MemoryStream())
+                {
+                    await request.Image.CopyToAsync(stream);
+                    image = new ImageFile() { Content = stream.ToArray() };
+                    _unitOfWork.ImageRepository.Add(image);
+                }
+            }
+            var oldImage = milkBrand.Image;
+            if(oldImage != null)
+            {
+                _unitOfWork.ImageRepository.Remove(oldImage);
                 await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<UpdateMilkBrandResponse>(milkBrand);
+            }
+
+            milkBrand.Image = image;
+
+            _unitOfWork.MilkBrandRepository.Update(milkBrand);
+                await _unitOfWork.SaveChangesAsync();
+                response.MilkBrand = milkBrand;
                 response.IsSuccess = true;
                 
             

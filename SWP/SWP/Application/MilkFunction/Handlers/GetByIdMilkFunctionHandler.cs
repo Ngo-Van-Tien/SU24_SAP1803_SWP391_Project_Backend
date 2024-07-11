@@ -21,13 +21,13 @@ namespace SWPApi.Application.MilkFunction.Handlers
             var response = new GetByIdMilkFunctionResponse();
             
                 var milkFunction = _unitOfWork.MilkFunctionRepository.GetById(request.Id);
-                if(milkFunction == null)
+                if(milkFunction == null || !milkFunction.Enable)
                 {
                     response.ErrorMessage = "Milk Function is not found";
                 }
                 else
                 {
-                    response = _mapper.Map<GetByIdMilkFunctionResponse>(milkFunction);
+                response.MilkFunction = milkFunction;
                     response.IsSuccess = true;
                 }
             

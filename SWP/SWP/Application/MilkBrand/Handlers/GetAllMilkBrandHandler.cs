@@ -23,7 +23,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
         {
             var response = new GetAllMilkBrandResponse();
             
-                var milkBrands = _unitOfWork.MilkBrandRepository.GetAll().ToList();
+                var milkBrands = _unitOfWork.MilkBrandRepository.Find(mb => mb.Enable).ToList();
                 if (!milkBrands.Any())
                 {
                     response.ErrorMessage = "Do not have any milk brand";

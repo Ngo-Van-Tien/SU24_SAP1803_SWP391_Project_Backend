@@ -22,19 +22,23 @@ namespace SWPApi.Application.Company.Handlers
 
             var company = _unitOfWork.CompanyRepository.GetById(request.Id);
 
-            if (company == null)
+            if (!company.Enable || company == null)
             {
                 response.ErrorMessage = "Company not found";
                 return response;
             }
-
-            _unitOfWork.CompanyRepository.Remove(company);
-            await _unitOfWork.SaveChangesAsync();
-
-            response = _mapper.Map<DeleteCompanyResponse>(company);
-            response.IsSuccess = true;
-
-
+            if (company.Enable)
+            {
+                company.Enable = false;
+                _unitOfWork.CompanyRepository.Update(company);
+                await _unitOfWork.SaveChangesAsync();
+                response = _mapper.Map<DeleteCompanyResponse>(company);
+                response.IsSuccess = true;
+            }
+            else
+            {
+                response.ErrorMessage = "Company has been deleted";
+            }
             return response;
 
         }

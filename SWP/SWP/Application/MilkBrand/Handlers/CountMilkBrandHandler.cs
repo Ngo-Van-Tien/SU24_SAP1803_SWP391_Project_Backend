@@ -15,7 +15,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
 
         public async Task<CountMilkBrandResponse> Handle(CountMilkBrandCommand request, CancellationToken cancellationToken)
         {
-            var milkBrands = _unitOfWork.MilkBrandRepository.GetAll().ToList();
+            var milkBrands = _unitOfWork.MilkBrandRepository.Find(mb => mb.Enable).ToList();
             var count = milkBrands.Count();
             var response = new CountMilkBrandResponse();
             response.IsSuccess = true;

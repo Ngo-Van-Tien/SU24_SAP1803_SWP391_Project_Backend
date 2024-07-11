@@ -14,7 +14,7 @@ namespace SWPApi.Application.Company.Handlers
         }
         public async Task<CountCompanyResponse> Handle(CountCompanyCommand request, CancellationToken cancellationToken)
         {
-            var companies = _unitOfWork.CompanyRepository.GetAll().ToList();
+            var companies = _unitOfWork.CompanyRepository.Find(c => c.Enable);
             int count = companies.Count();
             var response = new CountCompanyResponse();
             response.IsSuccess = true;
