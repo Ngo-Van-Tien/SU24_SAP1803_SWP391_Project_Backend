@@ -22,13 +22,13 @@ namespace SWPApi.Application.Company.Handlers
             var response = new GetByIdResponse();
             
                 var company = _unitOfWork.CompanyRepository.GetById(request.Id);
-                if(company == null)
+                if(!company.Enable || company == null)
                 {
                     response.ErrorMessage = "Company is not found";
                 }
                 else
                 {
-                    response = _mapper.Map<GetByIdResponse>(company);
+                    response.Company = company;
                     response.IsSuccess = true;
                 }
             

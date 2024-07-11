@@ -22,10 +22,11 @@ namespace SWPApi.Application.MilkFunction.Handlers
         public async Task<AddMilkFunctionResponse> Handle(AddMilkFunctionCommand request, CancellationToken cancellationToken)
         {
             var response = new AddMilkFunctionResponse();
-            
-                var milkFunction = new Infrastructure.Entities.MilkFunction
-                {
-                    Name = request.Name,
+
+            var milkFunction = new Infrastructure.Entities.MilkFunction
+            {
+                Name = request.Name,
+                Enable = true,
                 };
 
 
@@ -33,7 +34,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
                 {
                     _unitOfWork.MilkFunctionRepository.Add(milkFunction);
                     await _unitOfWork.SaveChangesAsync();
-                    response = _mapper.Map<AddMilkFunctionResponse>(milkFunction);
+                response.MilkFunction = milkFunction;
                     response.IsSuccess = true;
                 }
 

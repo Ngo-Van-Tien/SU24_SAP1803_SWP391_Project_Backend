@@ -15,8 +15,11 @@ namespace SWPApi.Application.MilkBrand.Commands
         public string Name { get; set; }
         [FromForm]
         [Required]
-        public Guid? CompanyId { get; set; }
+        public Guid CompanyId { get; set; }
         [FromForm]
         public string? Description { get; set; }
+        [FromForm]
+        [Required]
+        public IFormFile Image { get; set; }
     }
 }

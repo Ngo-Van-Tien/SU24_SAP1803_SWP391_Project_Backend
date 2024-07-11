@@ -19,5 +19,6 @@ namespace Infrastructure.Entities
         public string StatusPayment { get; set; }
         [ForeignKey("UserId")]
         public AppUser User { get; set; }
+        public bool Enable { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace SWPApi.Application.Company.Handlers
         {
             var response = new GetAllCompanyResponse();
             
-            var companies = _unitOfWork.CompanyRepository.GetAll().ToList();
+            var companies = _unitOfWork.CompanyRepository.Find(c => c.Enable).ToList();
 
             response.Data = companies;
             response.IsSuccess = true;

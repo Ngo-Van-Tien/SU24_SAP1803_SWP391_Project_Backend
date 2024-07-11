@@ -95,5 +95,17 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> unlockcompany([FromForm] UnLockCompanyCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
     }
 }

@@ -9,5 +9,6 @@ namespace Infrastructure.Entities
     public class Nutrient : BaseEntity
     {
         public string? Name { get; set; }
+        public bool Enable { get; set; }
     }
 }

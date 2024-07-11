@@ -20,11 +20,11 @@ namespace SWPApi.Application.MilkFunction.Handlers
             var response = new DeleteMilkFunctionResponse();
             
                 var milkFunction = _unitOfWork.MilkFunctionRepository.GetById(request.Id);
-                if (milkFunction != null)
+                if (milkFunction != null && milkFunction.Enable)
                 {
-                    _unitOfWork.MilkFunctionRepository.Remove(milkFunction);
+                milkFunction.Enable = false;
+                    _unitOfWork.MilkFunctionRepository.Update(milkFunction);
                     await _unitOfWork.SaveChangesAsync();
-                    response = _mapper.Map<DeleteMilkFunctionResponse>(milkFunction);
                     response.IsSuccess = true;
 
                 }

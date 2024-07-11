@@ -22,15 +22,14 @@ namespace SWPApi.Application.MilkBrand.Handlers
             var response = new DeleteMilkBrandResponse();
             
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
-                if (milkBrand == null)
+                if (milkBrand == null || !milkBrand.Enable)
                 {
                     response.ErrorMessage = "Milk brand is not found";
                     return response;
                 }
-
-                _unitOfWork.MilkBrandRepository.Remove(milkBrand);
+            milkBrand.Enable = false;
+                _unitOfWork.MilkBrandRepository.Update(milkBrand);
                 await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<DeleteMilkBrandResponse>(milkBrand);
 
                 response.IsSuccess = true;
 

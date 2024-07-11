@@ -113,6 +113,18 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [Authorize(Roles = UserRolesConstant.AdminOrStaff)]
+        [HttpPost]
+        public async Task<IActionResult> addmilkfunctiontomilkbrand([FromForm] AddMilkFunctionToMilkBrandCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
         
 }
