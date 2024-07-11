@@ -25,7 +25,7 @@ namespace SWPApi.Application.MilkFunction.Handlers
         {
             var response = new GetAllMilkFunctionResponse();
             
-                var milkFunctions = _unitOfWork.MilkFunctionRepository.GetAll().ToList();
+                var milkFunctions = _unitOfWork.MilkFunctionRepository.Find(mf => mf.Enable).ToList();
                 if (!milkFunctions.Any())
                 {
                     response.ErrorMessage = "Do not have any milk function";

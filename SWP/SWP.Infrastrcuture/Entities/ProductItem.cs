@@ -14,5 +14,6 @@ namespace Infrastructure.Entities
         public int Size { get; set; }
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
+        public bool Enable { get; set; }
     }
 }

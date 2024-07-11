@@ -16,5 +16,11 @@ namespace SWPApi.Application.Company.Commands
         [FromForm]
         [Required]
         public string Nation { get; set; }
+        [Required]
+        [FromForm]
+        public IFormFile Image { get; set; }
+        [Required]
+        [FromForm]
+        public string Path { get; set; }
     }
 }

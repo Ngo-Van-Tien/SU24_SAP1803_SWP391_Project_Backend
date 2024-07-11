@@ -14,5 +14,6 @@ namespace Infrastructure.Entities
         public decimal PaymentAmount { get; set; }
         [ForeignKey("OrderId")]
         public Order Order { get; set; }
+        public bool Enable { get; set; }
     }
 }

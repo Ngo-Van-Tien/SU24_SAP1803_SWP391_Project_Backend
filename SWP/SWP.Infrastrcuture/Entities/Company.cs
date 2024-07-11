@@ -11,5 +11,8 @@ namespace Infrastructure.Entities
         public string Name { get; set; }
         public string? Description { get; set; }
         public string Nation { get; set; } 
+        public bool Enable { get; set; }
+        public ImageFile? Image { get; set; }
+        public string? Path { get; set; }
     }
 }

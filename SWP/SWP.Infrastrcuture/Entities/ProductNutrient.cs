@@ -16,5 +16,6 @@ namespace Infrastructure.Entities
         public double? In100g { get; set; }
         public double? InCup { get; set; }
         public string Unit { get; set; }
+        public bool Enable { get; set; }
     }
 }

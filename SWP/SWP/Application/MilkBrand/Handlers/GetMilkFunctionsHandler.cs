@@ -18,7 +18,7 @@ namespace SWPApi.Application.MilkBrand.Handlers
             var response = new GetMilkFunctionsResponse();
 
             var milkFunctions = _unitOfWork.MilkBrandFunctionRepository
-                                                .Find(mbf => mbf.MilkBrand.Id == request.Id)
+                                                .Find(mbf => mbf.MilkBrand.Id == request.Id && mbf.MilkBrand.Enable && mbf.MilkFunction.Enable)
                                                 .Select(mf => mf.MilkFunction)
                                                 .ToList();
 

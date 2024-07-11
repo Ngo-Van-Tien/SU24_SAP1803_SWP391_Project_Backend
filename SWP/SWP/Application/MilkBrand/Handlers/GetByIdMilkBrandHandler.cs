@@ -23,13 +23,13 @@ namespace SWPApi.Application.MilkBrand.Handlers
             var response = new GetByIdMilkBrandResponse();
             
                 var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.Id);
-                if(milkBrand == null)
+                if(milkBrand == null || !milkBrand.Enable)
                 {
                     response.ErrorMessage = "Milk Brand is not found";
                 }
                 else
                 {
-                    response = _mapper.Map<GetByIdMilkBrandResponse>(milkBrand);
+                    response.MilkBrand = milkBrand; 
                     response.IsSuccess = true;
                 }
             
