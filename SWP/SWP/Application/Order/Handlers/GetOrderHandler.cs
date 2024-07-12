@@ -20,15 +20,16 @@ namespace SWPApi.Application.Order.Handlers
         {
             var order = _unitOfWork.OrderRepository.GetById(request.Id);
             var response = new GetOrderResponse();
-            if (order != null)
+            if (order != null && order.Enable)
             {
                 response = _mapper.Map<GetOrderResponse>(order);
                 response.OrderDetails = _unitOfWork.OrderDetailRepository.Find(x => x.Order.Id == request.Id).ToList();
                 response.IsSuccess = true;
-                return response;
             }
-
-            response.ErrorMessage = "The order is not found";
+            else
+            {
+                response.ErrorMessage = "The order is not found or is disabled.";
+            }
             return response;
         }
     }

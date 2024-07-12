@@ -23,7 +23,7 @@ namespace SWPApi.Application.Order.Handlers
                 response.IsSuccess = true;
             }else
             {
-                var orders = _unitOfWork.OrderRepository.Find(x => x.Status.Equals(request.Status));
+                var orders = _unitOfWork.OrderRepository.Find(x => x.Status.Equals(request.Status) && x.Enable);
                 var count = orders.Count();
                 response.Quantity = count;
                 response.IsSuccess = true;
