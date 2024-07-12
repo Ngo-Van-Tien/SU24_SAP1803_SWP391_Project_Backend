@@ -17,19 +17,15 @@ namespace SWPApi.Application.ProductItem.Handler
 
         public async Task<CountOutOfStockResponse> Handle(CountOutOfStockCommand request, CancellationToken cancellationToken)
         {
-            var productItems = _unitOfWork.ProductItemRepository.GetAll().ToList();
-            var productItemsOutOfStock = new ArrayList();
-            foreach (var item in productItems)
-            {
-                if(item.Quantity == 0)
-                {
-                    productItemsOutOfStock.Add(item);
-                }
-            }
+            var productItemsOutOfStock = _unitOfWork.ProductItemRepository.GetAll()
+                                       .Where(item => item.Quantity == 0 && item.Enable)
+                                       .Count();
 
-            var response = new CountOutOfStockResponse();
-            response.IsSuccess = true;
-            response.Quantity = productItemsOutOfStock.Count;
+            var response = new CountOutOfStockResponse
+            {
+                IsSuccess = true,
+                Quantity = productItemsOutOfStock
+            };
 
             return response;
         }
