@@ -21,6 +21,8 @@ namespace SWPApi.Application.ProductItem.Handler
         {
             var response = new GetOutOfStockResponse();
             var productItems = _unitOfWork.ProductItemRepository.Find(x => x.Quantity == 0, request.PageNumber, request.PageSize);
+
+            productItems = (PagedList.IPagedList<Infrastructure.Entities.ProductItem>)productItems.Where(pi => pi.Enable);
             if (productItems.Any())
             {
                 response.Data = productItems;

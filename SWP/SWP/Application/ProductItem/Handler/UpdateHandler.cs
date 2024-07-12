@@ -27,25 +27,28 @@ namespace SWPApi.Application.ProductItem.Handler
                     response.ErrorMessage = "Product Item is not found";
                     return response;
                 }
-                var product = _unitOfWork.ProductRepository.GetById(request.ProductId);
-                if (product == null)
+            if (!productItem.Enable)
+            {
+                response.ErrorMessage = "Product Item is disabled";
+                return response;
+            }
+            var product = _unitOfWork.ProductRepository.GetById(request.ProductId);
+                if (product == null || !product.Enable)
                 {
                     response.ErrorMessage = "Product is not found";
                     return response;
                 }
-                productItem.Quantity = request.Quantity;
-                productItem.Price =  request.Price;
-                productItem.Size = request.Size;
-                productItem.Product = product;
+            productItem.Quantity = request.Quantity;
+            productItem.Price = request.Price;
+            productItem.Size = request.Size;
+            productItem.Product = product;
 
-                if(productItem != null)
-                {
-                    _unitOfWork.ProductItemRepository.Update(productItem);
-                    await _unitOfWork.SaveChangesAsync();
-                    response = _mapper.Map<UpdateResponse>(productItem);
-                    response.IsSuccess = true;
-                }
-            
+            _unitOfWork.ProductItemRepository.Update(productItem);
+            await _unitOfWork.SaveChangesAsync();
+
+            response = _mapper.Map<UpdateResponse>(productItem);
+            response.IsSuccess = true;
+
             return response;
         }
     }

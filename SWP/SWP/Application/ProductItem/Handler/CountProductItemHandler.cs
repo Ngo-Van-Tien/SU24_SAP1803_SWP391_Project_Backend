@@ -16,11 +16,15 @@ namespace SWPApi.Application.ProductItem.Handler
         }
         public async Task<CountProductItemResponse> Handle(CountProductItemCommand request, CancellationToken cancellationToken)
         {
-            var productItems = _unitOfWork.ProductItemRepository.GetAll().ToList();
-            var count = productItems.Count();
-            var response = new CountProductItemResponse();
-            response.Quantity = count;
-            response.IsSuccess = true;
+            var count = _unitOfWork.ProductItemRepository.GetAll()
+                               .Count(item => item.Enable);
+
+            var response = new CountProductItemResponse
+            {
+                IsSuccess = true,
+                Quantity = count
+            };
+
             return response;
         }
     }

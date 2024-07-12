@@ -21,14 +21,17 @@ namespace SWPApi.Application.ProductItem.Handler
             var response = new DeleteResponse();
             
                 var productItem = _unitOfWork.ProductItemRepository.GetById(request.Id);
-                if (productItem == null)
+                if (productItem == null || !productItem.Enable)
                 {
                     response.ErrorMessage = "Product Item is not found";
                     return response;
                 }
-                 _unitOfWork.ProductItemRepository.Remove(productItem);
-                await _unitOfWork.SaveChangesAsync();
-                response = _mapper.Map<DeleteResponse>(productItem);
+
+            productItem.Enable = false;
+            _unitOfWork.ProductItemRepository.Update(productItem);
+            await _unitOfWork.SaveChangesAsync();
+
+            response = _mapper.Map<DeleteResponse>(productItem);
                 response.IsSuccess = true;
             
             return response;

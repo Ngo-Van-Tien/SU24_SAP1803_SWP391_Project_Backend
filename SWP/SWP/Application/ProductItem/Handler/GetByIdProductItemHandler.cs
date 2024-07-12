@@ -25,6 +25,11 @@ namespace SWPApi.Application.ProductItem.Handler
                 response.ErrorMessage = "Product Item is not found";
                 return response;
             }
+            if (!productItem.Enable)
+            {
+                response.ErrorMessage = "Product Item is disabled";
+                return response;
+            }
 
             response = _mapper.Map<GetByIdProductItemResponse>(productItem);
             response.IsSuccess = true;
