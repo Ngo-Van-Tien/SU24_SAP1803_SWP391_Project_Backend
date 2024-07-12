@@ -30,7 +30,6 @@ namespace SWPApi.Application.MilkFunction.Handlers
                     _unitOfOfWork.MilkFunctionRepository.Update(milkFunction);
                     await _unitOfOfWork.SaveChangesAsync();
                     response.MilkFunction = milkFunction;
-
                     response.IsSuccess = true;
                     
                 }

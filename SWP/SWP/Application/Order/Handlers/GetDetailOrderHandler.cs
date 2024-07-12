@@ -19,12 +19,12 @@ namespace SWPApi.Application.Order.Handlers
             
             var orderDetail = _unitOfWork.OrderDetailRepository.Find(od => od.Order.Id == request.Id);
             var order = _unitOfWork.OrderRepository.GetById(request.Id);
-            var payment = _unitOfWork.PaymentRepository.Find(pm => pm.Order.Id == request.Id).FirstOrDefault();
-            if (order == null)
+            if (order == null || !order.Enable)
             {
-                response.ErrorMessage = "Order not found.";
+                response.ErrorMessage = "Order not found or not enabled.";
                 return response;
             }
+            var payment = _unitOfWork.PaymentRepository.Find(pm => pm.Order.Id == request.Id).FirstOrDefault();
 
             
             response.Id = order.Id;
@@ -33,14 +33,7 @@ namespace SWPApi.Application.Order.Handlers
             response.Email = order.User.Email; 
             response.ShipFees = order.ShipFees;
             response.FinalPrice = order.FinalPrice;
-            if (payment != null)
-            {
-                response.Method = payment.Method;
-            }
-            else
-            {
-                response.Method = "Not paid";
-            }
+            response.Method = payment?.Method ?? "Not paid";
 
 
             response.OrderDeatil = orderDetail
