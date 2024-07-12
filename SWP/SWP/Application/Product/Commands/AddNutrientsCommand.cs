@@ -9,9 +9,7 @@ namespace SWPApi.Application.Product.Commands
     public class AddNutrientsCommand : IRequest<AddNutrientsResponse>
     {
         [Required]
-        [FromForm]
         public Guid Id { get; set; }
-        [FromForm]
         public List<NutrientDetail>? Nutrients { get; set; } = new List<NutrientDetail>();
 
         public class NutrientDetail
