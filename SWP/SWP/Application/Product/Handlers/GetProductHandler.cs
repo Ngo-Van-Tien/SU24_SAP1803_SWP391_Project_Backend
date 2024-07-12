@@ -20,7 +20,7 @@ namespace SWPApi.Application.Product.Handlers
         {
             var product = _unitOfWork.ProductRepository.GetById(request.Id);
             var response = new GetProductResponse();
-            if (product != null)
+            if (product != null && product.Enable)
             {
                 response = _mapper.Map<GetProductResponse>(product);
                 if(product.Image != null)

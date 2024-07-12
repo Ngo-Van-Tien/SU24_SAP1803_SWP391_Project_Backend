@@ -18,9 +18,8 @@ namespace SWPApi.Application.Product.Handlers
         public async Task<GetByNameResponse> Handle(GetByNameCommand request, CancellationToken cancellationToken)
         {
             var response = new GetByNameResponse();
-            try
-            {
-                var products = _unitOfWork.ProductRepository.Find(x => string.IsNullOrEmpty(request.Name) || request.Name.Contains(x.Name) || x.MilkBrand.Company.Name.Contains(request.Name) || x.MilkBrand.Company.Name.Contains(request.Name) , request.PageNumber, request.PageSize);
+            
+                var products = _unitOfWork.ProductRepository.Find(x => x.Enable && (string.IsNullOrEmpty(request.Name) || request.Name.Contains(x.Name) || x.MilkBrand.Company.Name.Contains(request.Name) || x.MilkBrand.Company.Name.Contains(request.Name) ), request.PageNumber, request.PageSize);
 
                 if (products.Any())
                 {
@@ -32,11 +31,7 @@ namespace SWPApi.Application.Product.Handlers
                     response.ErrorMessage = "No product match with " + request.Name;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error at GetProductByName " + ex.Message;
-            }
+            
             return response;
         }
     }

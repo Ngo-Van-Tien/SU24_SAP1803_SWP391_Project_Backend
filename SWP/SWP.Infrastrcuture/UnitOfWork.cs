@@ -40,6 +40,7 @@ namespace Infrastructure
             AppUserRepository = new AppUserRepository(_context);
             OrderDetailRepository = new OrderDetailRepository(_context);
             MilkBrandFunctionRepository = new MilkBrandFunctionRepository(_context);
+            ProductNutrientRepository = new ProductNutrientRepository(_context);
         }
 
         public Task SaveChangesAsync()

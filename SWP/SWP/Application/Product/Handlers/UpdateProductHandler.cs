@@ -23,7 +23,7 @@ namespace SWPApi.Application.Product.Handlers
         {
             var product =  _unitOfWork.ProductRepository.GetById(request.Id);
             var response = new UpdateProductResponse();
-            if(product == null)
+            if(product == null || !product.Enable)
             {
                 response.ErrorMessage = "Product is not found";
                 return response;
@@ -31,7 +31,7 @@ namespace SWPApi.Application.Product.Handlers
 
             var image = product.Image;
             var milkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId);
-            if (milkBrand == null)
+            if (milkBrand == null || !milkBrand.Enable)
             {
                 response.ErrorMessage = "milkBrand is not existing";
                 return response;
@@ -53,7 +53,7 @@ namespace SWPApi.Application.Product.Handlers
             product.Description = request.Description;
             product.StartAge = request.StartAge;
             product.EndAge = request.EndAge;
-
+            
             _unitOfWork.ProductRepository.Update(product);
             await _unitOfWork.SaveChangesAsync();
 

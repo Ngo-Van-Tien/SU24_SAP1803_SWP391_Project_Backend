@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SWPApi.Application.Payments.Commands;
+using SWPApi.Application.Payments.Responses;
 
 namespace SWPApi.Controllers
 {
@@ -47,6 +48,33 @@ namespace SWPApi.Controllers
                 return BadRequest(result);
             }
             return Ok(result);
+        }
+        [Authorize]
+        [HttpPost("create-vnpay-payment")]
+        public async Task<ActionResult<CreatePaymentVnPayResponse>> CreateVnPayPayment(CreatePaymentVnPayCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result.ErrorMessage);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost("vnpay_return")]
+        public async Task<IActionResult> VnpayReturn()
+        {
+            var command = new ReturnPaymentVnPayCommand
+            {
+                QueryString = Request.Query
+            };
+
+            var response = await _mediator.Send(command);
+            if (!response.IsSuccess)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
     }
 }

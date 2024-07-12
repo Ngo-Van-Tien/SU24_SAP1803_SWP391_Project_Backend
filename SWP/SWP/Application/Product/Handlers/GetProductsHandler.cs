@@ -21,7 +21,7 @@ namespace SWPApi.Application.Product.Handlers
         {
             var response = new GetProductsResponse();
 
-            var products = _unitOfWork.ProductRepository.Find(x => string.IsNullOrEmpty(request.Name) || x.Name.Contains(request.Name), request.PageNumber, request.PageSize);
+            var products = _unitOfWork.ProductRepository.Find(x => (string.IsNullOrEmpty(request.Name) || x.Name.Contains(request.Name)) && x.Enable, request.PageNumber, request.PageSize);
             response.PageNumber = request.PageNumber;
             response.PageSize = request.PageSize;
             response.TotalElements = _unitOfWork.ProductRepository.GetAll().Count();
