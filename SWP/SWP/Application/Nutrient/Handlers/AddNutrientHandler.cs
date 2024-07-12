@@ -19,11 +19,12 @@ namespace SWPApi.Application.Nutrient.Handlers
         public async Task<AddNutrientResponse> Handle(AddNutrientCommand request, CancellationToken cancellationToken)
         {
             var response = new AddNutrientResponse();
-            
-                var nutrient = new Infrastructure.Entities.Nutrient
-                {
-                    Name = request.Name,
-                };
+
+            var nutrient = new Infrastructure.Entities.Nutrient
+            {
+                Name = request.Name,
+                Enable = true
+            };
                 
                 if (nutrient != null)
                 {

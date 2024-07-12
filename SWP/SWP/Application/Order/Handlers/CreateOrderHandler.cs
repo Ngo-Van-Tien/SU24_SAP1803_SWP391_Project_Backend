@@ -25,6 +25,15 @@ namespace SWPApi.Application.Order.Handlers
             }
             var productItemIds = request.ProductItems.Select(x => x.Id);
             var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id));
+            foreach (var item in productItems)
+            {
+                if (!item.Enable)
+                {
+                    response.IsSuccess = false;
+                    response.ErrorMessage = $"Product {item.Id} is not enabled";
+                    return response;
+                }
+            }
 
             var order = new Infrastructure.Entities.Order();
             order.Address = user.Address;
@@ -33,6 +42,7 @@ namespace SWPApi.Application.Order.Handlers
             order.Status = OrderConstant.PROCESSING_STATUS;
             order.StatusPayment = OrderConstant.UNPAID_STATUS;
             order.User = user;
+
             decimal totalPrice = 0;
             var orderDetails = new List<OrderDetail>();
             foreach (var item in productItems) 
