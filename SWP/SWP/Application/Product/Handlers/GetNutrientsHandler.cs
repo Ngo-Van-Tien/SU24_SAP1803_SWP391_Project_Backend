@@ -18,7 +18,7 @@ namespace SWPApi.Application.Product.Handlers
             var nutrients = _unitOfWork.ProductNutrientRepository.Find(pn => pn.Product.Id == request.Id)
                                                                  .Select(pn => pn.Nutrient)
                                                                  .ToList();
-            if(nutrients.Any() && nutrients != null)
+            if (nutrients.Any() && nutrients != null)
             {
                 response.Data = nutrients;
                 response.IsSuccess = true;

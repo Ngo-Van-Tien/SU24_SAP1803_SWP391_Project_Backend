@@ -15,7 +15,7 @@ namespace SWPApi.Application.Product.Handlers
         public async Task<GetQuantityProductResponse> Handle(GetQuantityProductCommand request, CancellationToken cancellationToken)
         {
             var response = new GetQuantityProductResponse();
-            var products = _unitOfWork.ProductRepository.GetAll().ToList();
+            var products = _unitOfWork.ProductRepository.Find(x => x.Enable).ToList();
             var count = products.Count();
             response.Quantity = count;
             response.IsSuccess = true;

@@ -20,13 +20,14 @@ namespace SWPApi.Application.Product.Handlers
         {
             var response = new DeleteProductResponse();
             var product = _unitOfWork.ProductRepository.GetById(request.Id);
-            if(product == null)
+            if(product == null || !product.Enable)
             {
                 response.ErrorMessage = "Product is not found";
             }
             else
             {
-                _unitOfWork.ProductRepository.Remove(product);
+                product.Enable = false;
+                _unitOfWork.ProductRepository.Update(product);
                 await _unitOfWork.SaveChangesAsync();
                 response.IsSuccess = true;
             }

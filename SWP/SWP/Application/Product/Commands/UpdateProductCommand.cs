@@ -19,11 +19,8 @@ namespace SWPApi.Application.Product.Commands
         public string? Description { get; set; }
         [Required]
         [FromForm]
-        public decimal Price { get; set; }
-        [Required]
-        [FromForm]
         public int StartAge { get; set; }
-        [Required]
+        
         [FromForm]
         public int EndAge { get; set; }
         [Required]
