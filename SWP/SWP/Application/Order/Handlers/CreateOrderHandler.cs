@@ -19,12 +19,13 @@ namespace SWPApi.Application.Order.Handlers
         {
             var response = new CreateOrderResponse();
             var user = _unitOfWork.AppUserRepository.Find(x => x.Id == request.UserId).FirstOrDefault();
-            if (user == null) {
+            if (user == null || user.LockoutEnd == null)
+            {
                 response.IsSuccess = false;
-                response.ErrorMessage = "The user not found";
+                response.ErrorMessage = "The user not found or is not locked out.";
             }
             var productItemIds = request.ProductItems.Select(x => x.Id);
-            var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id));
+            var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id) && x.Enable);
             foreach (var item in productItems)
             {
                 if (!item.Enable)
@@ -42,6 +43,7 @@ namespace SWPApi.Application.Order.Handlers
             order.Status = OrderConstant.PROCESSING_STATUS;
             order.StatusPayment = OrderConstant.UNPAID_STATUS;
             order.User = user;
+            order.Enable = true;
 
             decimal totalPrice = 0;
             var orderDetails = new List<OrderDetail>();

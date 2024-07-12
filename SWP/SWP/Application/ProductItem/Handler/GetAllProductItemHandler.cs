@@ -20,18 +20,20 @@ namespace SWPApi.Application.ProductItem.Handler
         public async Task<GetAllProductItemResponse> Handle(GetAllProductItemCommand request, CancellationToken cancellationToken)
         {
             var response = new GetAllProductItemResponse();
-            
-                var productItems = _unitOfWork.ProductItemRepository.GetAll().ToList();
-                if(!productItems.Any())
-{
-                    response.ErrorMessage = "Don't have any ProductItem";
-                }
-                else
-                {
-                    response.Data = productItems;
-                    response.IsSuccess = true;
-                }
-            
+
+            var productItems = _unitOfWork.ProductItemRepository.GetAll()
+                              .Where(pi => pi.Enable)
+                              .ToList();
+            if (!productItems.Any())
+            {
+                response.ErrorMessage = "Don't have any ProductItem";
+            }
+            else
+            {
+                response.Data = productItems;
+                response.IsSuccess = true;
+            }
+
             return response;
         }
     }
