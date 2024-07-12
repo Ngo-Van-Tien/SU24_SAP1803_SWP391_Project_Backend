@@ -18,7 +18,6 @@ namespace SWPApi.Application.Product.Commands
         [Required]
         [FromForm]
         public int StartAge { get; set; }
-        
         [FromForm]
         public int? EndAge { get; set; }
         [Required]
@@ -27,16 +26,8 @@ namespace SWPApi.Application.Product.Commands
         [Required]
         [FromForm]
         public IFormFile Image { get; set; }
-        [Required]
-        [FromForm]
-        public List<ProductNutrient> Data { get; set; }
+        
     }
-    public class ProductNutrient
-    {
-        public Guid NutrientId { get; set; }
-        public double? In100g { get; set; }
-        public double? InCup { get; set; }
-        public string Unit { get; set; }
-    }
+ 
 }
 

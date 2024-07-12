@@ -17,10 +17,8 @@ namespace SWPApi.Application.Product.Handlers
         }
         public async Task<GetByMilkBrandResponse> Handle(GetByMilkBrandCommand request, CancellationToken cancellationToken)
         {
-            var response = new GetByMilkBrandResponse();
-            try
-            {
-                var products = _unitOfWork.ProductRepository.Find(x => x.MilkBrand.Id == request.Id, request.pageNumber, request.pageSize);
+            var response = new GetByMilkBrandResponse();    
+                var products = _unitOfWork.ProductRepository.Find(x => x.MilkBrand.Id == request.Id && x.Enable, request.pageNumber, request.pageSize);
 
                 if (products.Any())
                 {
@@ -31,12 +29,6 @@ namespace SWPApi.Application.Product.Handlers
                 {
                     response.ErrorMessage = "No product";
                 }
-
-            }
-            catch (Exception ex)
-            {
-                response.ErrorMessage = "Error at get product by milkbrand " + ex.Message;
-            }
             return response;
         }
     }

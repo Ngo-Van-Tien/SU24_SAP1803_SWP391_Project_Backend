@@ -126,5 +126,27 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Addnutrientsbyproductid( AddNutrientsCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> deletenutrientsbyproductid(DeleteNutrientsCommand command)
+        {
+            var result = await _mediator.Send(command);
+            if (!result.IsSuccess)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+        }
     }
 }

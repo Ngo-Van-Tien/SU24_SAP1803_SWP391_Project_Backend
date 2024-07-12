@@ -20,7 +20,7 @@ namespace SWPApi.Application.Product.Handlers
         {
             var response = new GetAllProductResponse();
             
-                var products = _unitOfWork.ProductRepository.GetAll().ToList();
+                var products = _unitOfWork.ProductRepository.Find(x => x.Enable).ToList();
                 if (!products.Any())
                 {
                     response.ErrorMessage = "Don't have any Product";

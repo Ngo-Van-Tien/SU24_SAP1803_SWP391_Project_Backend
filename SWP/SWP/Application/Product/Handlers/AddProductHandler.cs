@@ -40,37 +40,19 @@ namespace SWPApi.Application.Product.Handlers
                 Description = request.Description,
                 StartAge = request.StartAge,
                 EndAge = request.EndAge,
-                Image = image
+                Image = image,
+                Enable = true
             };
 
             
             product.MilkBrand = _unitOfWork.MilkBrandRepository.GetById(request.MilkBrandId);
             
 
-            if (product.MilkBrand == null) 
+            if (product.MilkBrand == null  || !product.MilkBrand.Enable) 
             {
                 response.ErrorMessage = "The MilkBrand isn't found";
                 return response;
             }
-
-            foreach (var productNutrient in request.Data)
-            {
-                var nutrient = _unitOfWork.NutrientRepository.GetById(productNutrient.NutrientId);
-                if (nutrient != null)
-                {
-                    var newProductNutrient = new Infrastructure.Entities.ProductNutrient
-                    {
-                        Product = product,
-                        Nutrient = nutrient,
-                        In100g = productNutrient.In100g,
-                        InCup = productNutrient.InCup,
-                        Unit = productNutrient.Unit
-                    };
-                    _unitOfWork.ProductNutrientRepository.Add(newProductNutrient);
-                }
-            }
-
-
             if (product != null)
             {
                 _unitOfWork.ProductRepository.Add(product);
