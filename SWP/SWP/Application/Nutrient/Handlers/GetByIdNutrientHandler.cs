@@ -4,6 +4,7 @@ using Infrastructure.Entities;
 using MediatR;
 using SWPApi.Application.Nutrient.Commands;
 using SWPApi.Application.Nutrient.Responses;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace SWPApi.Application.Nutrient.Handlers
 {
@@ -21,17 +22,18 @@ namespace SWPApi.Application.Nutrient.Handlers
         {
             var response = new GetByIdNutrientResponse();
             
-                var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
-                if (nutrient == null)
-                {
-                    response.ErrorMessage = "Nutrient is not found";
-                }
-                else
-                {
-                    response = _mapper.Map<GetByIdNutrientResponse>(nutrient);
-                    response.IsSuccess = true;
-                }
-            
+            var nutrient = _unitOfWork.NutrientRepository.GetById(request.Id);
+
+            if (!nutrient.Enable || nutrient == null)
+            {
+                response.ErrorMessage = "nutrient is not found";
+            }
+            else
+            {
+                response.Nutrient = nutrient;
+                response.IsSuccess = true;
+            }
+
             return response;
         }
     }
