@@ -20,7 +20,7 @@ namespace SWPApi.Application.Order.Handlers
         {
             
             var response = new GetOrderByStatusResponse();
-            var orders = _unitOfWork.OrderRepository.Find(x => (x.Status.Equals(request.Status)|| request.Status == null)).ToList();
+            var orders = _unitOfWork.OrderRepository.Find(x => (x.Status.Equals(request.Status)|| request.Status == null) && x.Enable).ToList();
             response.Data = orders;
             response.IsSuccess = true;
             return response;
