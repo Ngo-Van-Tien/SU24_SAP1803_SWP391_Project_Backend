@@ -18,7 +18,8 @@ namespace SWPApi.Application.Order.Handlers
             var response = new Top5ProductHightestSaleResponse();
 
             var orderDetails = _unitOfWork.OrderDetailRepository.GetAll()
-                                   .Where(od => od.Order.Status == "SUCCESS")
+                                   .Where(od => od.Order.Status == "SUCCESS"
+                                   && od.Order.Enable)
                                    .ToList();
 
             var topProducts = orderDetails.GroupBy(od => od.ProductItem.Product.Name)

@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using Azure;
+using Infrastructure;
 using Infrastructure.Constans;
 using MediatR;
 using SWPApi.Application.Order.Commands;
@@ -17,25 +18,26 @@ namespace SWPApi.Application.Order.Handlers
         {
             var respone = new CancelOrderResponse();
             var order = _unitOfWork.OrderRepository.GetById(request.Id);
-            if(order == null)
+            if(order == null || !order.Enable)
             {
-                respone.ErrorMessage = "Order is not existed";
+                respone.ErrorMessage = "Order not found or not enabled";
                 return respone;
+            }
+            if (order.Status == OrderConstant.PROCESSING_STATUS || order.Status == OrderConstant.DELIVERING_STATUS)
+            {
+                order.Status = OrderConstant.CANCEL_STATUS;
+                if (order.StatusPayment == OrderConstant.PAID_STATUS)
+                {
+                    order.StatusPayment = OrderConstant.WAITREFUNDED_STATUS;
+                }
+                _unitOfWork.OrderRepository.Update(order);
+                await _unitOfWork.SaveChangesAsync();
+                respone.Order = order;
+                respone.IsSuccess = true;
             }
             else
             {
-                if(order.Status == OrderConstant.PROCESSING_STATUS || order.Status == OrderConstant.DELIVERING_STATUS)
-                {
-                    order.Status = OrderConstant.CANCEL_STATUS;
-                    if(order.StatusPayment == OrderConstant.PAID_STATUS)
-                    {
-                        order.StatusPayment = OrderConstant.WAITREFUNDED_STATUS;
-                    }
-                    _unitOfWork.OrderRepository.Update(order);
-                    await _unitOfWork.SaveChangesAsync();
-                    respone.Order = order;
-                    respone.IsSuccess = true;
-                }
+                respone.ErrorMessage = "Order cannot be cancelled in its current status";
             }
             return respone;
         }
