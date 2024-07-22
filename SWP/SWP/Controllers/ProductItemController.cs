@@ -147,5 +147,16 @@ namespace SWPApi.Controllers
             }
             return Ok(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> getsimilarproductitems(GetSimilarProductItemsCommand command)
+        {
+            var resutl = await _mediator.Send(command);
+            if (!resutl.IsSuccess)
+            {
+                return BadRequest(resutl);
+            }
+            return Ok(resutl);
+        }
     }
 }

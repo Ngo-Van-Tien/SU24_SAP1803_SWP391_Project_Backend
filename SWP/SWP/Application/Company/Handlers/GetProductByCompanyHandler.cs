@@ -21,9 +21,9 @@ namespace SWPApi.Application.Company.Handlers
                 response.ErrorMessage = "Company is not existed";
                 return response;
             }
-            var products = _unitOfWork.ProductRepository.Find(p => p.MilkBrand.Company.Id == request.Id).ToList();
+            var products = _unitOfWork.ProductItemRepository.Find(p => p.Product.MilkBrand.Company.Id == request.Id).ToList();
 
-            response.Products = products;
+            response.Data = products;
             response.IsSuccess = true;
             return response;
         }

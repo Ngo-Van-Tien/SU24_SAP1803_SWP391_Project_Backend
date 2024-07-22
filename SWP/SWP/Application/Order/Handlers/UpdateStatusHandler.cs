@@ -48,12 +48,10 @@ namespace SWPApi.Application.Order.Handlers
             {
                 case OrderConstant.PROCESSING_STATUS:
                     return statusPayment == OrderConstant.PAID_STATUS ||
-                           statusPayment == OrderConstant.UNPAID_STATUS ||
-                           statusPayment == OrderConstant.WAITREFUNDED_STATUS;
+                           statusPayment == OrderConstant.UNPAID_STATUS ;
                 case OrderConstant.DELIVERING_STATUS:
                     return statusPayment == OrderConstant.UNPAID_STATUS ||
-                           statusPayment == OrderConstant.PAID_STATUS ||
-                           statusPayment == OrderConstant.WAITREFUNDED_STATUS;
+                           statusPayment == OrderConstant.PAID_STATUS ;
                 case OrderConstant.DELIVERED_STATUS:
                     return statusPayment == OrderConstant.PAID_STATUS;
                 case OrderConstant.CANCEL_STATUS:

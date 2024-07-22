@@ -17,12 +17,14 @@ namespace SWPApi.Application.ProductItem.Commands
         [FromForm]
         public int? EndAge { get; set; }
         [FromForm]
-        public List<int> Sizes { get; set; } = new List<int>();
+        public List<int>? Sizes { get; set; } = new List<int>();
         [FromForm]
-        public List<Guid> MilkBrandIds { get; set; } = new List<Guid>();
+        public List<Guid>? MilkBrandIds { get; set; } = new List<Guid>();
         [FromForm]
         public int PageNumber { get; set; }
         [FromForm]
         public int PageSize { get; set; }
+        [FromForm]
+        public string? SortOrder { get; set; }
     }
 }

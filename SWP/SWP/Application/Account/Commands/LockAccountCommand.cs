@@ -9,6 +9,6 @@ namespace SWPApi.Application.Account.Commands
     {
         [Required]
         [FromForm]
-        public string Email { get; set; }
+        public Guid Id { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿    using MediatR;
     using SWPApi.Application.Payments.Responses;
+using System.Runtime.CompilerServices;
 
-    namespace SWPApi.Application.Payments.Commands
+namespace SWPApi.Application.Payments.Commands
     {
         public class CreatePaymentVnPayCommand : IRequest<CreatePaymentVnPayResponse>
         {
-        public decimal Amount { get; set; }
-        public string OrderId { get; set; }
-         }
+        public Guid OrderId { get; set; }
+        }
     }

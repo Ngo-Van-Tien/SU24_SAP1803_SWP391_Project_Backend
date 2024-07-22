@@ -50,8 +50,8 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
         [Authorize]
-        [HttpPost("create-vnpay-payment")]
-        public async Task<ActionResult<CreatePaymentVnPayResponse>> CreateVnPayPayment(CreatePaymentVnPayCommand command)
+        [HttpPost]
+        public async Task<ActionResult> CreateVnPayPayment(CreatePaymentVnPayCommand command)
         {
             var result = await _mediator.Send(command);
             if (!result.IsSuccess)
@@ -61,14 +61,9 @@ namespace SWPApi.Controllers
             return Ok(result);
         }
 
-        [HttpPost("vnpay_return")]
-        public async Task<IActionResult> VnpayReturn()
+        [HttpPost]
+        public async Task<IActionResult> VnpayReturn(ReturnPaymentVnPayCommand command)
         {
-            var command = new ReturnPaymentVnPayCommand
-            {
-                QueryString = Request.Query
-            };
-
             var response = await _mediator.Send(command);
             if (!response.IsSuccess)
             {

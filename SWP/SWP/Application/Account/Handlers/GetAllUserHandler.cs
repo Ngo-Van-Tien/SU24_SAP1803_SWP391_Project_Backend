@@ -36,7 +36,7 @@ namespace SWPApi.Application.Account.Handlers
             }
 
             var currentUser = await _userManager.GetUserAsync(user);
-            if (currentUser == null)
+            if (currentUser == null || !currentUser.LockoutEnabled)
             {
                 response.IsSuccess = false;
                 response.ErrorMessage = "The current user could not be located";
@@ -49,26 +49,32 @@ namespace SWPApi.Application.Account.Handlers
                 response.ErrorMessage = "Page number and page size must be greater than 0";
                 return response;
             }
-
             var roles = await _userManager.GetRolesAsync(currentUser);
 
             IQueryable<AppUser> usersQuery = _userManager.Users;
 
             if (roles.Contains(UserRolesConstant.Staff))
             {
-                var customerRole = await _roleManager.FindByNameAsync(UserRolesConstant.Customer);
-                if (customerRole != null)
-                {
                     var customerUserIds = await _userManager.GetUsersInRoleAsync(UserRolesConstant.Customer);
                     if (customerUserIds != null)
                     {
                         usersQuery = usersQuery.Where(u => customerUserIds.Select(cu => cu.Id).Contains(u.Id));
                     }
-                }
             }
 
-            var usersList = await usersQuery
-                .Select(u => new GetAllUserResponse.User
+            var usersList = await usersQuery.ToListAsync(cancellationToken);
+            if (usersList == null)
+            {
+                response.IsSuccess = false;
+                response.ErrorMessage = "Failed to retrieve user list";
+                return response;
+            }
+            var userWithRole = new List<GetAllUserResponse.User>();
+            foreach(var u in usersList)
+            {
+                var userRoles = await _userManager.GetRolesAsync(u);
+                var userRole = userRoles.FirstOrDefault();
+                userWithRole.Add(new GetAllUserResponse.User
                 {
                     Id = u.Id,
                     Email = u.Email,
@@ -76,16 +82,11 @@ namespace SWPApi.Application.Account.Handlers
                     LastName = u.LastName,
                     Address = u.Address,
                     PhoneNumber = u.PhoneNumber,
-                    LockoutEnabled = u.LockoutEnabled
-                })
-                .ToListAsync(cancellationToken);
-            if (usersList == null)
-            {
-                response.IsSuccess = false;
-                response.ErrorMessage = "Failed to retrieve user list";
-                return response;
+                    LockoutEnabled = u.LockoutEnabled,
+                    Role = userRole
+                }) ;
             }
-            var pagedUsers = usersList.ToPagedList(request.pageNumber, request.pageSize);
+            var pagedUsers = userWithRole.ToPagedList(request.pageNumber, request.pageSize);
 
             response.Data = pagedUsers;
             response.IsSuccess = true;

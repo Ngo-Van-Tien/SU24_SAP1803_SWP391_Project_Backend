@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using Infrastructure;
-using Infrastructure.Constans;
+﻿using Infrastructure.Constans;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,38 +6,33 @@ using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
 using System.ComponentModel.DataAnnotations;
-using System.Net;
+using System.Net.WebSockets;
 using System.Text.RegularExpressions;
 
 namespace SWPApi.Application.Account.Handlers
 {
-    public class RegisterHandler : IRequestHandler<RegisterCommand, RegisterResponse>
+    public class CreateAccountStaffHandler : IRequestHandler<CreateAccountStaffCommand, CreateAccountStaffResponse>
     {
-        UserManager<AppUser> _userManager;
-        IMapper _mapper;
-       
-
-        public RegisterHandler(UserManager<AppUser> userManager, IMapper mapper)
+        UserManager<AppUser> _usermanager;
+        public CreateAccountStaffHandler(UserManager<AppUser> usermanager)
         {
-            _userManager = userManager;
-            _mapper = mapper;
+            _usermanager = usermanager;
         }
 
-        public async  Task<RegisterResponse> Handle(RegisterCommand request, CancellationToken cancellationToken)
+        public async Task<CreateAccountStaffResponse> Handle(CreateAccountStaffCommand request, CancellationToken cancellationToken)
         {
-
-            var response = new RegisterResponse();
+            var response = new CreateAccountStaffResponse();
             if (string.IsNullOrEmpty(request.Email) || !new EmailAddressAttribute().IsValid(request.Email))
             {
                 response.ErrorMessage = "Invalid email address";
                 return response;
             }
-            if (string.IsNullOrEmpty(request.PhoneNumber) || !IsPhoneNumberValid(request.PhoneNumber))
+            if (string.IsNullOrEmpty(request.PhoneNumber) || !new PhoneAttribute().IsValid(request.PhoneNumber))
             {
-                response.ErrorMessage = "Invalid phone number";
+                response.ErrorMessage = "Phone number is invalid";
                 return response;
             }
-            var checkPhone = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == request.PhoneNumber, cancellationToken);
+            var checkPhone = await _usermanager.Users.FirstOrDefaultAsync(u => u.PhoneNumber ==  request.PhoneNumber, cancellationToken);
             if(checkPhone != null)
             {
                 response.ErrorMessage = "Phone number is already";
@@ -49,31 +42,30 @@ namespace SWPApi.Application.Account.Handlers
             {
                 UserName = request.Email,
                 Email = request.Email,
+                PhoneNumber = request.PhoneNumber,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Address = request.Address,
-                PhoneNumber = request.PhoneNumber
             };
+            var result = await _usermanager.CreateAsync(user, request.Password);
             
-            var result = await _userManager.CreateAsync(user, request.Password);
-            
-            if (result.Succeeded)
+            if(result.Succeeded)
             {
-                var roleResult = await _userManager.AddToRoleAsync(user, UserRolesConstant.Customer);
-                if (roleResult.Succeeded)
+                var resultRole = await _usermanager.AddToRoleAsync(user, UserRolesConstant.Staff);
+                if(resultRole.Succeeded)
                 {
                     response.IsSuccess = true;
                 }
                 else
                 {
-                    response.ErrorMessage = string.Join(", ", roleResult.Errors.Select(e => e.Description));
+                    response.ErrorMessage = string.Join(", ", resultRole.Errors.Select(e => e.Description));  
                 }
+                
             }
             else
             {
-                response.ErrorMessage = string.Join(", ", result.Errors.Select(e => e.Description));
+                response.ErrorMessage = string.Join("", result.Errors.Select(e => e.Description));
             }
-
             return response;
         }
 
@@ -84,4 +76,5 @@ namespace SWPApi.Application.Account.Handlers
             return phoneRegex.IsMatch(phoneNumber);
         }
     }
+    
 }

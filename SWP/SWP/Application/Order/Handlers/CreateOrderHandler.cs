@@ -19,27 +19,18 @@ namespace SWPApi.Application.Order.Handlers
         {
             var response = new CreateOrderResponse();
             var user = _unitOfWork.AppUserRepository.Find(x => x.Id == request.UserId).FirstOrDefault();
-            if (user == null || user.LockoutEnd == null)
+            if (user == null || !user.LockoutEnabled)
             {
                 response.IsSuccess = false;
                 response.ErrorMessage = "The user not found or is not locked out.";
             }
             var productItemIds = request.ProductItems.Select(x => x.Id);
             var productItems = _unitOfWork.ProductItemRepository.Find(x => productItemIds.Contains(x.Id) && x.Enable);
-            foreach (var item in productItems)
-            {
-                if (!item.Enable)
-                {
-                    response.IsSuccess = false;
-                    response.ErrorMessage = $"Product {item.Id} is not enabled";
-                    return response;
-                }
-            }
 
             var order = new Infrastructure.Entities.Order();
             order.Address = user.Address;
             order.PhoneNumber = user.PhoneNumber;
-            order.ShipFees = request.ShipFees;
+            order.ShipFees = 0;
             order.Status = OrderConstant.PROCESSING_STATUS;
             order.StatusPayment = OrderConstant.UNPAID_STATUS;
             order.User = user;
@@ -66,7 +57,7 @@ namespace SWPApi.Application.Order.Handlers
             }
 
             order.TotalPriceProduct = totalPrice;
-            order.FinalPrice = totalPrice + request.ShipFees;
+            order.FinalPrice = totalPrice;
             _unitOfWork.OrderDetailRepository.AddRange(orderDetails);
 
             await _unitOfWork.SaveChangesAsync();

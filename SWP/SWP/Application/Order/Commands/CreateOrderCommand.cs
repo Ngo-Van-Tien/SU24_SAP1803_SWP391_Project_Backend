@@ -13,7 +13,6 @@ namespace SWPApi.Application.Order.Commands
         }
 
         public List<ProductRequest> ProductItems { get; set; }
-        public decimal ShipFees { get; set; }
         public string UserId { get; set; }
     }
 }

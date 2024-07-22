@@ -34,7 +34,7 @@ namespace SWPApi.Application.Account.Handlers
             }
             var user = await _userManager.FindByEmailAsync(request.Email);
             
-            if (user == null)
+            if (user == null || !user.LockoutEnabled)
             {
                 response.ErrorMessage = "User or password is not valid";
                 return response;
@@ -82,7 +82,7 @@ namespace SWPApi.Application.Account.Handlers
             SigningCredentials signingCred = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var securityToken = new JwtSecurityToken(
             claims: claims,
-                expires: DateTime.Now.AddMinutes(60),
+                expires: DateTime.Now.AddMinutes(1440),
                 issuer: _configuration.GetSection("Jwt:Issuer").Value,
                 audience: _configuration.GetSection("Jwt:Audience").Value,
                 signingCredentials: signingCred);
