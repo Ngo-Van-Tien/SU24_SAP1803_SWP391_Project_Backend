@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
 using SWPApi.Application.Account.Responses;
@@ -30,9 +31,15 @@ namespace SWPApi.Application.Account.Handlers
                 return response;
             }
             var user = await _userManager.FindByEmailAsync(request.Email);    
-            if (user == null)
+            if (user == null || !user.LockoutEnabled)
             {
                 response.ErrorMessage = "User is not existed";
+                return response;
+            }
+            var checkPhone = await _userManager.Users.FirstOrDefaultAsync(x => x.PhoneNumber == request.PhoneNumber, cancellationToken);
+            if(checkPhone != null)
+            {
+                response.ErrorMessage = "Phone number is already";
                 return response;
             }
 

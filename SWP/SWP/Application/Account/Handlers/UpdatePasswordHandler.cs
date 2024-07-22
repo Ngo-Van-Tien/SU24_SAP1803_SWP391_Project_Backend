@@ -25,7 +25,7 @@ namespace SWPApi.Application.Account.Handlers
             }
             var user = await _userManager.FindByEmailAsync(request.Email);
 
-            if (user == null)
+            if (user == null || !user.LockoutEnabled)
             {
                 response.ErrorMessage = "User does not exist";
                 return response;

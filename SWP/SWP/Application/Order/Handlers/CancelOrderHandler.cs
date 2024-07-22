@@ -32,6 +32,16 @@ namespace SWPApi.Application.Order.Handlers
                 }
                 _unitOfWork.OrderRepository.Update(order);
                 await _unitOfWork.SaveChangesAsync();
+
+                var orderDetails = _unitOfWork.OrderDetailRepository.Find(x => x.Order.Id == request.Id);
+                var productItems = _unitOfWork.ProductItemRepository.Find(pi => orderDetails.Select(x => x.ProductItem.Id).Contains(pi.Id));
+                foreach(var productItem in productItems)
+                {
+                    var quantity = orderDetails.FirstOrDefault(x => x.ProductItem.Id == productItem.Id).Quantity;
+                    productItem.Quantity = productItem.Quantity + quantity;
+                }
+                _unitOfWork.ProductItemRepository.UpdateRange(productItems);
+                await _unitOfWork.SaveChangesAsync();
                 respone.Order = order;
                 respone.IsSuccess = true;
             }

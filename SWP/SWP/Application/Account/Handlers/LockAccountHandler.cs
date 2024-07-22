@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Constans;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using SWP.Infrastrcuture.Entities;
 using SWPApi.Application.Account.Commands;
@@ -18,27 +19,38 @@ namespace SWPApi.Application.Account.Handlers
         public async Task<LockAccountResponse> Handle(LockAccountCommand request, CancellationToken cancellationToken)
         {
             var response = new LockAccountResponse();
-            if (string.IsNullOrEmpty(request.Email) || !new EmailAddressAttribute().IsValid(request.Email))
-            {
-                response.ErrorMessage = "Invalid email address";
-                return response;
-            }
-            var user = await _userManager.FindByEmailAsync(request.Email);
-            if(user == null)
+            
+            var user = await _userManager.FindByIdAsync((request.Id).ToString());
+            if(user == null || !user.LockoutEnabled)
             {
                 response.ErrorMessage = "User is not existed";
                 return response;
             }
-            user.LockoutEnabled = true;
-            var result = await _userManager.UpdateAsync(user);
-
-            if (result.Succeeded)
+            
+            if (user.LockoutEnabled)
             {
-                response.IsSuccess = true;
+                var roles = await _userManager.GetRolesAsync(user);
+                if (roles.Contains(UserRolesConstant.Admin))
+                {
+                    response.ErrorMessage = "Admin accounts cannot be locked";
+                    return response;
+                }
+
+                user.LockoutEnabled = false;
+                var result = await _userManager.UpdateAsync(user);
+
+                if (result.Succeeded)
+                {
+                    response.IsSuccess = true;
+                }
+                else
+                {
+                    response.ErrorMessage = "Failed to lock the account";
+                }
             }
             else
             {
-                response.ErrorMessage = "Failed to lock the account";
+                response.ErrorMessage = "User is already locked";
             }
 
             return response;

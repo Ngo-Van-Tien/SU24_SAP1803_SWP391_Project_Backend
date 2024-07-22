@@ -27,6 +27,7 @@ namespace SWPApi.Application.Product.Handlers
                 {
                    response.ImageBase64 = Convert.ToBase64String(product.Image.Content, 0, product.Image.Content.Length);
                 }
+                response.MilkBrand = product.MilkBrand;
                 response.IsSuccess = true;
                 return response;
             }

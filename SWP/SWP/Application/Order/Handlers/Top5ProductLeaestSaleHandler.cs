@@ -18,7 +18,7 @@ namespace SWPApi.Application.Order.Handlers
             var response = new Top5ProductLeaestSaleResponse();
 
             var orderDetails = _unitOfWork.OrderDetailRepository.GetAll()
-                                   .Where(od => od.Order.Status == "SUCCESS"
+                                   .Where(od => od.Order.Status == "DELIVERED"
                                    && od.Order.Enable)
                                    .ToList();
 

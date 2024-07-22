@@ -10,5 +10,6 @@ namespace SWPApi.Application.Product.Responses
         public int StartAge { get; set; }
         public int EndAge { get; set; }
         public string ImageBase64 { get; set; }
+        public Infrastructure.Entities.MilkBrand MilkBrand { get; set; }
     }
 }

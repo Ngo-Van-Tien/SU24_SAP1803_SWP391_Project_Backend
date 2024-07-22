@@ -1,4 +1,4 @@
-@SWP_HostAddress = http://localhost:5106
+@SWP_HostAddress = https://belongloveadmin.vercel.app/
 
 GET {{SWP_HostAddress}}/weatherforecast/
 Accept: application/json
