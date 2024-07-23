@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -60,7 +61,7 @@ public class VnPayLibrary
             signData = signData.Remove(data.Length - 1, 1);
         }
         string vnp_SecureHash = Utils.HmacSHA512(vnp_HashSecret, signData);
-        baseUrl += "&vnp_SecureHash=" + vnp_SecureHash;
+        baseUrl += "vnp_SecureHash=" + vnp_SecureHash;
         return baseUrl;
     }
 
@@ -131,22 +132,50 @@ public class Utils
 
         return hash.ToString();
     }
-    public  string GetIpAddress()
+    public static string GetIpAddress(IHttpContextAccessor _httpContextAccessor)
     {
-        string ipAddress;
+        var ipAddress = string.Empty;
         try
         {
-            ipAddress = _httpContextAccessor.HttpContext.Request.Headers["X-Forwarded-For"].FirstOrDefault();
+            var remoteIpAddress = _httpContextAccessor.HttpContext.Connection.RemoteIpAddress;
 
-            if (string.IsNullOrEmpty(ipAddress) || (ipAddress.ToLower() == "unknown") || ipAddress.Length > 45)
-                ipAddress = _httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
+            if (remoteIpAddress != null)
+            {
+                if (remoteIpAddress.AddressFamily == AddressFamily.InterNetworkV6)
+                {
+                    remoteIpAddress = Dns.GetHostEntry(remoteIpAddress).AddressList
+                        .FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
+                }
+
+                if (remoteIpAddress != null) ipAddress = remoteIpAddress.ToString();
+
+                return ipAddress;
+            }
         }
         catch (Exception ex)
         {
             ipAddress = "Invalid IP:" + ex.Message;
         }
 
-        return ipAddress;
+        return "127.0.0.1";
+    }
+
+    public static string EncodeGuid(Guid guid)
+    {
+        // Convert Guid to string in the format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+        string guidString = guid.ToString();
+
+        // Replace '-' with 'W'
+        return guidString.Replace("-", "W");
+    }
+
+    public static Guid DecodeGuid(string encodedGuid)
+    {
+        // Replace 'W' with '-' to restore the original GUID format
+        string guidString = encodedGuid.Replace("W", "-");
+
+        // Convert the string back to a Guid
+        return Guid.Parse(guidString);
     }
 }
 
