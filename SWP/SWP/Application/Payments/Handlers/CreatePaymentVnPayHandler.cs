@@ -39,10 +39,9 @@ namespace SWPApi.Application.Payments.Handlers
             vnpay.AddRequestData("vnp_Command", "pay");
             vnpay.AddRequestData("vnp_TmnCode", vnp_TmnCode);
             vnpay.AddRequestData("vnp_Amount", ((int)(order.FinalPrice * 100)).ToString());
-            vnpay.AddRequestData("vnp_BankCode", "");
             vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
             vnpay.AddRequestData("vnp_CurrCode", "VND");
-            vnpay.AddRequestData("vnp_IpAddr", System.Net.Dns.GetHostAddresses(hostName).GetValue(0).ToString());
+            vnpay.AddRequestData("vnp_IpAddr", Utils.GetIpAddress(_httpContextAccessor));
             vnpay.AddRequestData("vnp_Locale", _configuration["VNPAY:vnp_Locale"]);
             vnpay.AddRequestData("vnp_OrderInfo", "Thanh toan don hang:" + request.OrderId);
             vnpay.AddRequestData("vnp_OrderType", "other");
